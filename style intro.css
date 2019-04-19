@@ -2,8 +2,8 @@ body {
 	font-family: 'arial', sans-serif;
   height: 100%;
   width: 100%;
-  color: white;
-  background-color: #0e000f;
+  color: black;
+  background-color: white;
 
   -webkit-font-smoothing: antialiased;
 -moz-font-smoothing: antialiased;
@@ -197,7 +197,7 @@ img.portfolio-item {
   height: 24.5%;
   right: 0%;
   cursor: s-resize !important;
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted black;
   text-align: left;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -209,7 +209,7 @@ img.portfolio-item {
   height: 24.5%;
   left: 0%;
   cursor: n-resize !important;
-  border-top: 1px dotted white;
+  border-top: 1px dotted black;
   text-align: left;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -220,7 +220,7 @@ img.portfolio-item {
   bottom: 24.5%;
   width: 24.5%;
   cursor: e-resize !important;
-  border-right: 1px dotted white;
+  border-right: 1px dotted black;
   text-align: center;
   overflow: scroll;
 }
@@ -230,7 +230,7 @@ img.portfolio-item {
   bottom: 0%;
   width: 24.5%;
   cursor: w-resize !important;
-  border-left: 1px dotted white;
+  border-left: 1px dotted black;
   text-align: center;
   overflow: scroll;
 }
@@ -240,7 +240,7 @@ img.portfolio-item {
   color: #0e000f;
   font-family: 'Nobile', sans-serif;
   font-size: .8vw;
-  background-color: white;
+  background-color: lightgrey;
   padding: 5px;
   padding-bottom: 1px;
   z-index: 2;
