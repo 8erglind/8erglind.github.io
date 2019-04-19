@@ -39,6 +39,8 @@ img.portfolio-item {
   overflow: show;
   z-index: 9999999;
   border: 0px dotted #027967;
+  -webkit-overflow-scrolling: touch;
+  z-index: 99999;
   /*background-color: #100111;*/
 }
 .containerMiddleScroll {
@@ -385,10 +387,10 @@ img.portfolio-item {
 
 .dragAnnounce {
   font-size: 9px;
-  bottom: 25%;
+  bottom: 24.65%;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 8px;
+  padding-bottom: 7px;
   padding-top: 3px;
   left: 25% !important;
   right: 25% !important;
