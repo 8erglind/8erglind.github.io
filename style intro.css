@@ -68,7 +68,7 @@ img.portfolio-item {
 
 
 
-.drag, .info, .logo2, .close, .date, .name, .subtitlesName, .subtitlesDate, .dragAnnounce {
+.drag, .info, .logo2, .close, .date, .name, .subtitlesName, .subtitlesDate, .dragAnnounce, .dragAnnounceMobile {
   position: fixed;
 }
 .drag {
@@ -170,6 +170,9 @@ img.portfolio-item {
 .dragAnnounce {
   left: 40% !important;
   right: 40% !important;
+}
+.dragAnnounceMobile {
+  display: none;
 }
 
 
@@ -375,19 +378,13 @@ img.portfolio-item {
   right: auto;
   text-align: left;
 }
-.subtitlesName {
-  display: inline;
-  font-size: 9px;
-  bottom: 27.5%;
-  padding-bottom: 3px;
-}
 .subtitlesDate {
   display: none;
 }
 
 .subtitlesName {
   font-size: 9px;
-  bottom: 24.65%;
+  bottom: 24.6%;
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 7px;
@@ -402,6 +399,28 @@ img.portfolio-item {
   color: black;
   border-top: 1px dotted black;
   display: inline;
+}
+.dragAnnounceMobile {
+  font-size: 9px;
+  bottom: 50.65%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  left: 25% !important;
+  right: 25% !important;
+  max-width: 50%;
+  width: 50%;
+
+  border-top: 1px dotted white;
+  border-bottom: 1px dotted white;
+  background-color: rgba(240,250,10,0.7);
+  color: black;
+  display: inline;
+  text-align: center;
+
+  position: fixed;
+  z-index: 999;
 }
 
 
