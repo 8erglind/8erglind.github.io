@@ -20,7 +20,7 @@ img.portfolio-item {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0%;
-  background-color: grey;
+  background-color: lightgrey;
   border: dotted 0px #027967;
 }
 ::-webkit-scrollbar-corner {
