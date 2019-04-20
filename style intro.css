@@ -20,7 +20,7 @@ img.portfolio-item {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 0%;
-  background-color: grey;
+  background-color: rgba(128,128,128,0.8);
   border: dotted 0px #027967;
 }
 ::-webkit-scrollbar-corner {
@@ -240,7 +240,7 @@ img.portfolio-item {
   color: #0e000f;
   font-family: 'Nobile', sans-serif;
   font-size: .8vw;
-  background-color: grey;
+  background-color: rgba(128,128,128,0.8);
   padding: 5px;
   padding-bottom: 1px;
   z-index: 2;
