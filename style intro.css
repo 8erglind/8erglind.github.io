@@ -122,11 +122,11 @@ img.portfolio-item {
 }
 
 .close {
-  font-size: 3vw;
-  top: 24.5%;
-  right: 26%;
+  top: 26.7%;
+  right: 26.15%;
   cursor: ne-resize;
   z-index: 100;
+  width: 28px;
 }
 
 .date, .name {
