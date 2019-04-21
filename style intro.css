@@ -105,6 +105,7 @@ img.portfolio-item {
   width: auto;
   z-index: 99999;
   color: white;
+  font-size: 0.8vw;
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 15px;
@@ -365,7 +366,6 @@ img.portfolio-item {
 
 .close {
   top: 25%;
-  font-size: 20px;
 }
 
 .date, .name {
