@@ -45,7 +45,7 @@ img.portfolio-item {
 }
 .containerMiddleScroll {
   position: absolute;
-  bottom: 24.5%;
+  bottom: 24.8%;
   top: 24.5%;
   left: 24.5%;
   right: 24.5%;
@@ -80,7 +80,7 @@ img.portfolio-item {
 }
 .info {
   top: 31%;
-  width: 1.83%;
+  width: 28px;
   width: auto;
   right: 24.5%;
   height: auto;
@@ -92,9 +92,9 @@ img.portfolio-item {
 }
 .logo {
   display: inline;
-  width: 37px;
+  width: 30px;
   float: right;
-  padding-right: 25px;
+  padding-right: 22px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
@@ -123,10 +123,11 @@ img.portfolio-item {
 
 .close {
   top: 26.7%;
-  right: 26.15%;
+  right: 24.5%;
   cursor: ne-resize;
   z-index: 100;
   width: 28px;
+  padding-right: 23px;
 }
 
 .date, .name {
@@ -276,8 +277,9 @@ img.portfolio-item {
   margin-top: 10px;
   margin-left: 15px;
   margin-right: 15px;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 72%;
+  max-width: 280px;
+  max-height: 280px;
   padding: 15px;
   border: 1px dotted rgba(0,0,0,0);
 }
@@ -286,7 +288,8 @@ img.portfolio-item {
 }
 .smallPicDown, .smallPicUp {
   display: inline-block;
-  max-height: 76%;
+  max-height: 73%;
+  max-width: auto;
   margin-left: 30px;
   /*vertical-align: middle;*/
 }
