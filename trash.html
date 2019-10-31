@@ -1,23 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" 
       type="image/png" 
       href="igms/favicon.png" />
     <meta charset="utf-8">
     <title>Berglind Brá</title>
-		<link rel="stylesheet" href="style intro.css" type="text/css" media="screen" />
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style intro.css" type="text/css" media="screen" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 
-	<script type="text/javascript" src="jquery.zoomooz.js"></script>
+   <script type="text/javascript" src="jquery.zoomooz.js"></script>
 
-		<script type="text/javascript" src="dragabilly.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-		
-<link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
-		
+    <script type="text/javascript" src="dragabilly.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
 	</head>
 	<body>
 
@@ -25,6 +24,8 @@
 
 
 <div id="Screen" class="containerMiddleScroll" >
+	<img class="drag" src="igms/drag2.png">
+  <div class="dragAnnounce">Click on images and drag to move them around.</div>
   <div class="dragAnnounceMobile">!! Mobile version under construction !!</div>
 
 	<img class="close" src="igms/x.png" />
@@ -35,14 +36,31 @@
     </div>
   </div>
 
-	<div class="date">Spring 2019</div>
+	<img class="portfolio-item" style="
+	position: absolute;
+  	top: 6%;
+  	z-index: 1;
+  	left: 16%;
+  	height: 85%;" 
+  	src="igms/INNtrash/1.png"/>
+  	<img class="portfolio-item" style="
+	position: absolute;
+  	top: 6%;
+  	z-index: 1;
+  	right: 16%;
+  	height: 85%;" 
+  	src="igms/INNtrash/4.jpg"/>
+  	
 
-	<div class="subtitlesDate" style="left: 45% !important; right: 45% !important;">Page last updated<br>19th of April 2019.</div>
+
+	<div class="date">Spring 2018</div>
+
+	<div class="subtitlesDate" style="left: 45% !important; right: 45% !important;">KABK.</div>
 
 	
-	<div class="name">Berglind Brá Jóhannsdóttir</div>
-	<div class="subtitlesName" style="left: 37% !important; right: 37% !important;">
-		Welcome to my portfolio,<br>click on X (upper right corner) to view my work.
+	<div class="name">Trash</div>
+	<div class="subtitlesName" style="left: 5%; right: 5%;">
+		A sticker for the trash-bins of KABK as a call for recycling. Typeface made out of KABK's logo.
 	</div>
 </div>
 
@@ -81,12 +99,13 @@
     <a href="flottabok.html">
       <img class="smallPicLeft" src="igms/INNflottabok/aSmallflotta.png">
     </a>
+    <br>
     <a href="secretbook.html">
       <img class="smallPicLeft" src="igms/INNsecret/aSmallsecret.png">
     </a>
     <a href="alterego.html">
       <img class="smallPicLeft" src="igms/INNalterego/aSmallego.png">
-  </a> 
+  </a>
 </div>
 
 <div class="wrapperBottom back">
@@ -99,8 +118,8 @@
   <a href="bigoil.html">
     <img class="smallPicDown" src="igms/INNoliugaurar/aSmallkallar.png">
   </a>
-  <a href="trash.html">
-    <img class="smallPicDown" src="igms/INNtrash/aSmalltrash.png">
+  <a>
+    <img class="smallPicDown active" src="igms/INNtrash/aSmalltrash.png">
   </a>
     <a href="crowdstream.html">
     <img class="smallPicDown" src="igms/INNstream crowds/aSmallstream.png">
