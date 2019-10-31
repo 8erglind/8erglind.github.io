@@ -533,6 +533,7 @@ a:hover {
 .A2 {
 	left: 100%;
 	background-size: cover;
+	background-color: rgba(255,235,185,1);
 	/*background-image: url("imgs/Let_sTalkAboutTheWeather/00112272018.jpg");*/
 }
 .A2style {
@@ -546,8 +547,9 @@ a:hover {
 }
 .A3 {
 	left: 200%;
-	background-color: rgba(255,235,225,1);
-
+	
+	
+	background-color: rgba(185,155,185,1);
 	/*background-image: url("imgs/Me_And_My_Naked_Family/Io Sivertsen - 9 - 09.jpg");*/
 }
 .A3style {
@@ -561,7 +563,7 @@ a:hover {
 }
 .A4 {
 	left: 300%;
-
+	background-color: rgba(255,205,155,1);
 	/*background-image: url("imgs/4.png");*/
 }
 .A4style {
@@ -573,20 +575,6 @@ a:hover {
 }
 .A5 {
 	left: 400%;
-}
-.A6 {
-	left: 500%;
-
-	background-image: url("imgs/6.png");
-}
-.A7 {
-	left: 600%;
-
-	background-image: url("imgs/1.png");
-}
-.A8 {
-	left: 700%;
-
 }
 /* ////////////////////// */
 
