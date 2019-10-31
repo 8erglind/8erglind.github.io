@@ -1,0 +1,618 @@
+@font-face {
+    font-family: ortica;
+    src: url(Ortica-Light.woff);
+}
+@font-face {
+    font-family: mazius;
+    src: url(MAZIUSREVIEW20.09-Extraitalic.woff);
+}
+
+@-ms-viewport{
+  width: device-width;
+  height: device-height;
+}
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	background-color: rgb(255,253,250);
+}
+a {
+	text-decoration: none;
+	cursor: pointer !important;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* ///////  MENU  /////// */
+.menu {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+
+	background-color: rgb(255,253,250);
+	/*background-image: linear-gradient(#ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ff668c, #FFCCCC);
+	background-image: linear-gradient(#ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3, #ffbb99);*/
+	/*background-image: linear-gradient(white, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3);*/
+	/*background-color: #FFFBEC;*/
+	background-color: rgba(255,250,205,.7);
+	/*background-color: rgba(75,0,2,.95);*/
+	background-color: #ffeee6;
+	background-color: #FFFBEC;
+}
+
+
+
+
+.menuBox {
+	position: absolute;
+
+	border: solid 1px darkred;
+	font:  18px 'ortica';
+	color: darkred;
+
+	resize: both;
+	overflow: auto;
+	z-index: 9999998;
+
+
+	/* new */
+	width: auto;
+	height: auto;
+	top: 6%;
+	left: 6%;
+	right: 75%;
+	bottom: 16%;
+
+	/*background-color: rgba(255,238,230,.7);*/
+
+
+
+}
+.menuBox:hover {
+	z-index: 999999899;
+	background-color: rgba(255,238,230,.7);
+}
+
+
+.menuBoxBack {
+	position: fixed;
+	left: 40%;
+	/*top: 20%;*/
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: -1;
+	opacity: 1;
+
+	/*left: 0%;
+	bottom: 0%;
+	right: 0%;
+	width: 100%;
+	background-size: cover !important;*/
+	
+
+    background-image: url("imgs/Menu/allblurred9.png");
+
+	background-size: initial;
+	background-size:     contain;                      /* <------ */
+    background-repeat:   no-repeat;
+
+	background-position: bottom right;
+
+	background-size: contain;
+	pointer-events: none;
+	z-index: -5 !important;
+
+	/*background-color: rgba(255,238,230,.7);*/
+}
+
+.MENUWorkText {
+	position: absolute;
+	width: 44%;
+	top: 6%;
+	text-align: center;
+	z-index: 99999999999999999999999999999999999999;
+
+	font-size: 30px !important;
+	text-transform: uppercase;
+	font-family: 'mazius' !important;
+
+	color: rgb(10,40,10) !important;
+}
+.WORK {
+	left: 6%;
+	right: 45%;
+	width: auto;
+	pointer-events: none;
+}
+
+.ONGOINGWORK {
+	right: 6%;
+}
+
+.MENUtext {
+	position: relative;
+	padding-bottom: 10%;
+	padding-top: calc(6% + 10px);
+	top: 0px;
+	margin-left: 15px;
+	/*right: 15px;*/
+	/*margin-right: 15px;*/
+	bottom: 0%;
+	overflow-y: scroll;
+
+	color: darkred;
+}
+.MENUtext a {
+	color: darkred;
+	cursor: pointer !important;
+}
+.MENUtext a:hover, .closevideoPopUp a:hover {
+	background-color: white;
+	color: red !important;
+	cursor: pointer !important;
+}
+.Column {
+	position: relative;
+
+	columns: 10;
+    column-width: 250px;
+    column-fill: auto;
+    column-gap: 50px;
+}
+
+.A1Button:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/1SPACE.png");
+	opacity: 1;
+}
+.A2Button:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/2SPACE.png");
+    opacity: 1;
+}
+.A3Button:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/3SPACE.png");
+    opacity: 1;
+}
+.A4Button:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/4SPACE.png");
+	background-size:     contain;                      /* <------ */
+    opacity: 1;
+}
+.A5Button:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/5SPACEb.png");
+	background-size:     contain;  
+    opacity: 1;
+}
+.extraVideo:hover ~ .menuBoxBack {
+	display: inline;
+	background-image: url("imgs/Menu/5SPACE.png");
+	background-size:     contain;  
+    opacity: 1;
+}
+.videoPopUp {
+	position: fixed;
+	top: 12%;
+	right: 15%;
+	width: 50%;
+	height: auto;
+	display: none;
+}
+.closevideoPopUp {
+	position: relative;
+	float: right;
+}
+.active {
+	background-color: white;
+	color: red !important;
+	cursor: pointer !important;
+	text-decoration: underline;
+}
+/* ////////////////////// */
+
+
+
+
+
+/* //// FREE FLOW CANVAS //// */
+.FreeFlowCanvas {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+
+	background-color: none;
+	z-index: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	text-align: right;
+
+	resize: both;
+	overflow: auto;
+	
+}
+.FreeFlowCanvas:hover {
+	/*z-index: 9999999;*/
+	/*background-color: rgba(255,250,205,.7);*/
+}
+.FreeFlowImage {
+	position: relative;
+	display: inline-block;
+	/*max-width: 66%;
+	max-height: 62%;*/
+	max-width: 70%;
+	max-height: 80%;
+	height: auto;
+
+	/*top: 10%;*/
+	padding-bottom: 100px;
+
+	/*position: sticky;
+	top: 0px;*/
+}
+.FFI0 {
+	/*margin-top: 30%;*/
+	margin-right: 8%;
+}
+.FFI1 {
+	margin-right: 30%;
+}
+.FFI2 {
+	margin-right: 3%;
+}
+.FFI3 {
+	margin-right: 70%;
+}
+.FFI4 {
+	margin-right: 50%;
+}
+.FFI5 {
+	margin-right: 40%;
+}
+.FFI6 {
+	margin-right: 20%;
+}
+.FFI7 {
+	margin-right: 60%;
+}
+.FFI8 {
+	margin-right: 40%;
+}
+.FFI9 {
+	margin-right: 4%;
+}
+.FFI10 {
+	margin-right: 70%;
+}
+.FFI11 {
+	margin-right: 20%;
+}
+.FFI2 {
+	margin-right: 22%;
+}
+
+/* ////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------  FRAME + PROJECTS  ------ */
+.menuButton, .IoName, .ProjectName, .ArrowNext, .ArrowPrevious, .CV, .CVclose, .MENUtext, .FreeFlowTitle, .MENUWorkText {
+	font:  18px 'ortica';
+	color: darkred;
+	cursor: pointer;
+}
+.menuButton:hover, .IoName:hover, .ProjectName:hover, .ArrowNext:hover, .ArrowPrevious:hover {
+	color: black;
+	text-decoration: underline;
+	background-color: white;
+}
+/* -------------------------------- */
+
+
+
+/* ------  FRAME  ------ */
+.menuButton, .IoName, .CV, .CVclose, .CVtext {
+	position: fixed;
+	z-index: 999;
+}
+.menuButton {
+	top: 2%;
+	right: 2%;
+}
+.menuButton:hover, .IoName:hover, .CVclose:hover, .UNTITLEDIhide:hover, .UNTITLEDIshow:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.IoName {
+	bottom: 2%;
+	left: 2%;
+}
+.CV {
+	display: none;
+	width: 30%;
+	border-right: solid 1px lightblue;
+	top: 0%;
+	left: 0%;
+	bottom: 0%;
+	background-color: rgb(10,40,10);
+	z-index: 9999999;
+}
+.CVclose {
+	top: 2%;
+	right: 72%;
+	color: lightblue;
+}
+.CVtext {
+	color: lightblue;
+	padding-top: 0%;
+	padding-bottom: 10%;
+	top: 0%;
+	left: 2%;
+	right: 70%;
+	padding-right: 2%;
+	bottom: 0%;
+	overflow-y: scroll;
+}
+/* ---------------------- */
+
+
+
+/* ------ PROJECTS ------ */
+.ProjectName, .ArrowNext, .ArrowPrevious {
+	position: absolute;
+	z-index: 999;
+} 
+.ProjectName {
+	bottom: 2%;
+	right: 2%;
+}
+.ArrowNext, .ArrowPrevious {
+	font-size: 35px;
+}
+.ArrowNext {
+	top: 47%;
+	right: 2%;
+}
+.ArrowPrevious {
+	top: 47%;
+	left: 2%;
+}
+
+
+
+
+
+.project {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 1;
+	overflow: scroll;
+	text-align: center;
+}
+.pic {
+	position: relative;
+	height: 90%;
+	display: inline-block;
+
+	padding: 30px;
+}
+.pic:hover {
+	border: 1px solid none;
+}
+.picSticky {
+	position: relative;
+	height: 90%;
+	display: inline-block;
+
+	padding: 30px;
+
+	position: sticky;
+    top: 0px;
+}
+.picSticky:hover {
+	border: 1px solid none;
+}
+.Sticky {
+	position: sticky;
+    top: 0px;
+}
+
+
+.UNTITLEDIabout {
+	position: absolute;
+	/*display: inline;*/
+	width: 30%;
+	height: 52%;
+	border: solid 1px rgb(0,0,10);
+	border: solid 1px darkred;
+	z-index: 9999998;
+
+	font:  18px 'ortica';
+	color: rgb(0,0,10);
+	color: darkred;
+
+	resize: both;
+	overflow: auto;
+}
+.smallUNTITLEDIabout {
+	bottom: auto;
+	height: 43px;
+
+	background-color: rgba(0,0,0,0);
+}
+.UNTITLEDIhide {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.UNTITLEDIshow {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;	
+}
+.UNTITLEDItext {
+	position: absolute;
+	padding-top: 10px;
+	padding-bottom: 10%;
+	top: 0%;
+	left: 10px;
+	right: 10px;
+	padding-right: 10px;
+	bottom: 0%;
+	overflow-y: scroll;
+}
+
+
+/* ------------------------------------ */
+
+
+
+
+
+
+/* //// containerar //// */
+.A1, .A2, .A3, .A4, .A5, .A6, .A7, .A8 {
+	position: absolute;
+
+	top: 100%;
+	height: 100%;
+	width: calc(100% - 1px);
+	border: 1px solid darkorange;
+	background-color: white;
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.A1 {
+	left: 0%;
+}
+.A1style {
+	/*top: 8%;
+	left: 10%;*/
+	top: 1.5%;
+	left: 1%;
+	width: 18%;
+}
+.A1style:hover {
+	background-color: rgba(255,255,255,.8);
+}
+.A1projectStyle {
+	background-color: rgba(255,178,102,.4);
+	background-color: #FFE370;
+}
+.A2 {
+	left: 100%;
+	background-size: cover;
+	/*background-image: url("imgs/Let_sTalkAboutTheWeather/00112272018.jpg");*/
+}
+.A2style {
+	top: 8%;
+	left: 10%;
+	width: 20%;
+	height: 70%;
+}
+.A2style:hover {
+	background-color: rgba(255,205,255,.8);
+}
+.A3 {
+	left: 200%;
+	background-color: rgba(255,235,225,1);
+
+	/*background-image: url("imgs/Me_And_My_Naked_Family/Io Sivertsen - 9 - 09.jpg");*/
+}
+.A3style {
+	top: 1.5%;
+	left: 1%;
+	height: 44%;
+	width: 26.5%;
+}
+.A3style:hover {
+	background-color: rgba(255,255,205,.8);
+}
+.A4 {
+	left: 300%;
+
+	/*background-image: url("imgs/4.png");*/
+}
+.A4style {
+	top: 8%;
+	left: 10%;
+}
+.A4style:hover {
+	background-color: rgba(255,255,205,.8);
+}
+.A5 {
+	left: 400%;
+}
+.A6 {
+	left: 500%;
+
+	background-image: url("imgs/6.png");
+}
+.A7 {
+	left: 600%;
+
+	background-image: url("imgs/1.png");
+}
+.A8 {
+	left: 700%;
+
+}
+/* ////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (min-width: 1100px){
+
+}

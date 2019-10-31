@@ -1,3 +1,12 @@
+@font-face {
+    font-family: britney;
+    src: url(font/britney.ttf);
+}
+@font-face {
+    font-family: mine;
+    src: url(font/mine.otf);
+}
+
 body {
 	font-family: 'arial', sans-serif;
   height: 100%;
@@ -8,6 +17,11 @@ body {
   -webkit-font-smoothing: antialiased;
 -moz-font-smoothing: antialiased;
 -o-font-smoothing: antialiased;
+
+background-image: url(igms/baby.png);
+background-repeat: no-repeat;
+background-size: 13%;
+background-position: top 38% right 31%;
 }
 img.portfolio-item {
   cursor: pointer;
@@ -21,6 +35,7 @@ img.portfolio-item {
 ::-webkit-scrollbar-thumb {
   border-radius: 0%;
   background-color: rgba(128,128,128,0.8);
+  background-color: white;
   border: dotted 0px #027967;
 }
 ::-webkit-scrollbar-corner {
@@ -199,7 +214,7 @@ img.portfolio-item {
   height: 24.5%;
   right: 0%;
   cursor: s-resize !important;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted #00004d;
   text-align: left;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -211,7 +226,7 @@ img.portfolio-item {
   height: 24.5%;
   left: 0%;
   cursor: n-resize !important;
-  border-top: 1px dotted black;
+  border-top: 1px dotted #00004d;
   text-align: left;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -222,7 +237,7 @@ img.portfolio-item {
   bottom: 24.5%;
   width: 24.5%;
   cursor: e-resize !important;
-  border-right: 1px dotted black;
+  border-right: 1px dotted #00004d;
   text-align: center;
   overflow: scroll;
 }
@@ -232,7 +247,7 @@ img.portfolio-item {
   bottom: 0%;
   width: 24.5%;
   cursor: w-resize !important;
-  border-left: 1px dotted black;
+  border-left: 1px dotted #00004d;
   text-align: center;
   overflow: scroll;
 }
@@ -240,13 +255,23 @@ img.portfolio-item {
 .captionLeft, .captionRight, .captionTop, .captionBottom {
   position: fixed;
   color: #0e000f;
-  font-family: 'Nobile', sans-serif;
-  font-size: .8vw;
-  background-color: rgba(128,128,128,0.8);
-  padding: 5px;
+  /*font-family: 'Nobile', sans-serif;*/
+  font-family: 'britney';
+  text-transform: lowercase;
+  /*font-size: .8vw;*/
+  font-size: 2vw;
+  /*background-color: rgba(128,128,128,0.8);
+  background-color: rgba(0,0,0,0.8);*/
+  background-color: rgba(255,255,255,.3);
+  /*padding: 5px;*/
   padding-bottom: 1px;
   z-index: 2;
-  color: white;
+  /*color: white;*/
+  color: #027967;
+  color: #00004d;
+  border-bottom: 5px solid white;
+  width: 24.5%;
+  text-align: center;
 }
 .captionLeft {
   top: -1px;
@@ -259,10 +284,12 @@ img.portfolio-item {
 .captionBottom {
   margin-top: 0px;
   left: 0px;
+  border-right: 5px solid white;
 }
 .captionTop {
   top: -1px;
   right: 0px;
+  border-left: 5px solid white;
 }
 
 
