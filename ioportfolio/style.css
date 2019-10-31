@@ -56,26 +56,23 @@ a:hover {
 	position: absolute;
 
 	border: solid 1px darkred;
-	font:  18px 'ortica';
+	/*font:  18px 'ortica';*/
+	font:  10px 'ortica';
 	color: darkred;
 
 	resize: both;
 	overflow: auto;
 	z-index: 9999998;
 
-
 	/* new */
 	width: auto;
 	height: auto;
 	top: 6%;
 	left: 6%;
-	right: 75%;
+	/*right: 75%;*/
+	padding-right: 15px;
+	right: 68%;
 	bottom: 16%;
-
-	/*background-color: rgba(255,238,230,.7);*/
-
-
-
 }
 .menuBox:hover {
 	z-index: 999999899;
