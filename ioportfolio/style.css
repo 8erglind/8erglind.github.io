@@ -97,7 +97,7 @@ a:hover {
 	background-size: cover !important;*/
 	
 
-    background-image: url("imgs/Menu/allblurred9.png");
+    background-image: url("imgs/Menu/allblurred10.png");
 
 	background-size: initial;
 	background-size:     contain;                      /* <------ */
@@ -184,16 +184,16 @@ a:hover {
 }
 .A4Button:hover ~ .menuBoxBack {
 	display: inline;
-	background-image: url("imgs/Menu/4SPACE.png");
+	background-image: url("imgs/Menu/5SPACEb.png");
 	background-size:     contain;                      /* <------ */
     opacity: 1;
 }
-.A5Button:hover ~ .menuBoxBack {
+/*.A5Button:hover ~ .menuBoxBack {
 	display: inline;
-	background-image: url("imgs/Menu/5SPACEb.png");
+	background-image: url("imgs/Menu/4SPACEb.png");
 	background-size:     contain;  
     opacity: 1;
-}
+}*/
 .extraVideo:hover ~ .menuBoxBack {
 	display: inline;
 	background-image: url("imgs/Menu/5SPACE.png");
@@ -253,7 +253,7 @@ a:hover {
 	display: inline-block;
 	/*max-width: 66%;
 	max-height: 62%;*/
-	max-width: 70%;
+	max-width: 60%;
 	max-height: 80%;
 	height: auto;
 
@@ -522,6 +522,7 @@ a:hover {
 	top: 1.5%;
 	left: 1%;
 	width: 18%;
+	height: 33%;
 }
 .A1style:hover {
 	background-color: rgba(255,255,255,.8);
@@ -550,6 +551,7 @@ a:hover {
 	
 	
 	background-color: rgba(185,155,185,1);
+	background-color: rgba(255,205,155,1);
 	/*background-image: url("imgs/Me_And_My_Naked_Family/Io Sivertsen - 9 - 09.jpg");*/
 }
 .A3style {
@@ -563,18 +565,17 @@ a:hover {
 }
 .A4 {
 	left: 300%;
-	background-color: rgba(255,205,155,1);
+	
 	/*background-image: url("imgs/4.png");*/
 }
 .A4style {
 	top: 8%;
 	left: 10%;
+	width: 18%;
+	height: 40%;
 }
 .A4style:hover {
 	background-color: rgba(255,255,205,.8);
-}
-.A5 {
-	left: 400%;
 }
 /* ////////////////////// */
 
