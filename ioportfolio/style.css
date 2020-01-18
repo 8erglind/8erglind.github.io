@@ -24,6 +24,7 @@ body {
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	background-color: rgb(255,253,250);
+	-webkit-overflow-scrolling: touch;
 }
 a {
 	text-decoration: none;
@@ -53,6 +54,8 @@ a:hover {
 	/*background-color: rgba(75,0,2,.95);*/
 	background-color: #ffeee6;
 	background-color: #FFFBEC;
+
+	-webkit-overflow-scrolling: touch;
 }
 
 
@@ -77,6 +80,8 @@ a:hover {
 	right: 75%;
 	padding-right: 15px;
 	bottom: 16%;
+
+	-webkit-overflow-scrolling: touch;
 }
 .menuBox:hover {
 	z-index: 999999899;
@@ -239,6 +244,8 @@ a:hover {
 	resize: both;
 	overflow: auto;
 	overflow-x: hidden;
+
+	-webkit-overflow-scrolling: touch;
 	
 }
 .FreeFlowCanvas:hover {
@@ -260,46 +267,19 @@ a:hover {
 	/*position: sticky;
 	top: 0px;*/
 }
-.FFI0 {
-	/*margin-top: 30%;*/
-	margin-right: 8%;
-}
-.FFI1 {
-	margin-right: 30%;
-}
-.FFI2 {
-	margin-right: 3%;
-}
-.FFI3 {
-	margin-right: 70%;
-}
-.FFI4 {
-	margin-right: 50%;
-}
-.FFI5 {
-	margin-right: 40%;
-}
-.FFI6 {
-	margin-right: 20%;
-}
-.FFI7 {
-	margin-right: 60%;
-}
-.FFI8 {
-	margin-right: 40%;
-}
-.FFI9 {
-	margin-right: 4%;
-}
-.FFI10 {
-	margin-right: 70%;
-}
-.FFI11 {
-	margin-right: 20%;
-}
-.FFI2 {
-	margin-right: 22%;
-}
+.FFI0 {margin-right: 8%;}
+.FFI1 {margin-right: 30%;}
+.FFI2 {margin-right: 3%;}
+.FFI3 {margin-right: 70%;}
+.FFI4 {margin-right: 50%;}
+.FFI5 {margin-right: 40%;}
+.FFI6 {margin-right: 20%;}
+.FFI7 {margin-right: 60%;}
+.FFI8 {margin-right: 40%;}
+.FFI9 {margin-right: 4%;}
+.FFI10 {margin-right: 70%;}
+.FFI11 {margin-right: 20%;}
+.FFI2 {margin-right: 22%;}
 
 /* ////////////////////////// */
 
@@ -349,6 +329,8 @@ a:hover {
 .IoName {
 	bottom: 2%;
 	left: 2%;
+	border: solid 1px darkred;
+	padding: 5px;
 }
 .CV {
 	display: none;
@@ -604,16 +586,17 @@ a:hover {
 		right: 15px;
 	}
 
-
 	.menuBox {
-		/* new */
 		top: 15px;
 		left: 15px;
 		right: 28%;
 		bottom: 16%;
 	}
 
-
+	.IoName {
+		bottom: 15px;
+		left: 15px;
+	}
 	.CV {
 		width: 100%;
 	}
@@ -628,6 +611,19 @@ a:hover {
 	}
 
 
+
+
+
+	.A1style, .A2style, .A3style, .A4style {
+		top: 15px;
+		left: 15px;
+		width: 55%;
+		height: 40%;
+	}
+	.A1style:hover, .A2style:hover, .A3style:hover, .A4style:hover {
+		height: 80%;
+		width: 70%;
+	}
 
 
 }
