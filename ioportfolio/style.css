@@ -1,7 +1,7 @@
 /*
 Theme Name: Portfolio for Io
 Author: Berglind Brá Jóhannsdóttir
-Version: 0.0.1
+Version: 0.0.2
 */
 
 @font-face {
@@ -494,6 +494,8 @@ a:hover {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+
+	-webkit-overflow-scrolling: touch;
 }
 
 .A1 {
