@@ -62,7 +62,6 @@ a:hover {
 	position: absolute;
 
 	border: solid 1px darkred;
-	/*font:  18px 'ortica';*/
 
 	color: darkred;
 
@@ -77,7 +76,6 @@ a:hover {
 	left: 6%;
 	right: 75%;
 	padding-right: 15px;
-	/*right: 68%;*/
 	bottom: 16%;
 }
 .menuBox:hover {
@@ -89,19 +87,11 @@ a:hover {
 .menuBoxBack {
 	position: fixed;
 	left: 40%;
-	/*top: 20%;*/
 	top: 0%;
 	right: 0%;
 	bottom: 0%;
 	z-index: -1;
 	opacity: 1;
-
-	/*left: 0%;
-	bottom: 0%;
-	right: 0%;
-	width: 100%;
-	background-size: cover !important;*/
-	
 
     background-image: url("imgs/Menu/allblurred10.png");
 
@@ -114,8 +104,6 @@ a:hover {
 	background-size: contain;
 	pointer-events: none;
 	z-index: -5 !important;
-
-	/*background-color: rgba(255,238,230,.7);*/
 }
 
 .MENUWorkText {
@@ -351,6 +339,8 @@ a:hover {
 .menuButton {
 	top: 2%;
 	right: 2%;
+	border: solid 1px darkred;
+	padding: 5px;
 }
 .menuButton:hover, .IoName:hover, .CVclose:hover, .UNTITLEDIhide:hover, .UNTITLEDIshow:hover {
 	text-decoration: underline;
@@ -374,6 +364,8 @@ a:hover {
 	top: 2%;
 	right: 72%;
 	color: lightblue;
+	border: solid 1px lightblue;
+	padding: 5px;
 }
 .CVtext {
 	color: lightblue;
@@ -606,6 +598,22 @@ a:hover {
 
 
 @media screen and (max-width: 800px) {
+	
+	.menuButton {
+		top: 15px;
+		right: 15px;
+	}
+
+
+	.menuBox {
+		/* new */
+		top: 15px;
+		left: 15px;
+		right: 28%;
+		bottom: 16%;
+	}
+
+
 	.CV {
 		width: 100%;
 	}
@@ -617,9 +625,10 @@ a:hover {
 	.CVclose {
 		top: 15px;
 		right: 15px;
-		border: solid 1px lightblue;
-		padding: 5px;
 	}
+
+
+
 
 }
 
