@@ -214,6 +214,9 @@ a:hover {
 	height: auto;
 	display: none;
 }
+.videoPopUpText {
+	display: none;
+}
 .closevideoPopUp {
 	position: relative;
 	float: right;
@@ -602,7 +605,21 @@ a:hover {
 
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 800px) {
+	.CV {
+		width: 100%;
+	}
+	.CVtext {
+		left: 20px;
+		right: 0px;
+		padding-right: 20px;
+	}
+	.CVclose {
+		top: 15px;
+		right: 15px;
+		border: solid 1px lightblue;
+		padding: 5px;
+	}
 
 }
 

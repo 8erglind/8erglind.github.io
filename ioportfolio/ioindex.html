@@ -138,14 +138,8 @@ function resumeDiv() {
       <a class="A3Button" href="#A3"><span style="text-decoration-line: overline;">2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Me And My Naked Family</a><br><br>
       <a class="A4Button" href="#A4"><span style="text-decoration-line: overline;">2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Before I fall asleep</a><br><br>
       <br><br>
-      <a class="extraVideo"><span style="text-decoration-line: overline;">Ongoing project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Tropenatt</a><br><br><br>
-      
-      <div class="videoPopUp">
-        <a class="closevideoPopUp">close</a>
-        <video width="100%" height="100%" controls>
-          <source src="imgs/Ongoingstuff/Tropenatt/Showreeltropenatt.mp4" type="video/mp4">
-        </video>
-        <p>Written and directed by Ylva Gulpinar and Io Sivertsen<br>
+      <a class="extraVideo"><span style="text-decoration-line: overline;">Ongoing project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>Tropenatt</a><br>
+      <p class="videoPopUpText">Written and directed by Ylva Gulpinar and Io Sivertsen<br>
         Director of Photography Linus Kropp<br>
         Set-design Christa Korvald<br>
         Producer Signe Rosenlund<br>
@@ -155,7 +149,13 @@ function resumeDiv() {
         <br><br>
         It is a collaborative work created the summer of 2019.<br>
         It is still in progress, but estimated completion will be spring 2020.</p>
-
+      <br><br>
+      
+      <div class="videoPopUp">
+        <a class="closevideoPopUp">close</a>
+        <video width="100%" height="100%" controls>
+          <source src="imgs/Ongoingstuff/Tropenatt/Showreeltropenatt.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="menuBoxBack"></div>
@@ -517,10 +517,12 @@ function resumeDiv() {
 
     $(".closevideoPopUp").click(function(){
         $(".videoPopUp").hide();
+        $(".videoPopUpText").hide();
         $(".extraVideo").removeClass('active');
     });
     $(".extraVideo").click(function(){
         $(".videoPopUp").show();
+        $(".videoPopUpText").show();
         $(".extraVideo").addClass('active');
     });
   });
