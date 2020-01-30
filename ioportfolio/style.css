@@ -1,225 +1,244 @@
 /*
-Theme Name: Portfolio for Io
+Theme Name: Portfolio for Io Sivertsen
 Author: Berglind Brá Jóhannsdóttir
 Version: 0.0.2
 */
 
-@font-face {
-    font-family: ortica;
-    src: url(Ortica-Light.woff);
-}
-@font-face {
-    font-family: mazius;
-    src: url(MAZIUSREVIEW20.09-Extraitalic.woff);
-}
 
-@-ms-viewport{
-  width: device-width;
-  height: device-height;
-}
+/* NOTES */
+/*
+---HALF-CHECK--- take tropenatt out and move before I fall asleep to there.
+----- see if I can make the scrolling start at random places
+---CHECK--- have years on the main pages not on menu
+---CHECK--- commission to the right, just images no info
+---CHECK--- buuttons lowercase 
+----- copyright
+----- github io.github.io    oioi.github.io
+----- chicken pic
+------ take me and my naked family out?
+------ add link to anna stina's portfolio if she has one, in the CV portion
+*/
 
 
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	background-color: rgb(255,253,250);
-	-webkit-overflow-scrolling: touch;
-}
-a {
-	text-decoration: none;
-	cursor: pointer !important;
-}
-a:hover {
-	text-decoration: underline;
-}
+/* ///////  BASIC  /////// */
+	@font-face {
+	    font-family: ortica;
+	    src: url(Ortica-Light.woff);
+	}
+	@font-face {
+	    font-family: mazius;
+	    src: url(MAZIUSREVIEW20.09-Extraitalic.woff);
+	}
+
+	@-ms-viewport{
+	  width: device-width;
+	  height: device-height;
+	}
+
+
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+		-o-font-smoothing: antialiased;
+		background-color: rgb(255,253,250);
+		-webkit-overflow-scrolling: touch;
+	}
+	a {
+		text-decoration: none;
+		cursor: pointer !important;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.buttons {
+		padding: 5px;
+		position: fixed;
+		z-index: 999;
+		font-family: arial !important;
+	}
+/* ////////////////////// */
 
 
 
 /* ///////  MENU  /////// */
-.menu {
-	position: fixed;
-	top: 0%;
-	left: 0%;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
+	.menu {
+		position: fixed;
+		top: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
 
-	background-color: rgb(255,253,250);
-	/*background-image: linear-gradient(#ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ff668c, #FFCCCC);
-	background-image: linear-gradient(#ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3, #ffbb99);*/
-	/*background-image: linear-gradient(white, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3);*/
-	/*background-color: #FFFBEC;*/
-	background-color: rgba(255,250,205,.7);
-	/*background-color: rgba(75,0,2,.95);*/
-	background-color: #ffeee6;
-	background-color: #FFFBEC;
+		background-color: rgb(255,253,250);
+		/*background-image: linear-gradient(#ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ff668c, #FFCCCC);
+		background-image: linear-gradient(#ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3, #ffbb99);*/
+		/*background-image: linear-gradient(white, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3);*/
+		/*background-color: #FFFBEC;*/
+		background-color: rgba(255,250,205,.7);
+		/*background-color: rgba(75,0,2,.95);*/
+		background-color: #ffeee6;
+		background-color: #FFFBEC;
 
-	-webkit-overflow-scrolling: touch;
-}
+		-webkit-overflow-scrolling: touch;
+	}
+	.menuBox {
+		position: absolute;
 
+		border: solid 1px darkred;
 
+		color: darkred;
 
+		resize: both;
+		overflow: auto;
+		z-index: 9999998;
 
-.menuBox {
-	position: absolute;
+		/* new */
+		width: auto;
+		height: auto;
+		top: 6%;
+		left: 6%;
+		right: 75%;
+		padding-right: 15px;
+		bottom: 16%;
 
-	border: solid 1px darkred;
+		-webkit-overflow-scrolling: touch;
+	}
+	.menuBox:hover {
+		z-index: 999999899;
+		background-color: rgba(255,238,230,.7);
+	}
 
-	color: darkred;
+	.menuBoxBack {
+		position: fixed;
+		left: 40%;
+		top: 0%;
+		right: 0%;
+		bottom: 0%;
+		z-index: -1;
+		opacity: 1;
 
-	resize: both;
-	overflow: auto;
-	z-index: 9999998;
+	    background-image: url("imgs/Menu/allblurred10.png");
 
-	/* new */
-	width: auto;
-	height: auto;
-	top: 6%;
-	left: 6%;
-	right: 75%;
-	padding-right: 15px;
-	bottom: 16%;
+		background-size: initial;
+		background-size:     contain;                      /* <------ */
+	    background-repeat:   no-repeat;
 
-	-webkit-overflow-scrolling: touch;
-}
-.menuBox:hover {
-	z-index: 999999899;
-	background-color: rgba(255,238,230,.7);
-}
+		background-position: bottom right;
 
+		background-size: contain;
+		pointer-events: none;
+		z-index: -5 !important;
+	}
+	.MENUWorkText {
+		position: absolute;
+		width: 44%;
+		top: 6%;
+		text-align: center;
+		z-index: 99999999999999999999999999999999999999;
 
-.menuBoxBack {
-	position: fixed;
-	left: 40%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	z-index: -1;
-	opacity: 1;
+		font-size: 25px !important;
+		text-transform: uppercase;
+		font-family: arial !important;
 
-    background-image: url("imgs/Menu/allblurred10.png");
+		color: rgb(10,40,10) !important;
+	}
+	.WORK {
+		left: 6%;
+		right: 45%;
+		width: auto;
+		pointer-events: none;
+	}
 
-	background-size: initial;
-	background-size:     contain;                      /* <------ */
-    background-repeat:   no-repeat;
+	.ONGOINGWORK {
+		right: 6%;
+	}
 
-	background-position: bottom right;
+	.MENUtext {
+		position: relative;
+		padding-bottom: 10%;
+		padding-top: calc(6% + 10px);
+		top: 0px;
+		margin-left: 15px;
+		bottom: 0%;
+		overflow-y: scroll;
 
-	background-size: contain;
-	pointer-events: none;
-	z-index: -5 !important;
-}
+		color: darkred;
+	}
+	.MENUtext a {
+		color: darkred;
+		cursor: pointer !important;
+	}
+	.MENUtext a:hover, .closevideoPopUp a:hover {
+		background-color: white;
+		color: red !important;
+		cursor: pointer !important;
+	}
+	.Column {
+		position: relative;
 
-.MENUWorkText {
-	position: absolute;
-	width: 44%;
-	top: 6%;
-	text-align: center;
-	z-index: 99999999999999999999999999999999999999;
+		columns: 10;
+	    column-width: 250px;
+	    column-fill: auto;
+	    column-gap: 50px;
+	}
 
-	font-size: 25px !important;
-	text-transform: uppercase;
-	font-family: 'mazius' !important;
-
-	color: rgb(10,40,10) !important;
-}
-.WORK {
-	left: 6%;
-	right: 45%;
-	width: auto;
-	pointer-events: none;
-}
-
-.ONGOINGWORK {
-	right: 6%;
-}
-
-.MENUtext {
-	position: relative;
-	padding-bottom: 10%;
-	padding-top: calc(6% + 10px);
-	top: 0px;
-	margin-left: 15px;
-	/*right: 15px;*/
-	/*margin-right: 15px;*/
-	bottom: 0%;
-	overflow-y: scroll;
-
-	color: darkred;
-}
-.MENUtext a {
-	color: darkred;
-	cursor: pointer !important;
-}
-.MENUtext a:hover, .closevideoPopUp a:hover {
-	background-color: white;
-	color: red !important;
-	cursor: pointer !important;
-}
-.Column {
-	position: relative;
-
-	columns: 10;
-    column-width: 250px;
-    column-fill: auto;
-    column-gap: 50px;
-}
-
-.A1Button:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/1SPACE.png");
-	opacity: 1;
-}
-.A2Button:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/2SPACE.png");
-    opacity: 1;
-}
-.A3Button:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/3SPACE.png");
-    opacity: 1;
-}
-.A4Button:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/5SPACEb.png");
-	background-size:     contain;                      /* <------ */
-    opacity: 1;
-}
-/*.A5Button:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/4SPACEb.png");
-	background-size:     contain;  
-    opacity: 1;
-}*/
-.extraVideo:hover ~ .menuBoxBack {
-	display: inline;
-	background-image: url("imgs/Menu/5SPACE.png");
-	background-size:     contain;  
-    opacity: 1;
-}
-.videoPopUp {
-	position: fixed;
-	top: 12%;
-	right: 15%;
-	width: 50%;
-	height: auto;
-	display: none;
-}
-.videoPopUpText {
-	display: none;
-}
-.closevideoPopUp {
-	position: relative;
-	float: right;
-}
-.active {
-	background-color: white;
-	color: red !important;
-	cursor: pointer !important;
-	text-decoration: underline;
-}
+	.A1Button:hover ~ .menuBoxBack {
+		display: inline;
+		background-image: url("imgs/Menu/1SPACE.png");
+		opacity: 1;
+	}
+	.A2Button:hover ~ .menuBoxBack {
+		display: inline;
+		background-image: url("imgs/Menu/2SPACE.png");
+	    opacity: 1;
+	}
+	.A3Button:hover ~ .menuBoxBack {
+		display: inline;
+		background-image: url("imgs/Menu/3SPACE.png");
+	    opacity: 1;
+	}
+	.A4Button:hover ~ .menuBoxBack {
+		display: inline;
+		background-image: url("imgs/Menu/5SPACEb.png");
+		background-size:     contain;                      /* <------ */
+	    opacity: 1;
+	}
+	/*.A5Button:hover ~ .menuBoxBack {
+		display: inline;
+		background-image: url("imgs/Menu/4SPACEb.png");
+		background-size:     contain;  
+	    opacity: 1;
+	}*/
+	.commissionedworklist {
+		display: none;
+		color: rgb(10,40,10);
+		position: fixed;
+		top: 28%;
+		left: 13%;
+		width: 17%;
+		bottom: 5%;
+		border: 1px solid rgb(10,40,10);
+		padding-left: 15px;
+		padding-right: 15px;
+		resize: both;
+		z-index: 1;
+		overflow: scroll;
+		background-color: rgba(250,255,245,1);
+	}
+	.commissionedworklist:hover {
+		/*background-color: rgba(255,255,255,1);*/
+	}
+	.commissionedworklistclose {
+		position: absolute;
+		top: 2vh;
+		right: 2vw;
+		border: 1px solid rgb(10,40,10);
+		cursor: pointer;
+	}
+	.commissionedworklistclose:hover {
+		background-color: lightblue;
+	}
 /* ////////////////////// */
 
 
@@ -227,60 +246,211 @@ a:hover {
 
 
 /* //// FREE FLOW CANVAS //// */
-.FreeFlowCanvas {
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	height: 100%;
-	width: 100%;
+	.FreeFlowCanvas {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		height: 100%;
+		width: 100%;
 
-	background-color: none;
-	z-index: 0;
-	overflow-y: scroll;
-	overflow-x: hidden;
+		background-color: none;
+		z-index: -2;
+		overflow-y: scroll;
+		overflow-x: hidden;
 
-	text-align: right;
+		text-align: right;
 
-	resize: both;
-	overflow: auto;
-	overflow-x: hidden;
+		resize: both;
+		overflow: auto;
+		overflow-x: hidden;
 
-	-webkit-overflow-scrolling: touch;
-	
-}
-.FreeFlowCanvas:hover {
-	/*z-index: 9999999;*/
-	/*background-color: rgba(255,250,205,.7);*/
-}
-.FreeFlowImage {
-	position: relative;
-	display: inline-block;
-	/*max-width: 66%;
-	max-height: 62%;*/
-	max-width: 60%;
-	max-height: 80%;
-	height: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.FreeFlowCanvas:hover {
+		/*z-index: 9999999;*/
+		/*background-color: rgba(255,250,205,.7);*/
+	}
+	.FreeFlowImage {
+		position: relative;
+		display: inline-block;
+		/*max-width: 66%;
+		max-height: 62%;*/
+		max-width: 60%;
+		max-height: 80%;
+		height: auto;
 
-	/*top: 10%;*/
-	padding-bottom: 100px;
+		/*top: 10%;*/
+		padding-bottom: 100px;
 
-	/*position: sticky;
-	top: 0px;*/
-}
-.FFI0 {margin-right: 8%;}
-.FFI1 {margin-right: 30%;}
-.FFI2 {margin-right: 3%;}
-.FFI3 {margin-right: 70%;}
-.FFI4 {margin-right: 50%;}
-.FFI5 {margin-right: 40%;}
-.FFI6 {margin-right: 20%;}
-.FFI7 {margin-right: 60%;}
-.FFI8 {margin-right: 40%;}
-.FFI9 {margin-right: 4%;}
-.FFI10 {margin-right: 70%;}
-.FFI11 {margin-right: 20%;}
-.FFI2 {margin-right: 22%;}
+		/*position: sticky;
+		top: 0px;*/
+	}
+	.FFI0 {margin-right: 8%;}
+	.FFI1 {margin-right: 30%;}
+	.FFI2 {margin-right: 3%;}
+	.FFI3 {margin-right: 70%;}
+	.FFI4 {margin-right: 50%;}
+	.FFI5 {margin-right: 40%;}
+	.FFI6 {margin-right: 20%;}
+	.FFI7 {margin-right: 60%;}
+	.FFI8 {margin-right: 40%;}
+	.FFI9 {margin-right: 4%;}
+	.FFI10 {margin-right: 70%;}
+	.FFI11 {margin-right: 20%;}
+	.FFI2 {margin-right: 22%;}
+/* ////////////////////////// */
 
+
+
+
+
+/* ------  FRAME + PROJECTS  ------ */
+	.menuButton, .IoName, .ProjectName, .ArrowNext, .ArrowPrevious, .CV, .CVclose, .MENUtext, .FreeFlowTitle, .MENUWorkText {
+		font:  15px arial;
+		color: darkred;
+		cursor: pointer;
+	}
+	.menuButton:hover, .IoName:hover, .ProjectName:hover, .ArrowNext:hover, .ArrowPrevious:hover {
+		color: black;
+		text-decoration: underline;
+		background-color: white;
+	}
+/* -------------------------------- */
+
+
+
+/* ------  FRAME  ------ */
+	.CV, .CVtext {
+		position: fixed;
+		z-index: 999;
+	}
+	.menuButton {
+		top: 2%;
+		right: 2%;
+		border: solid 1px darkred;
+	}
+	.menuButton:hover, .IoName:hover, .CVclose:hover, .UNTITLEDIhide:hover, .UNTITLEDIshow:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.IoName {
+		bottom: 2%;
+		left: 2%;
+		border: solid 1px darkred;
+	}
+	.CV {
+		display: none;
+		width: 30%;
+		border-right: solid 1px lightblue;
+		top: 0%;
+		left: 0%;
+		bottom: 0%;
+		background-color: rgb(10,40,10);
+		z-index: 9999999;
+	}
+	.CVclose {
+		top: 2%;
+		right: 72%;
+		color: lightblue;
+		border: solid 1px lightblue;
+	}
+	.CVtext {
+		color: lightblue;
+		padding-top: 0%;
+		padding-bottom: 10%;
+		top: 0%;
+		left: 2%;
+		right: 70%;
+		padding-right: 2%;
+		bottom: 0%;
+		overflow-y: scroll;
+	}
+/* ---------------------- */
+
+
+
+/* //// COMMISSIONS SECTION //// */
+	.commission1images, .commission2images, .commission3images, .commission4images, .commission5images, .commission6images {
+		position: fixed;
+		top: 0%;
+		right: 0%;
+		left: calc(30% + 1px);
+		bottom: 0%;
+		/*background-color: rgba(10,40,10,.7);*/
+		background-color: rgba(10,40,10,0);
+		padding: 35px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		text-align: center;
+		pointer-events: auto;
+		display: none;
+		z-index: 0;
+	}
+	.commission1images img, .commission2images img, .commission3images img, .commission4images img, .commission5images img, .commission6images img {
+		position: relative;
+		margin-top: 30px;
+		margin-left: 30px;
+	}
+	.commission1images img, .commission2images img, .commission3images img, .commission4images img, .commission5images img, .commission6images img {
+		max-height: 70vh;
+	}
+	/*.commission2images img {
+		max-width: 65vw;
+		max-height: 85vh;
+	}*/
+	.commission1:hover, .commission2:hover, .commission3:hover, .commission4:hover, .commission5:hover, .commission6:hover {
+		background-color: white;
+		color: red;
+		text-decoration: underline;
+	}
+	.commission1imagesclose, .commission2imagesclose, .commission3imagesclose, .commission4imagesclose, .commission5imagesclose, .commission6imagesclose {
+		width: auto;
+		color: rgb(10,40,10);
+		border: solid 1px rgb(10,40,10);
+		z-index: 10;
+		display: none;
+		background-color: white;
+		cursor: pointer;
+	}
+	.commission1imagesclose {
+		top: calc(2% - 3px);
+		right: 10%;
+	}
+	.commission2imagesclose {
+		top: 2%;
+		right: calc(10% - 3px);
+	}
+	.commission3imagesclose {
+		top: calc(2% + 3px);
+		right: calc(10% - 6px);
+	}
+	.commission4imagesclose {
+		top: calc(2% + 6px);
+		right: calc(10% - 9px);
+	}
+	.commission5imagesclose {
+		top: calc(2% + 9px);
+		right: calc(10% - 12px);
+	}
+	.commission6imagesclose {
+		top: calc(2% + 12px);
+		right: calc(10% - 15px);
+	}
+	.commission1images {padding: 30px;}
+	.commission2images {padding: 35px;}
+	.commission3images {padding: 40px;}
+	.commission4images {padding: 45px;}
+	.commission5images {padding: 50px;}
+	.commission6images {padding: 55px;}
+	.commission1imagesclose:hover, .commission2imagesclose:hover, .commission3imagesclose:hover, .commission4imagesclose:hover, .commission5imagesclose:hover, .commission6imagesclose:hover {
+		background-color: lightblue;
+	}
+	.front {
+		z-index: 9;
+	}
+	.frontclose {
+		z-index: 11;
+	}
 /* ////////////////////////// */
 
 
@@ -289,191 +459,109 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-/* ------  FRAME + PROJECTS  ------ */
-.menuButton, .IoName, .ProjectName, .ArrowNext, .ArrowPrevious, .CV, .CVclose, .MENUtext, .FreeFlowTitle, .MENUWorkText {
-	font:  15px 'ortica';
-	color: darkred;
-	cursor: pointer;
-}
-.menuButton:hover, .IoName:hover, .ProjectName:hover, .ArrowNext:hover, .ArrowPrevious:hover {
-	color: black;
-	text-decoration: underline;
-	background-color: white;
-}
-/* -------------------------------- */
-
-
-
-/* ------  FRAME  ------ */
-.menuButton, .IoName, .CV, .CVclose, .CVtext {
-	position: fixed;
-	z-index: 999;
-}
-.menuButton {
-	top: 2%;
-	right: 2%;
-	border: solid 1px darkred;
-	padding: 5px;
-}
-.menuButton:hover, .IoName:hover, .CVclose:hover, .UNTITLEDIhide:hover, .UNTITLEDIshow:hover {
-	text-decoration: underline;
-	cursor: pointer;
-}
-.IoName {
-	bottom: 2%;
-	left: 2%;
-	border: solid 1px darkred;
-	padding: 5px;
-}
-.CV {
-	display: none;
-	width: 30%;
-	border-right: solid 1px lightblue;
-	top: 0%;
-	left: 0%;
-	bottom: 0%;
-	background-color: rgb(10,40,10);
-	z-index: 9999999;
-}
-.CVclose {
-	top: 2%;
-	right: 72%;
-	color: lightblue;
-	border: solid 1px lightblue;
-	padding: 5px;
-}
-.CVtext {
-	color: lightblue;
-	padding-top: 0%;
-	padding-bottom: 10%;
-	top: 0%;
-	left: 2%;
-	right: 70%;
-	padding-right: 2%;
-	bottom: 0%;
-	overflow-y: scroll;
-}
-/* ---------------------- */
-
-
-
 /* ------ PROJECTS ------ */
-.ProjectName, .ArrowNext, .ArrowPrevious {
-	position: absolute;
-	z-index: 999;
-} 
-.ProjectName {
-	bottom: 2%;
-	right: 2%;
-}
-.ArrowNext, .ArrowPrevious {
-	font-size: 35px;
-}
-.ArrowNext {
-	top: 47%;
-	right: 2%;
-}
-.ArrowPrevious {
-	top: 47%;
-	left: 2%;
-}
+	.ProjectName, .ArrowNext, .ArrowPrevious {
+		position: absolute;
+		z-index: 999;
+	} 
+	.ProjectName {
+		bottom: 2%;
+		right: 2%;
+	}
+	.ArrowNext, .ArrowPrevious {
+		font-size: 35px;
+	}
+	.ArrowNext {
+		top: 47%;
+		right: 2%;
+	}
+	.ArrowPrevious {
+		top: 47%;
+		left: 2%;
+	}
+	.project {
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		right: 0%;
+		bottom: 0%;
+		z-index: 1;
+		overflow: scroll;
+		text-align: center;
+	}
+	.pic {
+		position: relative;
+		height: 90%;
+		display: inline-block;
+
+		padding: 30px;
+	}
+	.pic:hover {
+		border: 1px solid none;
+	}
+	.picSticky {
+		position: relative;
+		height: 90%;
+		display: inline-block;
+
+		padding: 30px;
+
+		position: sticky;
+	    top: 0px;
+	}
+	.picSticky:hover {
+		border: 1px solid none;
+	}
+	.Sticky {
+		position: sticky;
+	    top: 0px;
+	}
 
 
+	.UNTITLEDIabout {
+		position: absolute;
+		/*display: inline;*/
+		width: 30%;
+		height: 52%;
+		border: solid 1px rgb(0,0,10);
+		border: solid 1px darkred;
+		z-index: 9999998;
 
+		font:  15px arial;
+		color: rgb(0,0,10);
+		color: darkred;
 
+		resize: both;
+		overflow: auto;
+	}
+	.smallUNTITLEDIabout {
+		bottom: auto;
+		height: 43px;
 
-.project {
-	position: absolute;
-	left: 0%;
-	top: 0%;
-	right: 0%;
-	bottom: 0%;
-	z-index: 1;
-	overflow: scroll;
-	text-align: center;
-}
-.pic {
-	position: relative;
-	height: 90%;
-	display: inline-block;
-
-	padding: 30px;
-}
-.pic:hover {
-	border: 1px solid none;
-}
-.picSticky {
-	position: relative;
-	height: 90%;
-	display: inline-block;
-
-	padding: 30px;
-
-	position: sticky;
-    top: 0px;
-}
-.picSticky:hover {
-	border: 1px solid none;
-}
-.Sticky {
-	position: sticky;
-    top: 0px;
-}
-
-
-.UNTITLEDIabout {
-	position: absolute;
-	/*display: inline;*/
-	width: 30%;
-	height: 52%;
-	border: solid 1px rgb(0,0,10);
-	border: solid 1px darkred;
-	z-index: 9999998;
-
-	font:  15px 'ortica';
-	color: rgb(0,0,10);
-	color: darkred;
-
-	resize: both;
-	overflow: auto;
-}
-.smallUNTITLEDIabout {
-	bottom: auto;
-	height: 43px;
-
-	background-color: rgba(0,0,0,0);
-}
-.UNTITLEDIhide {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-}
-.UNTITLEDIshow {
-	display: none;
-	position: absolute;
-	top: 10px;
-	right: 10px;	
-}
-.UNTITLEDItext {
-	position: absolute;
-	padding-top: 10px;
-	padding-bottom: 10%;
-	top: 0%;
-	left: 10px;
-	right: 10px;
-	padding-right: 10px;
-	bottom: 0%;
-	overflow-y: scroll;
-}
-
-
+		background-color: rgba(0,0,0,0);
+	}
+	.UNTITLEDIhide {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	.UNTITLEDIshow {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;	
+	}
+	.UNTITLEDItext {
+		position: absolute;
+		padding-top: 10px;
+		padding-bottom: 10%;
+		top: 0%;
+		left: 10px;
+		right: 10px;
+		padding-right: 10px;
+		bottom: 0%;
+		overflow-y: scroll;
+	}
 /* ------------------------------------ */
 
 
@@ -482,86 +570,86 @@ a:hover {
 
 
 /* //// containerar //// */
-.A1, .A2, .A3, .A4, .A5, .A6, .A7, .A8 {
-	position: absolute;
+	.A1, .A2, .A3, .A4, .A5, .A6, .A7, .A8 {
+		position: absolute;
 
-	top: 100%;
-	height: 100%;
-	width: calc(100% - 1px);
-	border: 1px solid darkred;
-	background-color: white;
+		top: 100%;
+		height: 100%;
+		width: calc(100% - 1px);
+		border: 1px solid darkred;
+		background-color: white;
 
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
 
-	-webkit-overflow-scrolling: touch;
-}
+		-webkit-overflow-scrolling: touch;
+	}
 
-.A1 {
-	left: 0%;
-}
-.A1style {
-	/*top: 8%;
-	left: 10%;*/
-	top: 1.5%;
-	left: 1%;
-	width: 18%;
-	height: 33%;
-}
-.A1style:hover {
-	background-color: rgba(255,255,255,.8);
-}
-.A1projectStyle {
-	background-color: rgba(255,178,102,.4);
-	background-color: #FFE370;
-}
-.A2 {
-	left: 100%;
-	background-size: cover;
-	background-color: rgba(255,235,185,1);
-	/*background-image: url("imgs/Let_sTalkAboutTheWeather/00112272018.jpg");*/
-}
-.A2style {
-	top: 8%;
-	left: 10%;
-	width: 20%;
-	height: 70%;
-}
-.A2style:hover {
-	background-color: rgba(255,205,255,.8);
-}
-.A3 {
-	left: 200%;
-	
-	
-	background-color: rgba(185,155,185,1);
-	background-color: rgba(255,205,155,1);
-	/*background-image: url("imgs/Me_And_My_Naked_Family/Io Sivertsen - 9 - 09.jpg");*/
-}
-.A3style {
-	top: 1.5%;
-	left: 1%;
-	height: 44%;
-	width: 26.5%;
-}
-.A3style:hover {
-	background-color: rgba(255,255,205,.8);
-}
-.A4 {
-	left: 300%;
-	
-	/*background-image: url("imgs/4.png");*/
-}
-.A4style {
-	top: 8%;
-	left: 10%;
-	width: 18%;
-	height: 40%;
-}
-.A4style:hover {
-	background-color: rgba(255,255,205,.8);
-}
+	.A1 {
+		left: 0%;
+	}
+	.A1style {
+		/*top: 8%;
+		left: 10%;*/
+		top: 1.5%;
+		left: 1%;
+		width: 18%;
+		height: 33%;
+	}
+	.A1style:hover {
+		background-color: rgba(255,255,255,.8);
+	}
+	.A1projectStyle {
+		background-color: rgba(255,178,102,.4);
+		background-color: #FFE370;
+	}
+	.A2 {
+		left: 100%;
+		background-size: cover;
+		background-color: rgba(255,235,185,1);
+		/*background-image: url("imgs/Let_sTalkAboutTheWeather/00112272018.jpg");*/
+	}
+	.A2style {
+		top: 8%;
+		left: 10%;
+		width: 20%;
+		height: 70%;
+	}
+	.A2style:hover {
+		background-color: rgba(255,205,255,.8);
+	}
+	.A3 {
+		left: 200%;
+		
+		
+		background-color: rgba(185,155,185,1);
+		background-color: rgba(255,205,155,1);
+		/*background-image: url("imgs/Me_And_My_Naked_Family/Io Sivertsen - 9 - 09.jpg");*/
+	}
+	.A3style {
+		top: 1.5%;
+		left: 1%;
+		height: 44%;
+		width: 26.5%;
+	}
+	.A3style:hover {
+		background-color: rgba(255,255,205,.8);
+	}
+	.A4 {
+		left: 300%;
+		
+		/*background-image: url("imgs/4.png");*/
+	}
+	.A4style {
+		top: 8%;
+		left: 10%;
+		width: 18%;
+		height: 40%;
+	}
+	.A4style:hover {
+		background-color: rgba(255,255,205,.8);
+	}
 /* ////////////////////// */
 
 
@@ -587,7 +675,6 @@ a:hover {
 		top: 15px;
 		right: 15px;
 	}
-
 	.menuBox {
 		top: 15px;
 		left: 15px;
@@ -595,13 +682,13 @@ a:hover {
 		bottom: 16%;
 	}
 
+
+
 	.IoName {
 		bottom: 15px;
 		left: 15px;
 	}
-	.CV {
-		width: 100%;
-	}
+	.CV {width: 100%;}
 	.CVtext {
 		left: 20px;
 		right: 0px;
@@ -611,9 +698,6 @@ a:hover {
 		top: 15px;
 		right: 15px;
 	}
-
-
-
 
 
 	.A1style, .A2style, .A3style, .A4style {
@@ -627,6 +711,48 @@ a:hover {
 		width: 70%;
 	}
 
+
+
+	.commissionedworklist {
+		left: 13%;
+		width: auto;
+		right: 15px;
+		bottom: 10%;
+	}
+	.commissionedworklistclose {
+		position: fixed;
+		top: calc(28% + 15px);
+		right: 30px;
+		background-color: rgba(245,255,250,1);
+	}
+
+
+
+	/* //// COMMISSIONS SECTION //// */
+		.commission1images, .commission2images, .commission3images, .commission4images, .commission5images, .commission6images {
+			left: 0%;
+			padding: 2px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			background-color: rgba(245,255,250,.8);
+		}
+		.commission1images img, .commission2images img, .commission3images img, .commission4images img, .commission5images img, .commission6images img {
+			margin-top: 20px;
+			margin-left: 0px;
+			max-height: 70vh;
+		}
+		.commission1:hover, .commission2:hover, .commission3:hover, .commission4:hover, .commission5:hover, .commission6:hover {
+			background-color: white;
+			color: red;
+			text-decoration: underline;
+		}
+		.commission1imagesclose, .commission2imagesclose, .commission3imagesclose, .commission4imagesclose, .commission5imagesclose, .commission6imagesclose {
+			right: auto;
+			top: 15px;
+			left: 15px;
+			background-color: rgba(245,255,250,1);
+		}
+	/* ////////////////////////// */
 
 }
 
