@@ -34,7 +34,11 @@ Version: 0.0.2
 	  width: device-width;
 	  height: device-height;
 	}
-
+	html {
+		    scroll-snap-type: mandatory;
+		    scroll-snap-points-y: repeat(100vh);
+		    scroll-snap-type: y mandatory;
+		  }
 
 	body {
 		-webkit-font-smoothing: antialiased;
@@ -43,6 +47,7 @@ Version: 0.0.2
 		background-color: rgb(255,253,250);
 		-webkit-overflow-scrolling: touch;
 	}
+	
 	a {
 		text-decoration: none;
 		cursor: pointer !important;
@@ -56,6 +61,16 @@ Version: 0.0.2
 		position: fixed;
 		z-index: 999;
 		font-family: arial !important;
+	}
+
+	.section1, .section2 {
+		position: relative;
+		height: 100vh;
+		width: 400vw;
+		pointer-events: none;
+		scroll-snap-align: start;
+		z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+		top: 0vh;
 	}
 /* ////////////////////// */
 
@@ -753,6 +768,19 @@ Version: 0.0.2
 			background-color: rgba(245,255,250,1);
 		}
 	/* ////////////////////////// */
+
+
+	/*       PROJECTS      	*/
+	.pic, .picSticky {
+		height: auto;
+		max-height: 90%;
+
+		padding: 0px;
+		max-width: calc(100vw - 0px);
+		padding-bottom: 50px;
+		padding-top: 60px;
+	}
+	/*						*/
 
 }
 
