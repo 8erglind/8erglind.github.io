@@ -17,6 +17,7 @@ Version: 0.0.2
 ----- chicken pic
 ------ take me and my naked family out?
 ------ add link to anna stina's portfolio if she has one, in the CV portion
+------ add 'I see potential' short film instead of one of the other four?
 */
 
 
@@ -34,11 +35,13 @@ Version: 0.0.2
 	  width: device-width;
 	  height: device-height;
 	}
+	/*
 	html {
 		    scroll-snap-type: mandatory;
 		    scroll-snap-points-y: repeat(100vh);
 		    scroll-snap-type: y mandatory;
 		  }
+	*/
 
 	body {
 		-webkit-font-smoothing: antialiased;
@@ -62,7 +65,7 @@ Version: 0.0.2
 		z-index: 999;
 		font-family: arial !important;
 	}
-
+	/*
 	.section1, .section2 {
 		position: relative;
 		height: 100vh;
@@ -72,6 +75,7 @@ Version: 0.0.2
 		z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
 		top: 0vh;
 	}
+	*/
 /* ////////////////////// */
 
 
@@ -154,7 +158,7 @@ Version: 0.0.2
 
 		font-size: 25px !important;
 		text-transform: uppercase;
-		font-family: arial !important;
+		font-family: 'mazius' !important;
 
 		color: rgb(10,40,10) !important;
 	}
@@ -189,6 +193,21 @@ Version: 0.0.2
 		color: red !important;
 		cursor: pointer !important;
 	}
+	.ImIo {
+		position: absolute !important; 
+		left: 2%; 
+		bottom: 2%; 
+		top: auto; 
+		left: auto; 
+		padding-bottom: 0%; 
+		text-align: left; 
+		margin-right: 0px; 
+		font-family: 'mazius' !important; 
+		font-size: 25px !important; 
+		color: rgb(10,40,10) !important; 
+		pointer-events: none;
+	}
+
 	.Column {
 		position: relative;
 
@@ -385,6 +404,11 @@ Version: 0.0.2
 
 
 /* //// COMMISSIONS SECTION //// */
+	.commissionedworklist {
+		font: 15px arial;
+		cursor: pointer;
+		z-index: 999999999999999999;
+	}
 	.commission1images, .commission2images, .commission3images, .commission4images, .commission5images, .commission6images {
 		position: fixed;
 		top: 0%;
@@ -679,12 +703,19 @@ Version: 0.0.2
 
 
 
-
+@media screen and (min-width: 800px) {
+	.mobile {
+		display: none;
+	}
+}
 
 
 
 
 @media screen and (max-width: 800px) {
+	.desktop {
+		display: none;
+	}
 	
 	.menuButton {
 		top: 15px;
@@ -695,6 +726,18 @@ Version: 0.0.2
 		left: 15px;
 		right: 28%;
 		bottom: 16%;
+
+		top: 18%;
+		right: 15px;
+	}
+	.MENUWorkText {
+		top: 15px;
+		text-transform: none;
+		text-align: left !important;
+	}
+	.ImIo {
+		top: 15px; 
+		position: relative !important;
 	}
 
 
