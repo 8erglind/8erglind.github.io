@@ -776,12 +776,22 @@ Version: 0.0.2
 		width: auto;
 		right: 15px;
 		bottom: 10%;
+
+		top: 0%;
+		left: 0%;
+		right: 0%;
+		bottom: 0%;
+
+		border: none;
 	}
 	.commissionedworklistclose {
 		position: fixed;
 		top: calc(28% + 15px);
 		right: 30px;
 		background-color: rgba(245,255,250,1);
+
+		top: 15px;
+		right: 15px;
 	}
 
 
@@ -793,6 +803,7 @@ Version: 0.0.2
 			padding-top: 50px;
 			padding-bottom: 50px;
 			background-color: rgba(245,255,250,.8);
+			z-index: 999999999999999999999999999;
 		}
 		.commission1images img, .commission2images img, .commission3images img, .commission4images img, .commission5images img, .commission6images img {
 			margin-top: 20px;
@@ -809,6 +820,7 @@ Version: 0.0.2
 			top: 15px;
 			left: 15px;
 			background-color: rgba(245,255,250,1);
+			z-index: 9999999999999999999999999999;
 		}
 	/* ////////////////////////// */
 
