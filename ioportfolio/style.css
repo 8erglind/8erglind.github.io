@@ -35,13 +35,7 @@ Version: 0.0.2
 	  width: device-width;
 	  height: device-height;
 	}
-	/*
-	html {
-		    scroll-snap-type: mandatory;
-		    scroll-snap-points-y: repeat(100vh);
-		    scroll-snap-type: y mandatory;
-		  }
-	*/
+
 
 	body {
 		-webkit-font-smoothing: antialiased;
@@ -65,17 +59,7 @@ Version: 0.0.2
 		z-index: 999;
 		font-family: arial !important;
 	}
-	/*
-	.section1, .section2 {
-		position: relative;
-		height: 100vh;
-		width: 400vw;
-		pointer-events: none;
-		scroll-snap-align: start;
-		z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-		top: 0vh;
-	}
-	*/
+
 /* ////////////////////// */
 
 
