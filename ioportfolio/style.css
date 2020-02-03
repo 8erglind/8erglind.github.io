@@ -85,14 +85,12 @@ Version: 0.0.2
 		position: absolute;
 
 		border: solid 1px darkred;
-
 		color: darkred;
 
 		resize: both;
 		overflow: auto;
 		z-index: 9999998;
 
-		/* new */
 		width: auto;
 		height: auto;
 		top: 6%;
@@ -119,8 +117,7 @@ Version: 0.0.2
 
 	    background-image: url("imgs/Menu/allblurred10.png");
 
-		background-size: initial;
-		background-size:     contain;                      /* <------ */
+		background-size: initial;                     /* <------ */
 	    background-repeat:   no-repeat;
 
 		background-position: bottom right;
@@ -142,9 +139,7 @@ Version: 0.0.2
 
 		color: rgb(10,40,10) !important;
 	}
-	.overline {
-		text-decoration: overline;
-	}
+	.overline {text-decoration: overline;}
 	.WORK {
 		left: 6%;
 		right: 45%;
@@ -153,9 +148,7 @@ Version: 0.0.2
 		text-align: center;
 	}
 
-	.ONGOINGWORK {
-		right: 6%;
-	}
+	.ONGOINGWORK {right: 6%;}
 
 	.MENUtext {
 		position: relative;
@@ -201,27 +194,14 @@ Version: 0.0.2
 	    column-gap: 50px;
 	}
 
-	.A1Button:hover ~ .menuBoxBack {
+	.A1Button:hover ~ .menuBoxBack, .A2Button:hover ~ .menuBoxBack, .A3Button:hover ~ .menuBoxBack, .A4Button:hover ~ .menuBoxBack {
 		display: inline;
-		background-image: url("imgs/Menu/1SPACE.png");
 		opacity: 1;
 	}
-	.A2Button:hover ~ .menuBoxBack {
-		display: inline;
-		background-image: url("imgs/Menu/2SPACE.png");
-	    opacity: 1;
-	}
-	.A3Button:hover ~ .menuBoxBack {
-		display: inline;
-		background-image: url("imgs/Menu/3SPACE.png");
-	    opacity: 1;
-	}
-	.A4Button:hover ~ .menuBoxBack {
-		display: inline;
-		background-image: url("imgs/Menu/5SPACEb.png");
-		background-size:     contain;                      /* <------ */
-	    opacity: 1;
-	}
+	.A1Button:hover ~ .menuBoxBack {background-image: url("imgs/Menu/1SPACE.png");}
+	.A2Button:hover ~ .menuBoxBack {background-image: url("imgs/Menu/2SPACE.png");}
+	.A3Button:hover ~ .menuBoxBack {background-image: url("imgs/Menu/3SPACE.png");}
+	.A4Button:hover ~ .menuBoxBack {background-image: url("imgs/Menu/5SPACEb.png");}
 
 	.commissionedworklist {
 		display: none;
@@ -261,7 +241,6 @@ Version: 0.0.2
 		height: 100%;
 		width: 100%;
 
-		background-color: none;
 		z-index: -2;
 		overflow-y: scroll;
 		overflow-x: hidden;
@@ -308,7 +287,7 @@ Version: 0.0.2
 
 
 /* ------  FRAME + PROJECTS  ------ */
-	.menuButton, .IoName, .ProjectName, .ArrowNext, .ArrowPrevious, .CV, .CVclose, .MENUtext, .FreeFlowTitle, .MENUWorkText {
+	.menuButton, .IoName, .ProjectName, .ArrowNext, .ArrowPrevious, .CV, .CVclose, .MENUtext, .FreeFlowTitle, .MENUWorkText, .UNTITLEDIabout {
 		font:  15px arial;
 		color: darkred;
 		cursor: pointer;
@@ -327,20 +306,13 @@ Version: 0.0.2
 		position: fixed;
 		z-index: 999;
 	}
-	.menuButton {
-		top: 2%;
-		right: 2%;
-		border: solid 1px darkred;
-	}
 	.menuButton:hover, .IoName:hover, .CVclose:hover, .UNTITLEDIhide:hover, .UNTITLEDIshow:hover {
 		text-decoration: underline;
 		cursor: pointer;
 	}
-	.IoName {
-		bottom: 2%;
-		left: 2%;
-		border: solid 1px darkred;
-	}
+	.menuButton, .IoName {border: solid 1px darkred;}
+	.menuButton {top: 2%; right: 2%;}
+	.IoName {bottom: 2%; left: 2%;}
 	.CV {
 		display: none;
 		width: 30%;
@@ -384,7 +356,6 @@ Version: 0.0.2
 		right: 0%;
 		left: calc(30% + 1px);
 		bottom: 0%;
-		/*background-color: rgba(10,40,10,.7);*/
 		background-color: rgba(10,40,10,0);
 		padding: 35px;
 		overflow-y: scroll;
@@ -402,10 +373,6 @@ Version: 0.0.2
 	.commission1images img, .commission2images img, .commission3images img, .commission4images img, .commission5images img, .commission6images img {
 		max-height: 70vh;
 	}
-	/*.commission2images img {
-		max-width: 65vw;
-		max-height: 85vh;
-	}*/
 	.commission1:hover, .commission2:hover, .commission3:hover, .commission4:hover, .commission5:hover, .commission6:hover {
 		background-color: white;
 		color: red;
@@ -420,30 +387,12 @@ Version: 0.0.2
 		background-color: white;
 		cursor: pointer;
 	}
-	.commission1imagesclose {
-		top: calc(2% - 3px);
-		right: 10%;
-	}
-	.commission2imagesclose {
-		top: 2%;
-		right: calc(10% - 3px);
-	}
-	.commission3imagesclose {
-		top: calc(2% + 3px);
-		right: calc(10% - 6px);
-	}
-	.commission4imagesclose {
-		top: calc(2% + 6px);
-		right: calc(10% - 9px);
-	}
-	.commission5imagesclose {
-		top: calc(2% + 9px);
-		right: calc(10% - 12px);
-	}
-	.commission6imagesclose {
-		top: calc(2% + 12px);
-		right: calc(10% - 15px);
-	}
+	.commission1imagesclose {top: calc(2% - 3px); right: 10%;}
+	.commission2imagesclose {top: 2%; right: calc(10% - 3px);}
+	.commission3imagesclose {top: calc(2% + 3px); right: calc(10% - 6px);}
+	.commission4imagesclose {top: calc(2% + 6px); right: calc(10% - 9px);}
+	.commission5imagesclose {top: calc(2% + 9px); right: calc(10% - 12px);}
+	.commission6imagesclose {top: calc(2% + 12px); right: calc(10% - 15px);}
 	.commission1images {padding: 30px;}
 	.commission2images {padding: 35px;}
 	.commission3images {padding: 40px;}
@@ -453,12 +402,8 @@ Version: 0.0.2
 	.commission1imagesclose:hover, .commission2imagesclose:hover, .commission3imagesclose:hover, .commission4imagesclose:hover, .commission5imagesclose:hover, .commission6imagesclose:hover {
 		background-color: lightblue;
 	}
-	.front {
-		z-index: 9;
-	}
-	.frontclose {
-		z-index: 11;
-	}
+	.front {z-index: 9;}
+	.frontclose {z-index: 11;}
 /* ////////////////////////// */
 
 
@@ -472,21 +417,10 @@ Version: 0.0.2
 		position: absolute;
 		z-index: 999;
 	} 
-	.ProjectName {
-		bottom: 2%;
-		right: 2%;
-	}
-	.ArrowNext, .ArrowPrevious {
-		font-size: 35px;
-	}
-	.ArrowNext {
-		top: 47%;
-		right: 2%;
-	}
-	.ArrowPrevious {
-		top: 47%;
-		left: 2%;
-	}
+	.ProjectName {bottom: 2%; right: 2%;}
+	.ArrowNext, .ArrowPrevious {font-size: 35px;}
+	.ArrowNext {top: 47%; right: 2%;}
+	.ArrowPrevious {top: 47%; left: 2%;}
 	.project {
 		position: absolute;
 		left: 0%;
@@ -497,67 +431,24 @@ Version: 0.0.2
 		overflow: scroll;
 		text-align: center;
 	}
-	.pic {
+	.pic, .picSticky {
 		position: relative;
 		height: 90%;
 		display: inline-block;
-
 		padding: 30px;
 	}
-	.pic:hover {
-		border: 1px solid none;
-	}
-	.picSticky {
-		position: relative;
-		height: 90%;
-		display: inline-block;
-
-		padding: 30px;
-
-		position: sticky;
-	    top: 0px;
-	}
-	.picSticky:hover {
-		border: 1px solid none;
-	}
-	.Sticky {
-		position: sticky;
-	    top: 0px;
-	}
+	.picSticky {position: sticky; top: 0px;}
 
 
 	.UNTITLEDIabout {
 		position: absolute;
-		/*display: inline;*/
 		width: 30%;
 		height: 52%;
-		border: solid 1px rgb(0,0,10);
 		border: solid 1px darkred;
 		z-index: 9999998;
 
-		font:  15px arial;
-		color: rgb(0,0,10);
-		color: darkred;
-
 		resize: both;
 		overflow: auto;
-	}
-	.smallUNTITLEDIabout {
-		bottom: auto;
-		height: 43px;
-
-		background-color: rgba(0,0,0,0);
-	}
-	.UNTITLEDIhide {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
-	.UNTITLEDIshow {
-		display: none;
-		position: absolute;
-		top: 10px;
-		right: 10px;	
 	}
 	.UNTITLEDItext {
 		position: absolute;
@@ -596,46 +487,20 @@ Version: 0.0.2
 	}
 
 	.A1 {left: 0%;}
-	.A1style {
-		top: 2%;
-		left: 2%;
-		width: 18%;
-		height: 33%;
-	}
+	.A1style {top: 2%; left: 2%; width: 18%; height: 33%;}
 	.A1style:hover {background-color: rgba(255,255,255,.8);}
 	.A1projectStyle {background-color: #FFE370;}
 	
-	.A2 {
-		left: 100%;
-		background-color: rgba(255,235,185,1);
-	}
-	.A2style {
-		top: 8%;
-		left: 10%;
-		width: 20%;
-		height: 70%;
-	}
+	.A2 {left: 100%; background-color: rgba(255,235,185,1);}
+	.A2style {top: 8%; left: 10%; width: 20%; height: 70%;}
 	.A2style:hover {background-color: rgba(255,205,255,.8);}
 	
-	.A3 {
-		left: 200%;
-		background-color: rgba(255,205,155,1);
-	}
-	.A3style {
-		top: 2%;
-		left: 2%;
-		height: 33%;
-		width: 18%;
-	}
+	.A3 {left: 200%; background-color: rgba(255,205,155,1);}
+	.A3style {top: 2%; left: 2%; height: 33%; width: 18%;}
 	.A3style:hover {background-color: rgba(255,255,205,.8);}
 	
 	.A4 {left: 300%;}
-	.A4style {
-		top: 8%;
-		left: 10%;
-		width: 18%;
-		height: 40%;
-	}
+	.A4style {top: 8%; left: 10%; width: 18%; height: 40%;}
 	.A4style:hover {background-color: rgba(255,255,205,.8);}
 /* ////////////////////// */
 
@@ -652,44 +517,29 @@ Version: 0.0.2
 
 
 @media screen and (min-width: 800px) {
-	.mobile {
-		display: none;
-	}
+	.mobile {display: none;}
 }
 
 
 
 
 @media screen and (max-width: 800px) {
-	.desktop {
-		display: none;
-	}
+	.desktop {display: none;}
 	
-	.menuButton {
-		top: 15px;
-		right: 15px;
-	}
+	.menuButton {top: 15px; right: 15px;}
 	.menuBox {
-		top: 15px;
 		left: 15px;
 		right: 28%;
 		bottom: 16%;
-
-		top: 18%;
-		/*right: 15px;*/
 		top: 15px;
 	}
-	.MENUtext {
-		padding: 0px;
-	}
+	.MENUtext {padding: 0px;}
 	.ImIo {
 		top: 15px; 
 		position: relative !important;
 		font: 20px arial !important;
 	}
-	.menuBoxBack {
-		display: none !important;
-	}
+	.menuBoxBack {display: none !important;}
 	.collagething {
 		position: fixed;
 		bottom: 2px;
@@ -700,20 +550,14 @@ Version: 0.0.2
 
 
 
-	.IoName {
-		bottom: 15px;
-		left: 15px;
-	}
+	.IoName {bottom: 15px; left: 15px;}
 	.CV {width: 100%;}
 	.CVtext {
 		left: 20px;
 		right: 0px;
 		padding-right: 20px;
 	}
-	.CVclose {
-		top: 15px;
-		right: 15px;
-	}
+	.CVclose {top: 15px; right: 15px;}
 
 
 	.A1style, .A2style, .A3style, .A4style {
@@ -729,32 +573,34 @@ Version: 0.0.2
 
 
 
-	.commissionedworklist {
-		left: 13%;
-		width: auto;
-		right: 15px;
-		bottom: 10%;
-
-		top: 0%;
-		left: 0%;
-		right: 0%;
-		bottom: 0%;
-
-		border: none;
-	}
-	.commissionedworklistclose {
-		position: fixed;
-		top: calc(28% + 15px);
-		right: 30px;
-		background-color: rgba(245,255,250,1);
-
-		top: 15px;
-		right: 15px;
-	}
+	
 
 
 
 	/* //// COMMISSIONS SECTION //// */
+		.commissionedworklist {
+			left: 13%;
+			width: auto;
+			right: 15px;
+			bottom: 10%;
+
+			top: 0%;
+			left: 0%;
+			right: 0%;
+			bottom: 0%;
+
+			border: none;
+		}
+		.commissionedworklistclose {
+			position: fixed;
+			top: calc(28% + 15px);
+			right: 30px;
+			background-color: rgba(245,255,250,1);
+
+			top: 15px;
+			right: 15px;
+		}
+	
 		.commission1images, .commission2images, .commission3images, .commission4images, .commission5images, .commission6images {
 			left: 0%;
 			padding: 2px;
@@ -784,15 +630,15 @@ Version: 0.0.2
 
 
 	/*       PROJECTS      	*/
-	.pic, .picSticky {
-		height: auto;
-		max-height: 90%;
+		.pic, .picSticky {
+			height: auto;
+			max-height: 90%;
 
-		padding: 0px;
-		max-width: calc(100vw - 0px);
-		padding-bottom: 50px;
-		padding-top: 60px;
-	}
+			padding: 0px !important;
+			max-width: calc(100vw - 0px) !important;
+			padding-bottom: 50px;
+			padding-top: 60px;
+		}
 	/*						*/
 
 }
