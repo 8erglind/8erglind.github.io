@@ -709,6 +709,9 @@ Version: 0.0.2
 		/*right: 15px;*/
 		top: 15px;
 	}
+	.MENUtext {
+		padding: 0px;
+	}
 	.ImIo {
 		top: 15px; 
 		position: relative !important;
