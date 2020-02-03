@@ -131,9 +131,9 @@ Version: 0.0.2
 		text-align: center;
 		z-index: 99999999999999999999999999999999999999;
 
-		font-size: 25px !important;
 		text-transform: uppercase;
-		font-family: 'mazius' !important;
+		/*font: 25px 'mazius' !important;*/
+		font: 25px arial !important;
 
 		color: rgb(10,40,10) !important;
 	}
@@ -177,8 +177,8 @@ Version: 0.0.2
 		padding-bottom: 0%; 
 		text-align: left; 
 		margin-right: 0px; 
-		font-family: 'mazius' !important; 
-		font-size: 25px !important; 
+		/*font: 25px 'mazius' !important;*/
+		font: 25px arial !important;
 		color: rgb(10,40,10) !important; 
 		pointer-events: none;
 	}
@@ -709,6 +709,7 @@ Version: 0.0.2
 	.ImIo {
 		top: 15px; 
 		position: relative !important;
+		font: 20px arial !important;
 	}
 	.menuBoxBack {
 		display: none;
