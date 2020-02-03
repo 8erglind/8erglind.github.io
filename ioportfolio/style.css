@@ -60,6 +60,11 @@ Version: 0.0.2
 		font-family: arial !important;
 	}
 
+	.alignright {
+		text-align: right !important;
+		right: 0px;
+	}
+
 /* ////////////////////// */
 
 
@@ -145,6 +150,7 @@ Version: 0.0.2
 		right: 45%;
 		width: auto;
 		pointer-events: none;
+		text-align: center;
 	}
 
 	.ONGOINGWORK {
@@ -216,12 +222,7 @@ Version: 0.0.2
 		background-size:     contain;                      /* <------ */
 	    opacity: 1;
 	}
-	/*.A5Button:hover ~ .menuBoxBack {
-		display: inline;
-		background-image: url("imgs/Menu/4SPACEb.png");
-		background-size:     contain;  
-	    opacity: 1;
-	}*/
+
 	.commissionedworklist {
 		display: none;
 		color: rgb(10,40,10);
@@ -238,9 +239,6 @@ Version: 0.0.2
 		overflow: scroll;
 		background-color: rgba(250,255,245,1);
 	}
-	.commissionedworklist:hover {
-		/*background-color: rgba(255,255,255,1);*/
-	}
 	.commissionedworklistclose {
 		position: absolute;
 		top: 2vh;
@@ -248,9 +246,7 @@ Version: 0.0.2
 		border: 1px solid rgb(10,40,10);
 		cursor: pointer;
 	}
-	.commissionedworklistclose:hover {
-		background-color: lightblue;
-	}
+	.commissionedworklistclose:hover {background-color: lightblue;}
 /* ////////////////////// */
 
 
@@ -278,24 +274,19 @@ Version: 0.0.2
 
 		-webkit-overflow-scrolling: touch;
 	}
-	.FreeFlowCanvas:hover {
-		/*z-index: 9999999;*/
-		/*background-color: rgba(255,250,205,.7);*/
+	.emptyspace {
+		position: relative; 
+		height: 80%; 
+		width: 100%;
 	}
 	.FreeFlowImage {
 		position: relative;
 		display: inline-block;
-		/*max-width: 66%;
-		max-height: 62%;*/
 		max-width: 60%;
 		max-height: 80%;
 		height: auto;
 
-		/*top: 10%;*/
 		padding-bottom: 100px;
-
-		/*position: sticky;
-		top: 0px;*/
 	}
 	.FFI0 {margin-right: 8%;}
 	.FFI1 {margin-right: 30%;}
@@ -697,7 +688,7 @@ Version: 0.0.2
 		font: 20px arial !important;
 	}
 	.menuBoxBack {
-		display: none;
+		display: none !important;
 	}
 	.collagething {
 		position: fixed;
