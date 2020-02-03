@@ -15,9 +15,9 @@ Version: 0.0.2
 ----- copyright
 ----- github io.github.io    oioi.github.io
 ----- chicken pic
------- take me and my naked family out?
+---NOPE--- take me and my naked family out?
 ------ add link to anna stina's portfolio if she has one, in the CV portion
------- add 'I see potential' short film instead of one of the other four?
+------ add 'I see potential' short film?
 */
 
 
@@ -72,15 +72,6 @@ Version: 0.0.2
 		height: 100%;
 		width: 100%;
 		z-index: -1;
-
-		background-color: rgb(255,253,250);
-		/*background-image: linear-gradient(#ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ffb380, #ff668c, #FFCCCC);
-		background-image: linear-gradient(#ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3, #ffbb99);*/
-		/*background-image: linear-gradient(white, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffeee6, #ffddcc, #ffccb3);*/
-		/*background-color: #FFFBEC;*/
-		background-color: rgba(255,250,205,.7);
-		/*background-color: rgba(75,0,2,.95);*/
-		background-color: #ffeee6;
 		background-color: #FFFBEC;
 
 		-webkit-overflow-scrolling: touch;
@@ -713,15 +704,21 @@ Version: 0.0.2
 
 		top: 18%;
 		/*right: 15px;*/
-	}
-	.MENUWorkText {
 		top: 15px;
-		text-transform: none;
-		text-align: left !important;
 	}
 	.ImIo {
 		top: 15px; 
 		position: relative !important;
+	}
+	.menuBoxBack {
+		display: none;
+	}
+	.collagething {
+		position: fixed;
+		bottom: 2px;
+		right: 0px;
+		width: 70%;
+		pointer-events: none;
 	}
 
 
