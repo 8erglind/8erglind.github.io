@@ -240,9 +240,9 @@ Version: 0.0.2
 		background-color: rgba(250,255,245,1);
 	}
 	.commissionedworklistclose {
-		position: absolute;
-		top: 2vh;
-		right: 2vw;
+		position: fixed;
+		top: 30vh;
+		right: calc(70vw - 32px + 2vw);
 		border: 1px solid rgb(10,40,10);
 		cursor: pointer;
 	}
