@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>ATLAS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+    <!-- <script src="GLTFLoader.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+   <!-- <div id="popup" class="popup">DEPARTMENTS OR SOMETHING</div>
+    <div id="popup2" class="popup">this pops up when you click this</div> -->
+
+    <div id="label" class="FirstGen">
+        <div class="close closeBachelors bachelorsfurther">close</div>
+        <div class="bachelors FirstGenStyle">0</div>
+    </div>
+            <div id="label14" class="bachelorsfurther">Graphic Design</div>
+            <div id="label15" class="bachelorsfurther">Photography</div>
+            <div id="label16" class="bachelorsfurther">Textile</div>
+            <div id="label17" class="bachelorsfurther">Fashion</div>
+            <div id="label18" class="bachelorsfurther">Fine Arts</div>
+            <div id="label19" class="bachelorsfurther">Interactive Media Design</div>
+            <div id="label20" class="bachelorsfurther">Interior Architecture & Furniture Design</div>
+
+    <div id="label2" class="FirstGen">
+        <div class="close closeMasters mastersfurther">close</div>
+        <div class="masters FirstGenStyle">12</div>
+    </div>
+            <div id="label21" class="mastersfurther">Non-Linear Narrative</div>
+            <div id="label22" class="mastersfurther">Interior Architecture</div>
+            <div id="label23" class="mastersfurther">Artistic research</div>
+            <div id="label24" class="mastersfurther">Type & Media</div>
+            <div id="label25" class="mastersfurther">Photography-</div>
+            <div id="label26" class="mastersfurther">Industrial Design</div>
+
+    <div id="label3" class="FirstGen FirstGenStyle">1
+    </div>
+
+    <div id="label4" class="FirstGen">
+        <div class="close closeLectorates Lectoratesfurther">close</div>
+        <div class="Lectorates FirstGenStyle">2</div>
+        <div class="Lectoratesfurther">Art Theory and Practice: Janneke Wesseling</div>
+        <div class="Lectoratesfurther">Research in Arts: Henk Borgdorff</div>
+        <div class="Lectoratesfurther">Music, Education and Society: Helena Gaunt</div>
+    </div>
+
+    <div id="label5" class="FirstGen FirstGenStyle">3
+    </div>
+
+    <div id="label6" class="FirstGen">
+        <div class="close closeRAD RADfurther">close</div>
+        <div class="RAD FirstGenStyle">4</div>
+        <div class="RADfurther">Marieke Schoenmakers</div>
+    </div>
+
+    <div id="label7" class="FirstGen">
+        <div class="close closeAWE AWEfurther">close</div>
+        <div class="AWE FirstGenStyle">5</div>
+        <div class="AWEfurther">Coordinator: Niki van Strien</div>
+    </div>
+
+    <div id="label8" class="FirstGen">
+        <div class="close closeLeiden Leidenfurther">close</div>
+        <div class="Leiden FirstGenStyle">6</div>
+        <div class="Leidenfurther">Institute Manager: Lonneke Regter</div>
+        <div class="Leidenfurther">Scientific Director: Henk Borgdorff</div>
+    </div>
+
+    <div id="label9" class="FirstGen FirstGenStyle">7</div>
+
+    <div id="label10" class="FirstGen FirstGenStyle">8</div>
+
+    <div id="label11" class="FirstGen FirstGenStyle">9</div>
+
+    <div id="label12" class="FirstGen FirstGenStyle">10</div>
+
+    <div id="label13" class="FirstGen">
+        <div class="close closeDD DDfurther">close</div>
+        <div class="DD FirstGenStyle">11</div>
+        <div class="DDfurther">Miriam Bestebreurtje</div>
+    </div>
+
+    <div id="label27" class="FirstGen FirstGenStyle">bla</div>
+
+
+
+
+
+    
+
+
+
+    <script type="text/javascript">
+
+        /* THIS IS FOR THE TEXT TO SHOW MORE WHEN CLICKED ON */
+            $(document).ready(function(){
+                $(".bachelors").click(function(){
+                    $(".bachelorsfurther").show();
+                    $(".bachelors").addClass("active");
+                 });
+                $(".closeBachelors").click(function(){
+                    $(".bachelorsfurther").hide();
+                    $(".bachelors").removeClass("active");
+                 });
+
+
+                $(".masters").click(function(){
+                    $(".mastersfurther").show();
+                    $(".masters").addClass("active");
+                 });
+                $(".closeMasters").click(function(){
+                    $(".mastersfurther").hide();
+                    $(".masters").removeClass("active");
+                 });
+
+
+                $(".RAD").click(function(){
+                    $(".RADfurther").show();
+                    $(".RAD").addClass("active");
+                 });
+                $(".closeRAD").click(function(){
+                    $(".RADfurther").hide();
+                    $(".RAD").removeClass("active");
+                 });
+
+
+                $(".DD").click(function(){
+                    $(".DDfurther").show();
+                    $(".DD").addClass("active");
+                 });
+                $(".closeDD").click(function(){
+                    $(".DDfurther").hide();
+                    $(".DD").removeClass("active");
+                 });
+
+
+                $(".Lectorates").click(function(){
+                    $(".Lectoratesfurther").show();
+                    $(".Lectorates").addClass("active");
+                 });
+                $(".closeLectorates").click(function(){
+                    $(".Lectoratesfurther").hide();
+                    $(".Lectorates").removeClass("active");
+                 });
+
+
+                $(".AWE").click(function(){
+                    $(".AWEfurther").show();
+                    $(".AWE").addClass("active");
+                 });
+                $(".closeAWE").click(function(){
+                    $(".AWEfurther").hide();
+                    $(".AWE").removeClass("active");
+                 });
+
+
+                $(".Leiden").click(function(){
+                    $(".Leidenfurther").show();
+                    $(".Leiden").addClass("active");
+                 });
+                $(".closeLeiden").click(function(){
+                    $(".Leidenfurther").hide();
+                    $(".Leiden").removeClass("active");
+                 });
+            });
+        /* --------- */
+
+
+
+        if (!Detector.webgl) {
+            Detector.addGetWebGLMessage();
+        }
+
+        var container;
+
+        var camera, controls, scene, renderer;
+        var lighting, ambient, keyLight, fillLight, backLight;
+
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+        init();
+        animate();
+
+        function init() {
+
+            container = document.createElement('div');
+            document.body.appendChild(container);
+
+            /* Camera */
+
+            camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = 10;
+
+            /* Scene */
+
+            scene = new THREE.Scene();
+            lighting = false;
+
+            ambient = new THREE.AmbientLight(0xffffff, 1.0);
+            scene.add(ambient);
+
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+            keyLight.position.set(-100, 0, 100);
+
+            fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+            fillLight.position.set(100, 0, 100);
+
+            backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+            backLight.position.set(100, 0, -100).normalize();
+
+
+
+            /* CUBEs  -------    1st STEP, ALWAYS SHOWING*/
+
+                var cubeGeometry = new THREE.BoxGeometry (.08,.08,.08);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube.position.set (0, 0, 0);
+                scene.add (cube);
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,3.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube14 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube14.position.set (-1.3, .4, 0.01);
+
+                        cube14.rotation.z=0.4*Math.PI;
+                        /*cube14.position.x=0
+                        cube14.position.y=0
+                        cube14.position.z=0*/
+
+                        scene.add (cube14);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube15 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube15.position.set (0, 0, 0.02);
+                        scene.add (cube15);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube16 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube16.position.set (0, 0, 0.03);
+                        scene.add (cube16);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube17 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube17.position.set (0, 0, 0.04);
+                        scene.add (cube17);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube18 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube18.position.set (0, 0, 0.05);
+                        scene.add (cube18);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube19 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube19.position.set (0, 0, 0.06);
+                        scene.add (cube19);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube20 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube20.position.set (0, 0, 0.07);
+                        scene.add (cube20);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube2 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube2.position.set (0, 1, 0);  
+                scene.add (cube2);
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube21 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube21.position.set (0.59, 0.43, 0.55);
+                        scene.add (cube21);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube22 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube22.position.set (0.83, 0.27, 0.35);
+                        scene.add (cube22);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube23 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube23.position.set (0.88, 0, 0.2);
+                        scene.add (cube23);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube24 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube24.position.set (0.83, '-0.25', 0);
+                        scene.add (cube24);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube25 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube25.position.set (0.75, '-0.45', '-0.17');
+                        scene.add (cube25);
+
+
+                        var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                        cubeGeometry.computeBoundingBox();
+                        var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                        cube26 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                        cube26.position.set (0.52, '-0.59', '-0.3');
+                        scene.add (cube26);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube3 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube3.position.set (0.5, 0.8, 0); 
+                scene.add (cube3);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube4 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube4.position.set (0.8, 0.5, 0);
+                scene.add (cube4);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube5 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube5.position.set (1, 0, 0);  
+                scene.add (cube5);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube6 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube6.position.set (0.8, '-0.5', 0);
+                scene.add (cube6);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube7 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube7.position.set (0.5, '-0.8', 0);
+                scene.add (cube7);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube8 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube8.position.set (0, '-1', 0);
+                scene.add (cube8);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube9 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube9.position.set ('-0.5', '-0.8', 0);
+                scene.add (cube9);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube10 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube10.position.set ('-0.8', '-0.5', 0);
+                scene.add (cube10);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0x4F7942});
+                cube11 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube11.position.set ('-1', 0, 0);
+                scene.add (cube11);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube12 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube12.position.set ('-0.8', 0.5, 0);
+                scene.add (cube12);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube13 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube13.position.set ('-0.5', 0.8, 0);
+                scene.add (cube13);
+
+
+
+
+
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube27 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube27.position.set (0, 0, 1);
+                scene.add (cube27);
+
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube28 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube28.position.set (0, 0.5, 0.8);
+                scene.add (cube28);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube29 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube29.position.set (0, 0.8, 0.5);
+                scene.add (cube29);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube30 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube30.position.set (0, '-0.5', 0.8);
+                scene.add (cube30);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube31 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube31.position.set (0, '-0.8', 0.5);
+                scene.add (cube31);
+
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube27 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube27.position.set (0, 0, '-1');
+                scene.add (cube27);
+
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube28 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube28.position.set (0, 0.5, '-0.8');
+                scene.add (cube28);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube29 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube29.position.set (0, 0.8, '-0.5');
+                scene.add (cube29);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube30 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube30.position.set (0, '-0.5', '-0.8');
+                scene.add (cube30);
+
+
+                var cubeGeometry = new THREE.BoxGeometry (.01,.01,.01);
+                cubeGeometry.computeBoundingBox();
+                var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                cube31 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+
+                cube31.position.set (0, '-0.8', '-0.5');
+                scene.add (cube31);
+
+
+
+            /* Model */
+
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setBaseUrl('assets/');
+            mtlLoader.setPath('assets/');
+            mtlLoader.load('model.mtl', function (materials) {
+
+                materials.preload();
+
+    /*            materials.materials.default.map.magFilter = THREE.NearestFilter;  */
+    /*            materials.materials.default.map.minFilter = THREE.LinearFilter; */
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.setPath('assets/');
+                objLoader.load('model.obj', function (object) {
+
+
+                    scene.add(object);
+                    object.scale.set(1,1,1);
+                });
+
+            });
+
+            /* Renderer */
+
+            renderer = new THREE.WebGLRenderer();
+    /*       renderer.setPixelRatio(window.devicePixelRatio);*/
+            renderer.setSize(window.innerWidth, window.innerHeight);
+    /*       renderer.setClearColor(new THREE.Color("hsl(0, 0%, 10%)"));*/
+
+            container.appendChild(renderer.domElement);
+
+            /* Controls */
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = true;
+
+            /* Events */
+
+    /*        window.addEventListener('resize', onWindowResize, false);
+    /*        window.addEventListener('keydown', onKeyboardEvent, false); */
+
+       
+            /* Grid */
+            
+            var gridXZ = new THREE.GridHelper(50, 0.5);
+     //       gridXZ.setColors( new THREE.Color(0xff0000), new THREE.Color(//0xffffff) );
+            scene.add(gridXZ);
+  
+
+        }
+
+        function onWindowResize() {
+
+    /*        windowHalfX = window.innerWidth / 2;
+    /*        windowHalfY = window.innerHeight / 2;    */
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+
+        ambient.intensity = 0.25;
+        scene.add(keyLight);
+        scene.add(fillLight);
+        scene.add(backLight);
+
+
+
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            controls.update();
+
+            render();
+
+            /* Labels on CUBEs */
+            var pos = getScreenTranslation(cube);
+            console.log(pos);
+            document.getElementById("label").style.left = pos.x+"px";
+            document.getElementById("label").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube2);
+            console.log(pos);
+            document.getElementById("label2").style.left = pos.x+"px";
+            document.getElementById("label2").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube3);
+            console.log(pos);
+            document.getElementById("label3").style.left = pos.x+"px";
+            document.getElementById("label3").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube4);
+            console.log(pos);
+            document.getElementById("label4").style.left = pos.x+"px";
+            document.getElementById("label4").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube5);
+            console.log(pos);
+            document.getElementById("label5").style.left = pos.x+"px";
+            document.getElementById("label5").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube6);
+            console.log(pos);
+            document.getElementById("label6").style.left = pos.x+"px";
+            document.getElementById("label6").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube7);
+            console.log(pos);
+            document.getElementById("label7").style.left = pos.x+"px";
+            document.getElementById("label7").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube8);
+            console.log(pos);
+            document.getElementById("label8").style.left = pos.x+"px";
+            document.getElementById("label8").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube9);
+            console.log(pos);
+            document.getElementById("label9").style.left = pos.x+"px";
+            document.getElementById("label9").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube10);
+            console.log(pos);
+            document.getElementById("label10").style.left = pos.x+"px";
+            document.getElementById("label10").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube11);
+            console.log(pos);
+            document.getElementById("label11").style.left = pos.x+"px";
+            document.getElementById("label11").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube12);
+            console.log(pos);
+            document.getElementById("label12").style.left = pos.x+"px";
+            document.getElementById("label12").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube13);
+            console.log(pos);
+            document.getElementById("label13").style.left = pos.x+"px";
+            document.getElementById("label13").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube14);
+            console.log(pos);
+            document.getElementById("label14").style.left = pos.x+"px";
+            document.getElementById("label14").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube15);
+            console.log(pos);
+            document.getElementById("label15").style.left = pos.x+"px";
+            document.getElementById("label15").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube16);
+            console.log(pos);
+            document.getElementById("label16").style.left = pos.x+"px";
+            document.getElementById("label16").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube17);
+            console.log(pos);
+            document.getElementById("label17").style.left = pos.x+"px";
+            document.getElementById("label17").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube18);
+            console.log(pos);
+            document.getElementById("label18").style.left = pos.x+"px";
+            document.getElementById("label18").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube19);
+            console.log(pos);
+            document.getElementById("label19").style.left = pos.x+"px";
+            document.getElementById("label19").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube20);
+            console.log(pos);
+            document.getElementById("label20").style.left = pos.x+"px";
+            document.getElementById("label20").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube21);
+            console.log(pos);
+            document.getElementById("label21").style.left = pos.x+"px";
+            document.getElementById("label21").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube22);
+            console.log(pos);
+            document.getElementById("label22").style.left = pos.x+"px";
+            document.getElementById("label22").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube23);
+            console.log(pos);
+            document.getElementById("label23").style.left = pos.x+"px";
+            document.getElementById("label23").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube24);
+            console.log(pos);
+            document.getElementById("label24").style.left = pos.x+"px";
+            document.getElementById("label24").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube25);
+            console.log(pos);
+            document.getElementById("label25").style.left = pos.x+"px";
+            document.getElementById("label25").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube26);
+            console.log(pos);
+            document.getElementById("label26").style.left = pos.x+"px";
+            document.getElementById("label26").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube27);
+            console.log(pos);
+            document.getElementById("label27").style.left = pos.x+"px";
+            document.getElementById("label27").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube28);
+            console.log(pos);
+            document.getElementById("label28").style.left = pos.x+"px";
+            document.getElementById("label28").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube29);
+            console.log(pos);
+            document.getElementById("label29").style.left = pos.x+"px";
+            document.getElementById("label29").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube30);
+            console.log(pos);
+            document.getElementById("label30").style.left = pos.x+"px";
+            document.getElementById("label30").style.top = pos.y+"px";
+
+            var pos = getScreenTranslation(cube31);
+            console.log(pos);
+            document.getElementById("label31").style.left = pos.x+"px";
+            document.getElementById("label31").style.top = pos.y+"px";
+        }
+
+        /* BBJ ADDED WITH CUBE */
+
+        function getScreenTranslation (obj) {
+
+        var vector = new THREE.Vector3();
+        var widthHalf = 0.5 * renderer.context.canvas.width;
+        var heightHalf = 0.5 * renderer.context.canvas.height;
+
+        var bbox = new THREE.BoundingBoxHelper(obj, 0xFFFFFF);
+ 
+        bbox.update();
+ 
+                bbox.updateMatrixWorld();
+                bbox.updateMatrix();
+        
+        vector.setFromMatrixPosition(bbox.matrixWorld);
+        vector.project(camera);
+        vector.x = vector.x * widthHalf + widthHalf;
+        vector.y = -(vector.y * heightHalf) + heightHalf;
+        return {
+                x: vector.x,
+                y: vector.y
+        };
+};
+
+        function render() {
+
+            renderer.render(scene, camera);
+
+             console.log( camera.position );
+
+     //       if ( camera.position.x > 0 && camera.position.x < 180
+     //           && camera.position.y > 0 && camera.position.y < 180 ) {
+//
+       //         console.log( 'show text' );
+     //           document.getElementById( 'popup' ).style[ 'display' ] = 'inline-block';
+//
+      //      } else {
+      //          console.log( 'hide text' );
+      //          document.getElementById( 'popup' ).style[ 'display' ] = 'none';
+      //      }
+//
+//
+      //      if ( camera.position.x > 180 && camera.position.x < 360
+      //          && camera.position.y > 180 && camera.position.y < 360 ) {
+//
+      //          console.log( 'show text' );
+      //          document.getElementById( 'popup2' ).style[ 'display' ] = 'inline-block';
+//
+      //      } else {
+      //          console.log( 'hide text' );
+      //         document.getElementById( 'popup2' ).style[ 'display' ] = 'none';
+      //      }
+
+//
+        }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -60,8 +60,9 @@ img.portfolio-item {
 }
 .containerMiddleScroll {
   position: absolute;
-  bottom: 24.8%;
+  bottom: 0%;
   top: 24.5%;
+  padding-bottom: 24.8%;
   left: 24.5%;
   right: 24.5%;
   
@@ -212,7 +213,7 @@ img.portfolio-item {
   top: 0%;
   left: 24.5%;
   height: 24.5%;
-  right: 0%;
+  right: 24.5%;
   cursor: s-resize !important;
   border-bottom: 1px dotted #00004d;
   text-align: left;
@@ -224,7 +225,7 @@ img.portfolio-item {
   bottom: 0%;
   right: 24.5%;
   height: 24.5%;
-  left: 0%;
+  left: 24.5%;
   cursor: n-resize !important;
   border-top: 1px dotted #00004d;
   text-align: left;
@@ -234,7 +235,7 @@ img.portfolio-item {
 .wrapperLeft {
   top: 0%;
   left: 0%;
-  bottom: 24.5%;
+  bottom: 0%;
   width: 24.5%;
   cursor: e-resize !important;
   border-right: 1px dotted #00004d;
@@ -242,7 +243,7 @@ img.portfolio-item {
   overflow: scroll;
 }
 .wrapperRight {
-  top: 24.5%;
+  top: 0%;
   right: 0%;
   bottom: 0%;
   width: 24.5%;

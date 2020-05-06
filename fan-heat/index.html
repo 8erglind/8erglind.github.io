@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FAN</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+    <!-- <script src="GLTFLoader.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dragabilly.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+
+<a name="top" style="position: absolute;top: 0%;left: 100vw; width: 100%;"></a>
+<a name="firstpage" style="position: absolute;top: 100%;left: 0%; width: 100%;"></a>
+<a name="bls1" style="position: absolute;top: 100vw;left: 100vw; width: 100vw;"></a>
+<a name="bls2" style="position: absolute;top: 100vw;left: 200%; width: 100vw;"></a>
+<a name="bls3" style="position: absolute;top: 100vw;left: 300%; width: 100vw;"></a>
+<a name="bls4" style="position: absolute;top: 100vw;left: 400%; width: 100vw;"></a>
+
+<!--
+<a class="weatherwidget-io" href="https://forecast7.com/en/37d57126d98/seoul/" data-label_1="SEOUL" data-label_2="WEATHER" data-theme="original" >SEOUL WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+-->
+   <!-- <div id="popup" class="popup">DEPARTMENTS OR SOMETHING</div>
+    <div id="popup2" class="popup">this pops up when you click this</div> -->
+
+
+
+
+    <div class="firstpageabackground"></div>
+    <div class="main">
+        <div class="background country">
+            <div class="verticalLine bottom P10"></div>
+            <div class="verticalLine bottom P20"></div>
+            <div class="verticalLine bottom P30"></div>
+            <div class="verticalLine bottom P40"></div>
+            <div class="verticalLine bottom P50"></div>
+            <div class="verticalLine bottom P60"></div>
+            <div class="verticalLine bottom P70"></div>
+            <div class="verticalLine bottom P80"></div>
+            <div class="verticalLine bottom P90"></div>
+            <div class="yearBottom P0">2020</div>
+            <div class="yearBottom P10">2030</div>
+            <div class="yearBottom P20">2040</div>
+            <div class="yearBottom P30">2050</div>
+            <div class="yearBottom P40">2060</div>
+            <div class="yearBottom P50">2070</div>
+            <div class="yearBottom P60">2080</div>
+            <div class="yearBottom P70">2090</div>
+            <div class="yearBottom P80">2100</div>
+            <div class="verticalLine top P10"></div>
+            <div class="verticalLine top P20"></div>
+            <div class="verticalLine top P30"></div>
+            <div class="verticalLine top P40"></div>
+            <div class="verticalLine top P50"></div>
+            <div class="verticalLine top P60"></div>
+            <div class="verticalLine top P70"></div>
+            <div class="verticalLine top P80"></div>
+            <div class="verticalLine top P90"></div>
+            <div class="yearTop P0">2020</div>
+            <div class="yearTop P10">2010</div>
+            <div class="yearTop P20">2000</div>
+            <div class="yearTop P30">1990</div>
+            <div class="yearTop P40">1980</div>
+            <div class="yearTop P50">1970</div>
+            <div class="yearTop P60">1960</div>
+            <div class="yearTop P70">1950</div>
+            <div class="yearTop P80">1940</div>
+
+            <div class="tempLine85 one"></div>
+            <div class="tempLine85 two"></div>
+            <div class="tempLine85 three"></div>
+            <div class="tempLine45 one"></div>
+            <div class="tempLine45 two"></div>
+            <div class="tempLine45 three"></div>
+            <div class="tempLine3 one"></div>
+            <div class="tempLine3 two"></div>
+            <div class="tempLine3 three"></div>
+
+
+            <div class="meter rightright"></div>
+            <div class="meter right"></div>
+            <div class="meter left"></div>
+
+
+            <div class="fanicon" href="#top"></div>
+
+
+
+                
+            <div class="raindrop"></div>
+
+        </div>
+        <div class="bls1 country">
+
+            <div class="lifeline R56"></div>
+
+            <div id="juikbuinstads" style="left: 12%; width: 10vw;" class="jukbuin draga">
+                <img class="jukbuinimg" style="width: 100%;" src="https://conteudo.imguol.com.br/blogs/74/files/2017/11/Cordel.jpg">
+                <!--<div class="text">Cordel literature (from the Portuguese term, literatura de cordel, literally “string literature”) are popular and inexpensively printed booklets or pamphlets containing folk novels, poems and songs. They are produced and sold in street markets and by street vendors in Brazil, mainly in the Northeast. They are so named because they are hung from strings to display them to potential customers.</div>-->
+            </div>
+
+
+
+            <div id="element" class="utanumcultura L68 R36" style="top: 100px;">
+                <div href="https://tomze.bandcamp.com/" target="_blank">
+                    <div class="cultura tomze" style="top: 0px;">
+                        <img class="culturaimg" style="width: 100%;" src="https://f4.bcbits.com/img/a2304751530_10.jpg">
+                    </div>
+                </div>
+                <!--<a href="https://www.bbc.co.uk/programmes/p03hjvv7" target="_blank"><div class="tropicalia text">Tropicália (Portuguese pronunciation: [tɾopiˈkaʎɐ, tɾɔpiˈkaljɐ]), also known as Tropicalismo ([tɾopikɐˈlizmu, tɾɔpikaˈ-]), was a Brazilian artistic movement that arose in the late 1960s and formally ended in 1968. Though music was its chief expression, the movement was not solely expressed so, as it enveloped other art forms such as film, theatre, and poetry. Tropicália was characterized by the amalgamation of Brazilian genres—notably the union of the popular and the avant-garde, as well as the melding of Brazilian tradition and foreign traditions and styles.[2]</div></a>-->
+            </div>
+            <div id="element2" class="utanumcultura L77 R43" style="top: 350px;" href="https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector" target="_blank">
+                <div class="cultura" style="top: 0px; margin-left: 0%; left: -1%;">
+                    <img class="culturaimg" style="width: 100%;" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1338166548l/13082435.jpg">
+                </div>
+                <div class="cultura P10" style="top: 0px;">
+                    <img class="culturaimg" style="width: 100%;" src="https://cidadeverde.com/assets/uploads/noticias/f3592e0df473e1f7ebcd7b13926ed8d0.jpg">
+                </div>
+                <div class="cultura P50" style="top: 0px;">
+                    <img class="culturaimg" style="width: 100%;" src="https://portugueseattsu.files.wordpress.com/2015/01/claricelispector.jpg">
+                </div>
+            </div>
+            <div id="element" class="utanumcultura L97 R46" style="top: 600px;" href="" target="_blank">
+                <div class="cultura cL39" style="top: 0px;">
+                    <img class="culturaimg" style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/en/2/28/Pedagogy_of_the_Oppressed_%281968_Spanish%29.jpg">
+                </div>
+                <div class="cultura cL40" style="top: 0px;">
+                    <img class="culturaimg" style="width: 100%;" src="https://pictures.abebooks.com/11116758/30548794366.jpg">
+                </div>
+                <div class="cultura cL46" style="top: 0px;">
+                    <img class="culturaimg" style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Paulo_Freire_%281963%29.tif/lossy-page1-440px-Paulo_Freire_%281963%29.tif.jpg">
+                </div>
+            </div>
+            
+            <div id="element" class="utanumcultura L11 R11" style="top: 850px;">
+                <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                    <iframe style="width: 100%;" src="https://www.youtube.com/embed/cb-rUfBTQ1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="element" class="utanumcultura L03 R03" style="top: 550px;">
+                <div class="cultura cL39" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                    <img class="culturaimg" style="width: 100%;" src="https://d10btd77keh5oj.cloudfront.net/images/filmes/cartaz/288-carandiru.png">
+                </div>
+            </div>
+            <div id="element" class="utanumcultura L02 R02" style="top: 700px;">
+                <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important; height: 130px;">
+                    <iframe style="width: 100%;" src="https://player.vimeo.com/video/329118628?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                    </iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+            
+
+
+
+            <div class="metercountry rightrightbrazil"></div>
+            <div class="metercountry rightbrazil"></div>
+            <div class="metercountry leftbrazil"></div>
+
+            <a class="fanicon faniconbls1" href="#top"></a>
+            <a class="prevpage text" href="#firstpage">west</a>
+            <a class="nextpage text" href="#bls2">east</a>
+
+            <!--<div class="rcp85 a1 text">26°</div>   
+            <div class="rcp85 a2 text">27°</div>
+            <div class="rcp85 a3 text">29°</div>
+
+            <div class="rcp85 b1 text">2.007.491</div>
+            <div class="rcp85 b2 text">3.664.312</div>
+            <div class="rcp85 b3 text">7.546.797</div>
+
+            <div class="rcp85 c1 text">23</div>
+            <div class="rcp85 c2 text">40</div>
+            <div class="rcp85 c3 text">98</div>
+
+
+            <div class="rcp45 a1 text">26°</div>
+            <div class="rcp45 a2 text">27°</div>
+            <div class="rcp45 a3 text">27°</div>
+
+            <div class="rcp45 b1 text">2.007.491</div>
+            <div class="rcp45 b2 text">2.931.450</div>
+            <div class="rcp45 b3 text">3.157.333</div>
+
+            <div class="rcp45 c1 text">23</div>
+            <div class="rcp45 c2 text">32</div>
+            <div class="rcp45 c3 text">41</div>
+
+
+            <div class="rcpwhat a1 text">26°</div>
+            <div class="rcpwhat a2 text"></div>
+            <div class="rcpwhat a3 text"></div>
+
+            <div class="rcpwhat b1 text">2.007.491</div>
+            <div class="rcpwhat b2 text"></div>
+            <div class="rcpwhat b3 text"></div>
+            
+            <div class="rcpwhat c1 text">23</div>
+            <div class="rcpwhat c2 text"></div>
+            <div class="rcpwhat c3 text">deaths from corona (may 5th): 7.321</div>-->
+
+            <div class="rcp85 a1 text">26°</div>   
+            <div class="rcp85 a2 text">27°</div>
+            <div class="rcp85 a3 text">29°</div>
+
+            <div class="rcp85 c1 text">2.007.491</div>
+            <div class="rcp85 c2 text">3.664.312</div>
+            <div class="rcp85 c3 text">7.546.797</div>
+
+
+            <div class="rcp45 a1 text">26°</div>
+            <div class="rcp45 a2 text">27°</div>
+            <div class="rcp45 a3 text">27°</div>
+
+            <div class="rcp45 c1 text">2.007.491</div>
+            <div class="rcp45 c2 text">2.931.450</div>
+            <div class="rcp45 c3 text">3.157.333</div>
+
+
+            <div class="rcpwhat a1 text">corona (may 5th):</div>
+            <div class="rcpwhat a2 text"></div>
+            <div class="rcpwhat a3 text"></div>
+
+            <div class="rcpwhat c1 text">7.321</div>
+            <div class="rcpwhat c2 text"></div>
+            <div class="rcpwhat c3 text"></div>
+            
+        </div>
+        <div class="bls2 country">
+            <div class="lifeline R63"></div>
+
+            <div class="utanumcultura P0 R32" style="top: 100px;">
+                <div class="cultura P10" style="top: 0px; ">
+                    <img class="culturaimg" style="width: 100%;" src="https://66.media.tumblr.com/4c695d9330e1f45ff1ad3a1bafd25265/tumblr_n9wc098a5b1qgsppto4_1280.jpg">
+                </div>
+            </div>
+            <div class="utanumcultura L20 R41" style="top: 300px;">
+                <div style="top: 0px; margin-left: -5vw !important;" class="cultura P0">
+                    <iframe style="width: 100%;" src="https://www.youtube.com/embed/ZhLdn_cip_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <iframe style="top: 500px;" class="cultura P15" src="https://www.youtube.com/embed/qrEoePadw7w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="utanumcultura P16 R78" style="top: 700px;">
+                <div class="cultura"  style="position: absolute; top: 0px; margin-left: 2vw !important;">
+                    <iframe style="width: 100%;" src="https://www.youtube.com/embed/CNEku9GjnZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="utanumcultura L20 R61" style="top: 900px;">
+                <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                    <iframe style="width: 100%;" src="https://www.youtube.com/embed/BACnvj5jAh0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="utanumcultura P0 R63" style="top: 470px;">
+                <iframe class="cultura P0" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1023616399&color=%23ffffff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            </div>
+            <iframe style="top: 200px;" class="cultura P07" src="https://www.youtube.com/embed/y6tMA7mjFiA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <img id="juikbuinstads" class="jukbuin draga" src="imgs/Jukbuin.png">
+            <img id="iyeolchiyeolstads" class="iyeolchiyeol draga" src="imgs/iyeolchiyeol.png">
+
+
+
+
+            <div class="metercountry rightrightseoul"></div>
+            <div class="metercountry rightseoul"></div>
+            <div class="metercountry leftseoul"></div>
+
+
+            <!--<div class="rcp85 a1 text">25°</div>   
+            <div class="rcp85 a2 text">26°</div>
+            <div class="rcp85 a3 text">28°</div>
+
+            <div class="rcp85 b1 text">0</div>
+            <div class="rcp85 b2 text">38.646</div>
+            <div class="rcp85 b3 text">244.198</div>
+
+            <div class="rcp85 c1 text">0</div>
+            <div class="rcp85 c2 text">2</div>
+            <div class="rcp85 c3 text">19</div>
+
+
+            <div class="rcp45 a1 text">25°</div>
+            <div class="rcp45 a2 text">26°</div>
+            <div class="rcp45 a3 text">26°</div>
+
+            <div class="rcp45 b1 text">0</div>
+            <div class="rcp45 b2 text">19.323</div>
+            <div class="rcp45 b3 text">25.705</div>
+
+            <div class="rcp45 c1 text">0</div>
+            <div class="rcp45 c2 text">1</div>
+            <div class="rcp45 c3 text">2</div>
+
+
+            <div class="rcpwhat a1 text">25°</div>
+            <div class="rcpwhat a2 text"></div>
+            <div class="rcpwhat a3 text"></div>
+
+            <div class="rcpwhat b1 text">0</div>
+            <div class="rcpwhat b2 text"></div>
+            <div class="rcpwhat b3 text"></div>
+            
+            <div class="rcpwhat c1 text">0</div>
+            <div class="rcpwhat c2 text"></div>
+            <div class="rcpwhat c3 text">deaths from corona (may 4th): 252</div>-->
+
+            <div class="rcp85 a1 text">26°</div>   
+            <div class="rcp85 a2 text">26°</div>
+            <div class="rcp85 a3 text">28°</div>
+
+            <div class="rcp85 c1 text">0</div>
+            <div class="rcp85 c2 text">38.646</div>
+            <div class="rcp85 c3 text">244.198</div>
+
+
+            <div class="rcp45 a1 text">25°</div>
+            <div class="rcp45 a2 text">26°</div>
+            <div class="rcp45 a3 text">26°</div>
+
+            <div class="rcp45 c1 text">0</div>
+            <div class="rcp45 c2 text">19.323</div>
+            <div class="rcp45 c3 text">25.705</div>
+
+
+            <div class="rcpwhat a1 text">corona (may 5th):</div>
+            <div class="rcpwhat a2 text"></div>
+            <div class="rcpwhat a3 text"></div>
+
+            <div class="rcpwhat c1 text">252</div>
+            <div class="rcpwhat c2 text"></div>
+            <div class="rcpwhat c3 text"></div>
+
+            <a class="fanicon faniconbls2" href="#top"></a>
+            <a class="prevpage text" href="#bls1">west</a>
+            <a class="nextpage text" href="#bls3">east</a>
+        </div>
+        <div class="bls3 country">
+            <a class="fanicon faniconbls3" href="#top"></a>
+            <a class="prevpage text" href="#bls2">west</a>
+            <a class="nextpage text" href="#bls4">east</a>
+        </div>
+    </div>
+
+
+            <!--   FIRST PAGE   -->
+            <div class="firstpagedescription draga">description of project</div>
+            <div class="faniconfirstablsabackground">
+                <a class="faniconfirstabls" href="#top"></a>
+                <a class="nextpage text" style="z-index: 99999999999;" href="#bls1">open</a>
+            </div>
+
+
+
+
+            <!--   SEOUL   -->
+            
+
+
+
+
+            <!--   FAN NAVIGATE   -->
+
+            
+
+
+            <!--   STUFF   -->
+
+
+    <a id="reykjavikperson" class="crystal1" href="#bls1">
+        <img class="raindroponfan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Brazil_%281960%E2%80%931968%29.svg/120px-Flag_of_Brazil_%281960%E2%80%931968%29.svg.png">
+    </a>
+    <a id="tryoutperson" class="crystal1">
+        <img class="raindroponfan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/96px-Flag_of_South_Korea.svg.png">
+    </a>
+    <div id="2010" class="FirstGen FirstGenStyle">2010</div>
+    <div id="2000" class="FirstGen FirstGenStyle">2000</div>
+    <div id="1990" class="FirstGen FirstGenStyle">1990</div>
+    <div id="1980" class="FirstGen FirstGenStyle">1980</div>
+    <div id="1970" class="FirstGen FirstGenStyle">1970</div>
+    <div id="1960" class="FirstGen FirstGenStyle">1960</div>
+    <div id="1950" class="FirstGen FirstGenStyle">1950</div>
+    <div id="1940" class="FirstGen FirstGenStyle">1940</div>
+
+
+
+    <a id="raindroponfanid" class="crystal1 raindroponfan" href="#bls1"></a>
+    <a id="raindroponfanid2" class="crystal1 raindroponfan" href="#bls1"></a>
+    
+
+
+    <div id="label" class="FirstGen">
+        <div class="close closeBachelors bachelorsfurther">close</div>
+        <div class="bachelors FirstGenStyle">0</div>
+    </div>
+            <div id="label14" class="bachelorsfurther">Graphic Design</div>
+            <div id="label15" class="bachelorsfurther">Photography</div>
+            <div id="label16" class="bachelorsfurther">Textile</div>
+            <div id="label17" class="bachelorsfurther">Fashion</div>
+            <div id="label18" class="bachelorsfurther">Fine Arts</div>
+            <div id="label19" class="bachelorsfurther">Interactive Media Design</div>
+            <div id="label20" class="bachelorsfurther">Interior Architecture & Furniture Design</div>
+
+    
+
+
+
+    <script type="text/javascript" src="scriptnew.js"></script>
+</body>
+</html>
