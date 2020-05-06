@@ -213,13 +213,6 @@
                             cube2raindrop.rotation.z=0.35*Math.PI;
                             scene.add (cube2raindrop);
 
-                            var cubeGeometry = new THREE.BoxGeometry (0.01,0.01,0.01);
-                            cubeGeometry.translate( 0, 7, 0 );
-                            var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
-                            cube2raindrop2 = new THREE.Mesh (cubeGeometry, cubeMaterial);
-                            cube2raindrop2.position.set (0, 0, 0);
-                            cube2raindrop2.rotation.z=0.35*Math.PI;
-                            scene.add (cube2raindrop2);
 
 
                 var cubeGeometry = new THREE.BoxGeometry (.01,9,.01);
@@ -237,6 +230,15 @@
                             cube3top.position.set (0, 0, 0);
                             cube3top.rotation.z=0.275*Math.PI;
                             scene.add (cube3top);
+
+
+                            var cubeGeometry = new THREE.BoxGeometry (0.01,0.01,0.01);
+                            cubeGeometry.translate( 0, 7, 0 );
+                            var cubeMaterial = new THREE.MeshLambertMaterial ({color: 0xFFFFFF});
+                            cube3raindrop2 = new THREE.Mesh (cubeGeometry, cubeMaterial);
+                            cube3raindrop2.position.set (0, 0, 0);
+                            cube3raindrop2.rotation.z=0.3*Math.PI;
+                            scene.add (cube3raindrop2);
 
 
                 var cubeGeometry = new THREE.BoxGeometry (.01,9,.01);
@@ -606,47 +608,47 @@
             var pos = getScreenTranslation(cube5a);
             console.log(pos);
             document.getElementById("reykjavikperson").style.left = pos.x - 20 + 200 +"px";
-            document.getElementById("reykjavikperson").style.top = pos.y - 20 + 400 +"px";
+            document.getElementById("reykjavikperson").style.top = pos.y - 20 + 200 +"px";
 
             var pos = getScreenTranslation(cube12010);
             console.log(pos);
             document.getElementById("2010").style.left = pos.x + 200 +"px";
-            document.getElementById("2010").style.top = pos.y + 400 +"px";
+            document.getElementById("2010").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube12000);
             console.log(pos);
             document.getElementById("2000").style.left = pos.x + 200 +"px";
-            document.getElementById("2000").style.top = pos.y + 400 +"px";
+            document.getElementById("2000").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11990);
             console.log(pos);
             document.getElementById("1990").style.left = pos.x + 200 +"px";
-            document.getElementById("1990").style.top = pos.y + 400 +"px";
+            document.getElementById("1990").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11980);
             console.log(pos);
             document.getElementById("1980").style.left = pos.x + 200 +"px";
-            document.getElementById("1980").style.top = pos.y + 400 +"px";
+            document.getElementById("1980").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11970);
             console.log(pos);
             document.getElementById("1970").style.left = pos.x + 200 +"px";
-            document.getElementById("1970").style.top = pos.y + 400 +"px";
+            document.getElementById("1970").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11960);
             console.log(pos);
             document.getElementById("1960").style.left = pos.x + 200 +"px";
-            document.getElementById("1960").style.top = pos.y + 400 +"px";
+            document.getElementById("1960").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11950);
             console.log(pos);
             document.getElementById("1950").style.left = pos.x + 200 +"px";
-            document.getElementById("1950").style.top = pos.y + 400 +"px";
+            document.getElementById("1950").style.top = pos.y + 200 +"px";
 
             var pos = getScreenTranslation(cube11940);
             console.log(pos);
             document.getElementById("1940").style.left = pos.x + 200 +"px";
-            document.getElementById("1940").style.top = pos.y + 400 +"px";
+            document.getElementById("1940").style.top = pos.y + 200 +"px";
 
 
 
@@ -654,12 +656,12 @@
             var pos = getScreenTranslation(cube2raindrop);
             console.log(pos);
             document.getElementById("raindroponfanid").style.left = pos.x - 10 + 200 +"px";
-            document.getElementById("raindroponfanid").style.top = pos.y - 10 + 400 +"px";
+            document.getElementById("raindroponfanid").style.top = pos.y - 10 + 200 +"px";
 
-            var pos = getScreenTranslation(cube2raindrop2);
+            var pos = getScreenTranslation(cube3raindrop2);
             console.log(pos);
             document.getElementById("raindroponfanid2").style.left = pos.x - 10 + 200 +"px";
-            document.getElementById("raindroponfanid2").style.top = pos.y - 10 + 400 +"px";
+            document.getElementById("raindroponfanid2").style.top = pos.y - 10 + 200 +"px";
 
 
 
@@ -668,7 +670,7 @@
             var pos = getScreenTranslation(cube1a);
             console.log(pos);
             document.getElementById("tryoutperson").style.left = pos.x - 25 + 200 +"px";
-            document.getElementById("tryoutperson").style.top = pos.y - 15 + 400 +"px";
+            document.getElementById("tryoutperson").style.top = pos.y - 15 + 200 +"px";
 
 
 
