@@ -33,7 +33,13 @@ canvas {
 }
 
 
-
+.brazil {position: absolute;}
+.brazilinni {
+    display: none;
+}
+.brazil:hover  .brazilinni {
+    display: inline;
+}
 
 
 
