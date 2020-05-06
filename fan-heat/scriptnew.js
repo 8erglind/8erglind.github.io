@@ -772,67 +772,37 @@ var $draggable = $('.draga').draggabilly();
 	});
 
 
-
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var object = document.getElementById('element'),
-initY, firstY;
-
-object.addEventListener('mousedown', function(e) {
-
-    e.preventDefault();
-    initY = this.offsetTop;
-    firstY = e.pageY;
-
-    this.addEventListener('mousemove', dragIt, false);
-
-    window.addEventListener('mouseup', function() {
-        object.removeEventListener('mousemove', dragIt, false);
-    }, false);
-
-}, false);
-
-object.addEventListener('touchstart', function(e) {
-
-    e.preventDefault();
-    initY = this.offsetTop;
-    var touch = e.touches;
-    firstY = touch[0].pageY;
-
-    this.addEventListener('touchmove', swipeIt, false);
-
-    window.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        object.removeEventListener('touchmove', swipeIt, false);
-    }, false);
-
-}, false);
-
-function dragIt(e) {
-    this.style.top = initY+e.pageY-firstY + 'px';
 }
 
-function swipeIt(e) {
-    var contact = e.touches;
-    this.style.top = initY+contact[0].pageY-firstY + 'px';
-}
 
-	
+
+
+
+
+
+
+
+$( function() {
+    $( ".draga2" ).draggable({ axis: "y" });
+ //   $( "#draggable2" ).draggable({ axis: "x" });
+ 
+ //   $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+ //   $( "#draggable4" ).draggable({ containment: "parent" });
+  } );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

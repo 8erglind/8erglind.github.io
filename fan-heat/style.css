@@ -4,7 +4,10 @@ div {
         -ms-user-select: none;
             user-select: none;
 }
-
+@font-face {
+    font-family: ortica;
+    src: url(Ortica/Ortica-Light.otf);
+}
 body {
     background-color: rgb(250,250,250);
     /*background-image: url("imgs/first page.jpg");*/
@@ -21,15 +24,12 @@ canvas {
     background-color: rgba(60,60,60,0);
 }
 .text {
-    font: 12px arial;
+    font: 12px ortica;
 }
 
 
-#element {
-    cursor: move;
-}
-#element2 {
-    cursor: move;
+.draga2 {
+    cursor: ns-resize;
 }
 
 
@@ -154,7 +154,7 @@ canvas {
     border: 1px solid black;
     border-radius: 0px;
 }
-.meter:after {
+/*.meter:after {
     content: '';
     position: absolute;
     top: 0px;
@@ -165,8 +165,8 @@ canvas {
     border-radius: 0px;
     background: linear-gradient(140deg, rgba(230,245,250,1), rgba(240,245,250,.7), rgba(255,255,255,0), rgba(255,255,255,0), rgba(40,45,50,.5));
     /*box-shadow: inset 0 0 3px lightblue;*/
-    pointer-events: none;
-}
+/*    pointer-events: none;
+}*/
 .rightright {right: 30px;}
 .right {right: calc(50px + ((10% - 80px) / 2))}
 .left {left: 30px;}
@@ -189,8 +189,8 @@ canvas {
     border: 1px solid rgba(0,0,0,0);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    /*background-color: rgb(70,70,70);*/
-    background-color: rgba(255,81,0,.8);
+    background-color: rgb(70,70,70);
+    /*background-color: rgba(255,81,0,.8);*/
 }
 /*.rightrightseoul {right: 30px; height: calc(((100vw - 145px) / .01417) * 0.0076); border-radius: 10px;}
 .rightseoul {right: calc(50px + ((10% - 80px) / 2)); height: calc(((100vw - 145px) / .01417) * 0.0008);}*/
@@ -246,16 +246,74 @@ canvas {
     z-index: 9;
 }
 
-.nextpage {
+.nextpage, .prevpage {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    text-transform: uppercase;
 }
-.prevpage {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+.nextpage {right: 20px;}
+.prevpage {left: 20px; /*cursor: url(https://tvguide1.cbsistatic.com/i/r/2018/01/16/33963887-9b95-460f-88d8-00df30549466/crop/1380x1380+345+0/thumbnail/128x128/e411d4a5c0751c1e49af073b8faaa4d3/kimkardashian-news.jpg), auto;*/}
+.nextpage:hover, .prevpage:hover {text-decoration: underline;}
+
+
+
+
+.nidur1 {
+    animation-name: example;
+    animation-duration: 10s;  
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+    transition-timing-function: ease-in-out;
 }
+@keyframes example {
+  0% {top: 100px;}
+  10% {width: 15px !important; margin-left: 5px !important; height: 40px !important;}
+  90% {width: 15px !important; margin-left: 5px !important; height: 40px !important;}
+  100% {top: calc(100% - 185px); width: auto !important; margin-left: auto !important; /*background-color: blue;*/}
+}
+.nidur2 {
+    animation-name: exampletwo;
+    animation-duration: 10s;  
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+
+    transition-timing-function: ease-in-out;
+}
+@keyframes exampletwo {
+  from {top: 30%;}
+  to {top: calc(100% - 185px); /*background-color: blue;*/}
+}
+
+
+.stringthing {
+    position: absolute; 
+    left: 0% !important;
+    width: 20px !important;
+    height: 20px; 
+    padding: 0px !important;
+    overflow: hidden;
+
+    transition: width 3s, height 3s, left 3s;
+}
+.stringthing:hover {
+    width: 20vw !important;
+    height: auto !important;
+    left: -10vw !important;
+}
+.jukbuinimg {
+    width: 100%; 
+    position: relative; 
+    left: 0% !important;  
+    top: 0% !important;
+    margin-left: 0% !important;
+    opacity: 1 !important;
+}
+.tropicalia {
+    position: relative !important;
+
+}
+
 
 
 
@@ -271,11 +329,19 @@ canvas {
     border: none  !important;
 
     left: 10%; top: 30%; width: 20px !important; height: 20px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     opacity: 1;
     border-radius: 10px;
+
+
+
+    transition: width 3s;    
 }
+.raindrop:hover {
+    width: auto !important;
+}
+
 .raindrop:after{
     content: '';
     position: absolute;
@@ -359,6 +425,9 @@ canvas {
 .L02 {left: 28%;}
 .L03 {left: 27%;}
 .L11 {left: 19%;}
+.L13 {left: 17%;}
+.L15 {left: 15%;}
+.L14 {left: 16%;}
 .L20 {left: 10%;}
 
 .cL15 {left: 15%;}
