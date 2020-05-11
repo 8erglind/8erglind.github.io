@@ -1,0 +1,98 @@
+div {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+@font-face {
+    font-family: airland;
+    src: url(GlyphWorld-AirLand.otf);
+}
+body {
+    background-color: rgb(250,250,250);
+}
+
+
+.text {font: 16px airland;}
+.italic {font-style: italic; font-size: 20px;}
+.pureitalic {font-style: italic;}
+
+.absolute {position: absolute;}
+.fixed {position: fixed;}
+
+
+.top {top: 20px;}
+.left {left: 20px;}
+.right {right: 20px; text-align: right;}
+
+.center {width: calc(50vw - 40px); text-align: center; left: calc(25vw + 20px);}
+
+.top20 {top: 20vh;}
+.top50 {top: 50vh;}
+.bottom {bottom: 20px;}
+
+
+
+
+.list {
+    display: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    background-color: black;
+    color: white;
+}
+.indexbutton {
+    z-index: 1;
+    background-color: rgb(250,250,250);
+}
+.indexbutton:hover .list {
+    display: inline;
+}
+.indexbutton:hover {
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+
+
+
+
+.docus {
+    top: 100vh;
+    width: 100vw;
+    left: 0vw;
+    height: auto;
+    /*background-color: red;*/
+}
+
+.docu {
+    position: relative;
+    top: 0%;
+    width: 100vw;
+    left: 0vw;
+    height: 100vh;
+}
+.docu1 {/*background-color: rgba(255,255,255,.7);*/}
+.docu2 {/*background-color: rgba(255,255,255,.2);*/}
+
+
+
+.video {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+}
+.video2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100vw - 40px);
+    height: 80vh;
+}
