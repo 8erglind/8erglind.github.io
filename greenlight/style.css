@@ -13,10 +13,38 @@ body {
     background-color: rgb(250,250,250);
 }
 
+html {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+  }
+
 
 .text {font: 16px airland;}
 .italic {font-style: italic; font-size: 20px;}
 .pureitalic {font-style: italic;}
+/*.green {color: rgb(0, 51, 0);}*/
+.front {z-index: 2 !important;}
+.front a {/*color: rgb(0, 51, 0);
+text-shadow: none;*/}
+.front a:hover {
+    /*color: white;
+    background-color: rgba(0, 51, 0,0);
+    font-style: italic;
+    text-shadow: 
+        0 1px 2px lightgreen,
+        0 -1px 2px lightgreen,
+        1px 0 2px lightgreen; 
+    color: rgb(250,250,250);*/
+}
+.title {font-size: 48px;}
+.greenshadow {
+    text-shadow: 
+        0 1px 2px lightgreen,
+        0 -1px 2px lightgreen,
+        1px 0 2px lightgreen; 
+    color: rgb(250,250,250);
+}
 
 .absolute {position: absolute;}
 .fixed {position: fixed;}
@@ -43,31 +71,51 @@ a {
     text-decoration: none;
 }
 a:hover {
-    background-color: black;
-    color: white;
+    /*background-color: black;
+    color: white;*/
+    font-style: italic;
+    font-size: 17px;
 }
 .indexbutton {
     z-index: 1;
-    background-color: rgb(250,250,250);
+    max-height: calc(100vh - 20px);
+    overflow: scroll;
 }
-.indexbutton:hover .list {
+.arrow2 {
+    display: none;
+}
+
+.indexbutton:hover .list, .indexbutton:hover .arrow2 {
     display: inline;
+}
+.indexbutton:hover .arrow1 {
+    display: none;
 }
 .indexbutton:hover {
     padding-right: 20px;
-    padding-top: 20px;
+
+    background-color: rgb(250,250,250);
 }
 
 
 
+.intro {
+    position: absolute;
+    top: 0vh;
+    width: 100vw;
+    left: 0vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgb(250,250,250);
 
-
+    scroll-snap-align: start;
+    -webkit-overflow-scrolling: touch;
+}
 .docus {
     top: 100vh;
     width: 100vw;
     left: 0vw;
     height: auto;
-    /*background-color: red;*/
 }
 
 .docu {
@@ -76,8 +124,11 @@ a:hover {
     width: 100vw;
     left: 0vw;
     height: 100vh;
+
+    scroll-snap-align: start;
+    -webkit-overflow-scrolling: touch;
 }
-.docu1 {/*background-color: rgba(255,255,255,.7);*/}
+.docu1 {}
 .docu2 {/*background-color: rgba(255,255,255,.2);*/}
 
 
