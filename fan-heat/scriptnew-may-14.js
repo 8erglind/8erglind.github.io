@@ -2266,9 +2266,12 @@ var $draggable = $('.draga').draggabilly();
 
 
 
+/*  change background pic  */
 
-
-
+//$(".writer").hover(function() {
+//        $(this).closest(".bls1").toggleClass("country-background-image");
+//        $(this).closest(".a1").toggleClass("white-text");
+//    });
 
 
 

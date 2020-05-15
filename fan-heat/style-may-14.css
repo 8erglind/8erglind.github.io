@@ -38,7 +38,7 @@ canvas {
     width: 10%;
     text-align: center;
     left: 45%;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     font-family: meadow;
     /*color: grey;*/
@@ -350,9 +350,14 @@ canvas {
 
 
 
-    transition: width 3s;    
+    transition: width 3s, height 3s, left 3s, top 3s;    
 }
-.raindrop:hover {width: auto !important;}
+.raindrop:hover {
+    width: calc(100vw - 20vh) !important; 
+    height: 80vh; 
+    left: 10vh; 
+    top: 10vh !important;   
+}
 
 .raindrop:after{
     content: '';
@@ -630,6 +635,16 @@ a {
 
 
 
+.country-background-image {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Paulo_Freire_%281963%29.tif/lossy-page1-440px-Paulo_Freire_%281963%29.tif.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.white-text {
+    color: white !important;
+}
 
 
 
