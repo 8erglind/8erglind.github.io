@@ -1,3 +1,8 @@
+
+
+
+
+
 /* THIS IS FOR THE TEXT TO SHOW MORE WHEN CLICKED ON */
             $(document).ready(function(){
                 $(".closeBachelors").click(function(){
@@ -26,6 +31,14 @@
 
 
 
+        /* ------------ */
+
+
+
+
+
+        // imagemaps are not responsive (because they are so old!), but this script makes them act as such
+    //    $('map').imageMapResize();
 
 
 
@@ -2277,24 +2290,25 @@ var $draggable = $('.draga').draggabilly();
 
 
 
+/*  scroll hijack  */
 
-(function() {
-    function scrollHorizontally(e) {
-        e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('mainparent').scrollLeft -= (delta*27); // Multiplied by 40
-        e.preventDefault();
-    }
-    if (document.getElementById('mainparent').addEventListener) {
-        // IE9, Chrome, Safari, Opera
-        document.getElementById('mainparent').addEventListener("mousewheel", scrollHorizontally, false);
-        // Firefox
-        document.getElementById('mainparent').addEventListener("DOMMouseScroll", scrollHorizontally, false);
-    } else {
-        // IE 6/7/8
-        document.getElementById('mainparent').attachEvent("onmousewheel", scrollHorizontally);
-    }
-})();
+//(function() {
+//    function scrollHorizontally(e) {
+//        e = window.event || e;
+//        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+//        document.getElementById('mainparent').scrollLeft -= (delta*27); // Multiplied by 40
+//        e.preventDefault();
+//    }
+//    if (document.getElementById('mainparent').addEventListener) {
+//        // IE9, Chrome, Safari, Opera
+//        document.getElementById('mainparent').addEventListener("mousewheel", scrollHorizontally, false);
+//        // Firefox
+//        document.getElementById('mainparent').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+//    } else {
+//        // IE 6/7/8
+//        document.getElementById('mainparent').attachEvent("onmousewheel", scrollHorizontally);
+//    }
+//})();
 
 
 

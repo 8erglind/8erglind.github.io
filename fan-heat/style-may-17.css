@@ -29,7 +29,7 @@ canvas {
 }
 .text {font: 12px ortica;}
 
-
+/*
 .mainparent {
     position: absolute;
     top: 0px;
@@ -38,18 +38,24 @@ canvas {
     width: 100vw;
     overflow-x: scroll;
 }
+*/
 .icon {
     height: 20px;
 }
 
 
 
+
+
+
+
+
 .countryname {
     position: absolute;
     top: 100px;
-    width: 10%;
+    width: 10vw;
     text-align: center;
-    left: 45%;
+    left: 45vw;
     font-size: 30px;
     text-transform: uppercase;
     font-family: meadow;
@@ -66,13 +72,140 @@ canvas {
 
 
 
+
+/*.wrapper-for-layoutoverlay  {
+/*    position: absolute;
+/*    top: 0vh;
+/*    left: 0vw;
+/*    width: 100%; 
+/*    height: 100vh !important;
+/*    overflow-x: scroll;
+/*    white-space: nowrap;
+/*    z-index: 99999;
+/*}
+/*.wrapper-for-layoutoverlay *  {display: inline-block;}
+/*
+/*.boxone, .boxtwo, .boxthree  {
+/*    top: 0px;
+/*    left: 0px;
+/*    background-color: yellow;
+/*    height: 100vh !important;
+/*    /* -x- extra 25px on left (half of the width of .image) to be visually centred */
+/*}
+/*.boxone {width: 200vw;}
+/*.boxtwo {width: 400vw;}
+/*.boxthree {width: 400vw;}
+/*
+/*.layoutoverlay  {
+/*    position: sticky;
+/*    position: -webkit-sticky;
+/*    width: 100vw;
+/*    
+/*    left: 0px;
+/*    height: 100vh;
+/*    /* -x- right margin = .image's width (50px), to stay hidden when scrolled + 2px (for Chrome)*/
+/*    /*background-color: dodgerblue;*/
+/*    z-index: 2;
+/*}*/
+
+.boxone, .boxtwo, .boxthree {
+    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
+    left: -1px;
+    /*width: calc(100vw + 2px);
+    width: 100vw;*/
+    height: 100vh;
+    border-left: 1px solid black;
+    overflow: scroll;
+}
+.boxone {width: 200vw;}
+.boxtwo {width: 500vw;}
+.boxthree {width: 200vw;}
+
+.layoutoverlay  {
+    position: absolute;
+    width: 100vw;
+    
+    left: 0px;
+    height: 100vh;
+    /* -x- right margin = .image's width (50px), to stay hidden when scrolled + 2px (for Chrome)*/
+    /*background-color: dodgerblue;*/
+    z-index: 2;
+}
+
+
+
+.main-overlay {
+    position: absolute;
+    top: 0vh;
+    /*left: -1px;
+    left: 100%;*/
+    left: calc(95vw * 2);
+    left: calc((95vw * 2) - ((5vw / 15) * 2));
+    height: 100vh;
+    /*width: 1500vw;
+    width: calc(95vw * 8);*/
+    width: calc((95vw * 8) + 8px);
+    width: calc((95vw * 7) + (100vw - ((5vw / 15) * 7)) + 8px);
+    display: flex;
+    align-items: flex-start;
+    /*border-top: solid 1px black;*/
+    z-index: 1;
+    pointer-events: none;
+}
+.fan-overlay {
+    position: absolute;
+    top: 0vh;
+    /*left: -1px;
+    left: 100%;
+    left: calc(95vw * 1);*/
+    left: calc(95vw - 2px - (5vw / 15));
+    height: 100vh;
+    /*width: 1500vw;
+    width: calc(95vw * 15);*/
+    width: calc((95vw * 15) + 20px);
+    display: flex;
+    align-items: flex-start;
+    /*border-top: solid 1px black;*/
+    z-index: 1;
+    pointer-events: none;
+
+
+}
+.layout-overlay {
+    position: -webkit-sticky;
+    position: sticky;
+    left: -1px;
+    /*width: calc(100vw + 2px);
+    width: 100vw;*/
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/*
+.layoutoverlay {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    pointer-events: none;
+}*/
+
+
 .main {
     position: absolute;
     top: 0vh;
-    /*left: -1px;*/
-    left: 100%;
+    /*left: -1px;
+    left: 100%;*/
+    left: calc(95vw - 2px);
     height: 100vh;
-    width: 1600vw;
+    /*width: 1500vw;*/
+    width: calc((95vw * 15) + 15px);
     display: flex;
     align-items: flex-start;
     /*border-top: solid 1px black;*/
@@ -82,17 +215,31 @@ canvas {
     position: -webkit-sticky;
     position: sticky;
     left: -1px;
-    width: calc(100vw + 2px);
-    width: 100vw;
+    /*width: calc(100vw + 2px);
+    width: 100vw;*/
+    width: calc(100vw - 5vw);
     height: 100vh;
     border-left: 1px solid black;
     overflow: scroll;
 }
 .country {background-color: rgba(250,250,250,1);}
-.notcountry {background-color: rgba(255,121,58,1);}
-.bls1 {}
-.bls2 {}
-.bls3 {}
+.notcountry {/*background-color: rgba(255,121,58,1);*/ background-color: rgb(245,245,245);}
+.bls1 {left: calc((5vw / 15 * 0) - 1px);}
+.bls2 {left: calc((5vw / 15 * 1) - 1px);}
+.bls3 {left: calc((5vw / 15 * 2) - 1px);}
+.bls4 {left: calc((5vw / 15 * 3) - 1px);}
+.bls5 {left: calc((5vw / 15 * 4) - 1px);}
+.bls6 {left: calc((5vw / 15 * 5) - 1px);}
+.bls7 {left: calc((5vw / 15 * 6) - 1px);}
+.bls8 {left: calc((5vw / 15 * 7) - 1px);}
+.bls9 {left: calc((5vw / 15 * 8) - 1px);}
+.bls10 {left: calc((5vw / 15 * 9) - 1px);}
+.bls11 {left: calc((5vw / 15 * 10) - 1px);}
+.bls12 {left: calc((5vw / 15 * 11) - 1px);}
+.bls13 {left: calc((5vw / 15 * 12) - 1px);}
+.bls14 {left: calc((5vw / 15 * 13) - 1px);}
+.bls15 {left: calc((5vw / 15 * 14) - 1px);}
+.bls16 {left: calc((5vw / 15 * 15) - 0px);}
 .background {
     z-index: 9;
     pointer-events: none;
@@ -102,10 +249,62 @@ canvas {
 }
 
 
+.coverpage {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 95vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.rightsidenav {
+    position: fixed;
+    top: 0vh;
+    height: 100vh;
+    width: calc(5vw / 15);
+    background-color: rgba(250,250,250,1);
+    border-left: 1px solid black;
+}
+.rightsidenav:hover, .leftsidenav:hover {
+    /*width: calc(5vw / 10);*/
+    background-color: rgb(70,70,70);
+}
+.leftsidenav {
+    position: absolute;
+    top: 0vh;
+    left: 0px;
+    height: 100vh;
+    width: calc(5vw / 15);
+}
+
+
+.bls1right {right: calc(5vw / 15 * 15);}
+.bls2right {right: calc(5vw / 15 * 14); background-color: rgb(245,245,245);}
+.bls3right {right: calc(5vw / 15 * 13);}
+.bls4right {right: calc(5vw / 15 * 12);}
+.bls5right {right: calc(5vw / 15 * 11);}
+.bls6right {right: calc(5vw / 15 * 10);}
+.bls7right {right: calc(5vw / 15 * 9);}
+.bls8right {right: calc(5vw / 15 * 8); cursor: url('imgs/cursors/sk2.png'), auto !important;}
+.bls9right {right: calc(5vw / 15 * 7);}
+.bls10right {right: calc(5vw / 15 * 6);}
+.bls11right {right: calc(5vw / 15 * 5);}
+.bls12right {right: calc(5vw / 15 * 4);}
+.bls13right {right: calc(5vw / 15 * 3); background-color: rgb(245,245,245);}
+.bls14right {right: calc(5vw / 15 * 2); background-color: rgb(245,245,245);}
+.bls15right {right: calc(5vw / 15 * 1); background-color: rgb(245,245,245);}
+.bls16right {right: calc(5vw / 15 * 0); background-color: rgb(245,245,245);}
 
 
 
-.verticalLine, .yearBottom, .yearTop, .tempLine85, .tempLine45, .tempLine3, .meter {
+
+
+
+
+
+.verticalLine, .yearBottom, .yearTop, .tempLine85-1, .tempLine85-2, .tempLine85-3, .tempLine45-1, .tempLine45-2, .tempLine45-3, .tempLine3-1, .tempLine3-2, .tempLine3-3, .meter {
     position: absolute;
     z-index: 9999;
 }
@@ -141,41 +340,56 @@ canvas {
 .yearTop {top: 40px;}
 
 
-.tempLine85, .tempLine45, .tempLine3 {
+.tempLine85-1, .tempLine85-2, .tempLine85-3, .tempLine45-1, .tempLine45-2, .tempLine45-3, .tempLine3-1, .tempLine3-2, .tempLine3-3 {
     height: 1px;
     background-color: black;
     left: 0%;  
 }
-.tempLine85 {bottom: 135px;}
-.tempLine45 {bottom: 105px;}
-.tempLine3 {bottom: 75px;}
+.tempLine85-1 {/*bottom: 135px;*/ bottom: 50vh;}
+.tempLine85-2 {bottom: 68vh;}
+.tempLine85-3 {bottom: 91vh;}
+.tempLine45-1 {/*bottom: 105px;*/ bottom: 39.3vh;}
+.tempLine45-2 {bottom: 39.5vh;}
+.tempLine45-3 {bottom: 18.6vh;}
+.tempLine3-1 {bottom: 39.3vh;}
+.tempLine3-2 {bottom: 75px;}
+.tempLine3-3 {bottom: 75px;}
 .one {left: calc(10% + 3px); right: calc(70% + 3px);}
 .two {left: calc(30% + 3px); right: calc(50% + 3px);}
 .three {left: calc(70% + 3px); right: calc(10% + 3px);}
 
-.rcp85, .rcp45, .rcpwhat {
+.rcp85-1, .rcp85-2, .rcp85-3, .rcp45-1, .rcp45-2, .rcp45-3, .rcpwhat-1, .rcpwhat-2, .rcpwhat-3 {
     position: absolute;
     text-align: center;
 }
-.rcp85 {bottom: 135px;}
-.rcp45 {bottom: 105px;}
-.rcpwhat {bottom: 75px;}
-.a1 {left: 10%; right: 80%;}
-.a2 {left: 30%; right: 60%;}
-.a3 {left: 70%; right: 20%;}
-.b1 {left: 15%; right: 75%;}
-.b2 {left: 35%; right: 55%;}
-.b3 {left: 75%; right: 15%;}
-.c1 {left: 20%; right: 70%;}
-.c2 {left: 40%; right: 50%;}
-.c3 {left: 80%; right: 10%;}
+.rcp85-1 {/*bottom: 135px;*/ bottom: 50vh;}
+.rcp85-2 {bottom: 68vh;}
+.rcp85-3 {bottom: 91vh;}
+.rcp45-1 {bottom: 39.3vh;}
+.rcp45-2 {bottom: 39.5vh;}
+.rcp45-3 {bottom: 18.6vh;}
+.rcpwhat-1 {bottom: 39.3vh;}
+.rcpwhat-2 {bottom: 75px;}
+.rcpwhat-3 {bottom: 75px;}
+.a1, .a2, .a3, .b1, .b2, .b3, .c1, .c2, .c3 {width: 10vw;}
+.a1 {left: 10vw; right: 80vw;}
+.a2 {left: 30vw; right: 60vw;}
+.a3 {left: 70vw; right: 20vw;}
+.b1 {left: 15vw; right: 75vw;}
+.b2 {left: 35vw; right: 55vw;}
+.b3 {left: 75vw; right: 15vw;}
+.c1 {left: 20vw; right: 70vw;}
+.c2 {left: 40vw; right: 50vw;}
+.c3 {left: 80vw; right: 10vw;}
 .red {color: red;}
 
 
 .meter {
     top: 70px;
     bottom: 75px;
-    width: calc((10vw - 80px) / 2);
+    /*width: calc((10vw - 80px) / 2);
+    width: calc((5vw - 60px) / 2);*/
+    width: calc(((10vw - ((5vw / 15) * 13)) - 70px) / 2);
     /*border: 1px solid lightgrey;*/
     border: 1px solid black;
     border-radius: 0px;
@@ -193,9 +407,9 @@ canvas {
     /*box-shadow: inset 0 0 3px lightblue;*/
 /*    pointer-events: none;
 }*/
-.rightright {right: 30px;}
-.right {right: calc(50px + ((10% - 80px) / 2))}
-.left {left: 30px;}
+.rightright {/*right: calc(5vw + 20px);*/ left: calc(90vw + 40px + (((10vw - ((5vw / 15) * 13)) - 70px) / 2));}
+.right {/*right: calc(5vw + 31px + (((5vw - 50px) / 2)));*/ left: calc(90vw + 30px);}
+.left {/*left: 30px;*/ left: calc(10vw - 30px - (((10vw - ((5vw / 15) * 13)) - 70px) / 2) - 2px);}
 
 
 
@@ -203,15 +417,18 @@ canvas {
 .lifeline {
     position: absolute;
     height: 1px;
-    background-color: black;
-    left: 10%;
+    /*background-color: black;*/
+    background-color: purple;
+    left: 10vw;
     top: 70px;
+    
 }
 
 .metercountry {
     position: absolute;
     bottom: 75px;
-    width: calc((10vw - 80px) / 2);
+    /*width: calc((10vw - 80px) / 2);*/
+    width: calc(((10vw - ((5vw / 15) * 13)) - 70px) / 2);
     border: 1px solid rgba(0,0,0,0);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -220,15 +437,15 @@ canvas {
 }
 /*.rightrightseoul {right: 30px; height: calc(((100vw - 145px) / .01417) * 0.0076); border-radius: 10px;}
 .rightseoul {right: calc(50px + ((10% - 80px) / 2)); height: calc(((100vw - 145px) / .01417) * 0.0008);}*/
-.rightrightseoul {right: 30px; height: calc(((100vw - 145px) / 365) * 19);}
-.rightseoul {right: calc(50px + ((10% - 80px) / 2)); height: calc(((100vw - 145px) / 365) * 2);}
-.leftseoul {left: 30px; height: calc(((100vw - 145px) / 365) * 0); display: none;}
+.rightrightseoul {height: calc(((100vw - 145px) / 365) * 19);}
+.rightseoul {height: calc(((100vw - 145px) / 365) * 2);}
+.leftseoul {height: calc(((100vw - 145px) / 365) * 0); display: none;}
 
 
 
-.rightrightbrazil {right: 30px; height: calc(((100vw - 145px) / 365) * 98);}
-.rightbrazil {right: calc(50px + ((10% - 80px) / 2)); height: calc(((100vw - 145px) / 365) * 41);}
-.leftbrazil {left: 30px; height: calc(((100vw - 145px) / 365) * 23);}
+.rightrightbrazil {height: calc(((100vw - 145px) / 365) * 98);}
+.rightbrazil {height: calc(((100vw - 145px) / 365) * 41);}
+.leftbrazil {height: calc(((100vw - 145px) / 365) * 23);}
 
 
 
@@ -245,7 +462,7 @@ canvas {
     background-position: bottom;
     background-repeat: no-repeat;
 }
-.fanicon, .faniconfirstabls {
+.fanicon {
     position: absolute;
     bottom: 75px;
     left: calc(50vw + 3px); 
@@ -256,19 +473,32 @@ canvas {
     background-position: bottom;
     background-repeat: no-repeat;
 }
-.faniconbls1 {background-image: url('imgs/fanline.png');}
-.faniconbls2 {background-image: url('imgs/fanbls2.png');}
-.faniconbls3 {background-image: url('imgs/fanbls3.png');}
+.faniconbls1 {background-image: url('imgs/blsfan/1.png'); left: calc(50vw + 1px);}
+.faniconbls2 {background-image: url('imgs/blsfan/2.png'); left: calc(50vw + 1px - (5vw / 15 * 1));}
+.faniconbls3 {background-image: url('imgs/blsfan/3.png'); left: calc(50vw + 1px - (5vw / 15 * 2));}
+.faniconbls4 {background-image: url('imgs/blsfan/4.png'); left: calc(50vw + 1px - (5vw / 15 * 3));}
+.faniconbls5 {background-image: url('imgs/blsfan/5.png'); left: calc(50vw + 1px - (5vw / 15 * 4));}
+.faniconbls6 {background-image: url('imgs/blsfan/6.png'); left: calc(50vw + 1px - (5vw / 15 * 5));}
+.faniconbls7 {background-image: url('imgs/blsfan/7.png'); left: calc(50vw + 1px - (5vw / 15 * 6));}
+.faniconbls8 {background-image: url('imgs/blsfan/8.png'); left: calc(50vw + 1px - (5vw / 15 * 7));}
+.faniconbls9 {background-image: url('imgs/blsfan/9.png'); left: calc(50vw + 1px - (5vw / 15 * 8));}
+.faniconbls10 {background-image: url('imgs/blsfan/10.png'); left: calc(50vw + 1px - (5vw / 15 * 9));}
+.faniconbls11 {background-image: url('imgs/blsfan/11.png'); left: calc(50vw + 1px - (5vw / 15 * 10));}
+.faniconbls12 {background-image: url('imgs/blsfan/12.png'); left: calc(50vw + 1px - (5vw / 15 * 11));}
+.faniconbls13 {background-image: url('imgs/blsfan/13.png'); left: calc(50vw + 1px - (5vw / 15 * 12));}
+.faniconbls14 {background-image: url('imgs/blsfan/14.png'); left: calc(50vw + 1px - (5vw / 15 * 13));}
+.faniconbls15 {background-image: url('imgs/blsfan/15.png'); left: calc(50vw + 1px - (5vw / 15 * 14));}
+.faniconbls16 {background-image: url('imgs/blsfan/16.png'); left: calc(50vw + 1px - (5vw / 15 * 15));}
 .fanicon:hover {background-image: url('imgs/fanall.png');}
 .faniconfirstablsabackground {
     position: absolute;
     top: 0%;
-    left: 100%;
+    left: 0%;
     width: 100%;
     height: 100%;
 }
 .faniconfirstabls {
-    background-image: url('imgs/fanall.png');
+    background-image: /*url('imgs/fanall.png')*/ url('imgs/blsfan/2.png') ;
     z-index: 9;
 }
 
@@ -280,6 +510,25 @@ canvas {
 .nextpage {right: 20px;}
 .prevpage {left: 20px; /*cursor: url(https://tvguide1.cbsistatic.com/i/r/2018/01/16/33963887-9b95-460f-88d8-00df30549466/crop/1380x1380+345+0/thumbnail/128x128/e411d4a5c0751c1e49af073b8faaa4d3/kimkardashian-news.jpg), auto;*/}
 .nextpage:hover, .prevpage:hover {text-decoration: underline;}
+
+
+
+.bls2marginleft {margin-left: calc(0vw - (5vw / 15 * 1) - 1px);}
+.bls3marginleft {margin-left: calc(0vw - (5vw / 15 * 2) - 1px);}
+.bls4marginleft {margin-left: calc(0vw - (5vw / 15 * 3) - 1px);}
+.bls5marginleft {margin-left: calc(0vw - (5vw / 15 * 4) - 1px);}
+.bls6marginleft {margin-left: calc(0vw - (5vw / 15 * 5) - 1px);}
+.bls7marginleft {margin-left: calc(0vw - (5vw / 15 * 6) - 1px);}
+.bls8marginleft {margin-left: calc(0vw - (5vw / 15 * 7) - 1px);}
+.bls9marginleft {margin-left: calc(0vw - (5vw / 15 * 8) - 1px);}
+.bls10marginleft {margin-left: calc(0vw - (5vw / 15 * 9) - 1px);}
+.bls11marginleft {margin-left: calc(0vw - (5vw / 15 * 10) - 1px);}
+.bls12marginleft {margin-left: calc(0vw - (5vw / 15 * 11) - 1px);}
+.bls13marginleft {margin-left: calc(0vw - (5vw / 15 * 12) - 1px);}
+.bls14marginleft {margin-left: calc(0vw - (5vw / 15 * 13) - 1px);}
+.bls15marginleft {margin-left: calc(0vw - (5vw / 15 * 14) - 1px);}
+.bls16marginleft {margin-left: calc(0vw - (5vw / 15 * 15) - 1px);}
+
 
 
 
@@ -619,6 +868,33 @@ a {
 }
 
 
+
+.bubbi {
+    position: absolute; 
+    left: 0px; 
+    width: 100%; 
+    top: 0px;
+    opacity: .7;
+}
+.bubbatexti {
+    position: absolute;
+    /*display: none;*/
+    color: purple;
+
+}
+
+.bubbi:hover {
+    opacity: 1;
+}
+.bubbi:hover > .bubbatexti {
+    display: inline;
+}
+
+
+
+
+
+
 .firstpagedescription {
     position: absolute;
     width: 400px;
@@ -627,15 +903,27 @@ a {
     cursor: pointer;
 
     top: 40%;
-    left: 150%;
+    left: 50%;
 
-    text-align: center;
+    text-align: left;
     font: 12px arial;
 }
 .firstpageabackground {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    width: calc(100vw + 1px);
+    height: 100vh;
+    background-color: rgb(70,70,70);
+    /*background-color: rgba(255,81,0,.8);
+    background-color: rgba(255,121,58,1);*/
+    background-color: rgb(245,245,245);
+    z-index: -1;
+}
+.firstpagebbackground {
     position: absolute;
     top: 0vh;
-    left: 100vw;
+    left: 95vw;
     width: calc(100vw + 1px);
     height: 100vh;
     background-color: rgb(70,70,70);
