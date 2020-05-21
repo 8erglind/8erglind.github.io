@@ -489,7 +489,7 @@ canvas {
 .faniconbls14 {background-image: url('imgs/blsfan/14.png'); left: calc(50vw + 1px - (5vw / 15 * 13));}
 .faniconbls15 {background-image: url('imgs/blsfan/15.png'); left: calc(50vw + 1px - (5vw / 15 * 14));}
 .faniconbls16 {background-image: url('imgs/blsfan/16.png'); left: calc(50vw + 1px - (5vw / 15 * 15));}
-.fanicon:hover {background-image: url('imgs/fanall.png');}
+.fanicon:hover {/*background-image: url('imgs/fanall.png');*/ background-image: none;}
 .faniconfirstablsabackground {
     position: absolute;
     top: 0%;
