@@ -614,10 +614,10 @@ canvas {
     transition: width 3s, height 3s, left 3s, top 3s;    
 }
 .raindrop:hover {
-    width: calc(100vw - 20vh) !important; 
+    /*width: calc(100vw - 20vh) !important; 
     height: 80vh; 
     left: 10vh; 
-    top: 10vh !important;   
+    top: 10vh !important;*/   
 }
 
 .raindrop:after{
