@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>FAN</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+    <!-- <script src="GLTFLoader.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dragabilly.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style-may-29.css">
+
+</head>
+<body>
+
+
+<a name="bls1" style="position: absolute;top: 0vw;left: 0%; width: 95vw;"></a>
+<a name="bls2" style="position: absolute;top: 0vw;left: calc((95vw * 1) - (((5vw / 15) * 1) - 1px)); width: 95vw;"></a>
+<a name="bls3" style="position: absolute;top: 0vw;left: calc((95vw * 2) - (((5vw / 15) * 2) - 2px)); width: 95vw;"></a>
+<a name="bls4" style="position: absolute;top: 0vw;left: calc((95vw * 3) - (((5vw / 15) * 3) - 3px)); width: 95vw;"></a>
+<a name="bls5" style="position: absolute;top: 0vw;left: calc((95vw * 4) - (((5vw / 15) * 4) - 4px)); width: 95vw;"></a>
+<a name="bls6" style="position: absolute;top: 0vw;left: calc((95vw * 5) - (((5vw / 15) * 5) - 5px)); width: 95vw;"></a>
+<a name="bls7" style="position: absolute;top: 0vw;left: calc((95vw * 6) - (((5vw / 15) * 6) - 6px)); width: 95vw;"></a>
+<a name="bls8" style="position: absolute;top: 0vw;left: calc((95vw * 7) - (((5vw / 15) * 7) - 7px)); width: 95vw;"></a>
+<a name="bls9" style="position: absolute;top: 0vw;left: calc((95vw * 8) - (((5vw / 15) * 8) - 8px)); width: 95vw;"></a>
+<a name="bls10" style="position: absolute;top: 0vw;left: calc((95vw * 9) - (((5vw / 15) * 9) - 9px)); width: 95vw;"></a>
+<a name="bls11" style="position: absolute;top: 0vw;left: calc((95vw * 10) - (((5vw / 15) * 10) - 10px)); width: 95vw;"></a>
+<a name="bls12" style="position: absolute;top: 0vw;left: calc((95vw * 11) - (((5vw / 15) * 11) - 11px)); width: 95vw;"></>
+<a name="bls13" style="position: absolute;top: 0vw;left: calc((95vw * 12) - (((5vw / 15) * 12) - 12px)); width: 95vw;"></a>
+<a name="bls14" style="position: absolute;top: 0vw;left: calc((95vw * 13) - (((5vw / 15) * 13) - 13px)); width: 95vw;"></a>
+<a name="bls15" style="position: absolute;top: 0vw;left: calc((95vw * 14) - (((5vw / 15) * 14) - 14px)); width: 95vw;"></a>
+<a name="bls16" style="position: absolute;top: 0vw;left: calc((95vw * 15) - (((5vw / 15) * 15) - 15px)); width: 95vw;"></a>
+
+
+
+<!--<img style="position: fixed; top: 0px; left: -1.6vw; width: 100vw; height: 100vh; opacity: .5; z-index: 999999999999; pointer-events: none;" src="imgs/rcp-scenario-lines.png">-->
+
+
+<!--<a id="reykjavikperson" class="crystal1" href="#bls1">
+        <img class="raindroponfan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Brazil_%281960%E2%80%931968%29.svg/120px-Flag_of_Brazil_%281960%E2%80%931968%29.svg.png">
+    </a>-->
+
+    <a id="brazilflag" class="crystal1 raindroponfan" href="#bls1">
+        <!--<img class="raindroponfan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Brazil_%281960%E2%80%931968%29.svg/120px-Flag_of_Brazil_%281960%E2%80%931968%29.svg.png">-->
+    </a>
+    <a id="3flag" class="crystal1 raindroponfan" href="#bls3">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="4flag" class="crystal1 raindroponfan" href="#bls4">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="norwayflag" class="crystal1 raindroponfan" href="#bls2">
+        <!--<img class="raindroponfan" src="http://aux.iconspalace.com/uploads/1811499246.png">-->
+    </a>
+    <a id="6flag" class="crystal1 raindroponfan" href="#bls6">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="7flag" class="crystal1 raindroponfan" href="#bls7">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="8flag" class="crystal1 raindroponfan" href="#bls8">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="9flag" class="crystal1 raindroponfan" href="#bls9">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="10flag" class="crystal1 raindroponfan" href="#bls10">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="11flag" class="crystal1 raindroponfan" href="#bls11">
+        <!--<img class="raindroponfan" src="">-->
+    </a>
+    <a id="skflag" class="crystal1" href="#bls3">
+        <!--<img class="raindroponfan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/96px-Flag_of_South_Korea.svg.png">-->
+    </a>
+
+    <div id="2010" class="FirstGen FirstGenStyle">2010</div>
+    <div id="2000" class="FirstGen FirstGenStyle">2000</div>
+    <div id="1990" class="FirstGen FirstGenStyle">1990</div>
+    <div id="1980" class="FirstGen FirstGenStyle">1980</div>
+    <div id="1970" class="FirstGen FirstGenStyle">1970</div>
+    <div id="1960" class="FirstGen FirstGenStyle">1960</div>
+    <div id="1950" class="FirstGen FirstGenStyle">1950</div>
+    <div id="1940" class="FirstGen FirstGenStyle">1940</div>
+
+
+
+    <a id="raindroponfanid" class="crystal1 raindroponfan" href="#bls1"></a>
+    <a id="raindroponfan2id" class="crystal1 raindroponfan" href="#bls1"></a>
+    <a id="raindroponfanid2" class="crystal1 raindroponfan" href="#bls2"></a>
+
+
+
+
+
+    <a href="#bls1" class="leftsidenav" style="position: fixed;"></a>
+    <!--<div class="firstpageabackground">-->
+    <div class="coverpage">
+        <div class="countryname text" style="position: fixed;">HEAT</div>
+        <a class="nextpage text" href="#bls2">open &rarr;</a>
+    </div>
+    </div>    
+    <div id="mainparent" class="mainparent">
+        <div id="main" class="main">
+            <a href="#bls2" class="rightsidenav bls2right"></a>
+            <div class="bls2 notcountry">
+                <a href="#bls2" class="leftsidenav"></a>
+                <div class="countryname text bls2marginleft">On extreme heat</div>
+
+                <div class="firstpagedescription draga bls2marginleft">
+                    on extreme heat as it realates to the human’s<br>
+                    - body<br>
+                    - mortality (+suicide), public health (nr 1 weather related killer in US)<br>
+                    - quality of life / mobility / sports<br>
+                    - education and work (ca 1% less productivity with each excess 1°)<br>
+                    - social equality (inner city, senior citizens more affected)
+                </div>
+
+
+                <a class="fanicon faniconbls2" href="#bls1"></a>
+                <a class="prevpage text" href="#bls1">&larr; close</a>
+                <a class="nextpage text" href="#bls3">next &rarr;</a>
+            </div>
+            <a href="#bls3" class="rightsidenav bls3right"></a>
+            <div class="bls3 notcountry">
+                <a href="#bls3" class="leftsidenav"></a>
+                <div class="countryname text bls3marginleft">Layout introduction</div>
+
+
+
+                <div class="bls3marginleft yearbox">
+                    <div class="yearline y2020"></div>
+                    <div class="yearline y2019"></div>
+                    <div class="yearline y2018"></div>
+                    <div class="yearline y2017"></div>
+                    <div class="yearline y2016"></div>
+                    <div class="yearline y2015"></div>
+                    <div class="yearline y2014"></div>
+                    <div class="yearline y2013"></div>
+                    <div class="yearline y2012"></div>
+                    <div class="yearline y2011"></div>
+                    <div class="yearline y2010"></div>
+                    <div class="yearline y2009"></div>
+                    <div class="yearline y2008"></div>
+                    <div class="yearline y2007"></div>
+                    <div class="yearline y2006"></div>
+                    <div class="yearline y2005"></div>
+                    <div class="yearline y2004"></div>
+                    <div class="yearline y2003"></div>
+                    <div class="yearline y2002"></div>
+                    <div class="yearline y2001"></div>
+                    <div class="yearline y2000"></div>
+                    <div class="yearline y1999"></div>
+                    <div class="yearline y1998"></div>
+                    <div class="yearline y1997"></div>
+                    <div class="yearline y1996"></div>
+                    <div class="yearline y1995"></div>
+                    <div class="yearline y1994"></div>
+                    <div class="yearline y1993"></div>
+                    <div class="yearline y1992"></div>
+                    <div class="yearline y1991"></div>
+                    <div class="yearline y1990"></div>
+                    <div class="yearline y1989"></div>
+                    <div class="yearline y1988"></div>
+                    <div class="yearline y1987"></div>
+                    <div class="yearline y1986"></div>
+                    <div class="yearline y1985"></div>
+                    <div class="yearline y1984"></div>
+                    <div class="yearline y1983"></div>
+                    <div class="yearline y1982"></div>
+                    <div class="yearline y1981"></div>
+                    <div class="yearline y1980"></div>
+                    <div class="yearline y1979"></div>
+                    <div class="yearline y1978"></div>
+                    <div class="yearline y1977"></div>
+                    <div class="yearline y1976"></div>
+                    <div class="yearline y1975"></div>
+                    <div class="yearline y1974"></div>
+                    <div class="yearline y1973"></div>
+                    <div class="yearline y1972"></div>
+                    <div class="yearline y1971"></div>
+                    <div class="yearline y1970"></div>
+                    <div class="yearline y1969"></div>
+                    <div class="yearline y1968"></div>
+                    <div class="yearline y1967"></div>
+                    <div class="yearline y1966"></div>
+                    <div class="yearline y1965"></div>
+                    <div class="yearline y1964"></div>
+                    <div class="yearline y1963"></div>
+                    <div class="yearline y1962"></div>
+                    <div class="yearline y1961"></div>
+                    <div class="yearline y1960"></div>
+                    <div class="yearline y1959"></div>
+                    <div class="yearline y1958"></div>
+                    <div class="yearline y1957"></div>
+                    <div class="yearline y1956"></div>
+                    <div class="yearline y1955"></div>
+                    <div class="yearline y1954"></div>
+                    <div class="yearline y1953"></div>
+                    <div class="yearline y1952"></div>
+                    <div class="yearline y1951"></div>
+                    <div class="yearline y1950"></div>
+                    <div class="yearline y1949"></div>
+                    <div class="yearline y1948"></div>
+                    <div class="yearline y1947"></div>
+                    <div class="yearline y1946"></div>
+                    <div class="yearline y1945"></div>
+                    <div class="yearline y1944"></div>
+                    <div class="yearline y1943"></div>
+                    <div class="yearline y1942"></div>
+                    <div class="yearline y1941"></div>
+                    <div class="yearline y1940"></div>
+                </div>
+
+
+   
+                <div class="rcp85-2 a2 text bls3marginleft">°C (RCP 8.5)</div>
+                <div class="rcp85-3 a3 text bls3marginleft">°C (RCP 8.5)</div>
+
+                <div class="rcp85-2 c2 text bls3marginleft">&#10013; RCP 8.5)</div>
+                <div class="rcp85-3 c3 text bls3marginleft">&#10013; (RCP 8.5)</div>
+
+
+                <div class="rcp45-1 a1 text bls3marginleft">°C av. summer temp.</div>
+                <div class="rcp45-2 a2 text bls3marginleft">°C (RCP 4.5)</div>
+                <div class="rcp45-3 a3 text bls3marginleft">°C (RCP 4.5)</div>
+
+                <div class="rcp45-1 c1 text bls3marginleft">&#10013; by extreme heat</div>
+                <div class="rcp45-2 c2 text bls3marginleft">&#10013; (RCP 4.5)</div>
+                <div class="rcp45-3 c3 text bls3marginleft">&#10013; (RCP 4.5)</div>
+
+
+                <div class="rcpwhat-1 a1 text bls3marginleft"><!--corona (may 5th):--></div>
+                <div class="rcpwhat-2 a2 text bls3marginleft">°C (net-zero by 2050)</div>
+                <div class="rcpwhat-3 a3 text bls3marginleft">°C (net-zero by 2050)</div>
+
+                <div class="rcpwhat-1 c1 text bls3marginleft"><!--7.321--></div>
+                <div class="rcpwhat-2 c2 text bls3marginleft">&#10013; (net-zero by 2050)</div>
+                <div class="rcpwhat-3 c3 text bls3marginleft">&#10013; (net-zero by 2050)</div> 
+
+
+                <a class="fanicon faniconbls3" href="#bls1"></a>
+                <a class="prevpage text" href="#bls2">&larr; prev</a>
+                <a class="nextpage text" href="#bls4">next &rarr;</a>
+            </div>
+            <a href="#bls4" class="rightsidenav bls4right"></a>
+            <div class="bls4 country">
+                <a href="#bls4" class="leftsidenav"></a>
+                <div class="countryname text bls4marginleft">U.S.A.</div>
+                <!--<div class="lifeline R94 bls4marginleft"></div>-->
+
+
+                <svg class="bls4marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 71 899.5 71 599.5 36 299.5 36 299.5 24 -0.5 24 -0.5 0"/>
+                </svg>
+
+
+                <div class="bls4marginleft yearbox">
+                    <div class="yearline y2020"></div>
+                    <div class="yearline y2019"></div>
+                    <div class="yearline y2018"></div>
+                    <div class="yearline y2017"></div>
+                    <div class="yearline y2016"></div>
+                    <div class="yearline y2015"></div>
+                    <div class="yearline y2014"></div>
+                    <div class="yearline y2013"></div>
+                    <div class="yearline y2012"></div>
+                    <div class="yearline y2011"></div>
+                    <div class="yearline y2010"></div>
+                    <div class="yearline y2009"></div>
+                    <div class="yearline y2008"></div>
+                    <div class="yearline y2007"></div>
+                    <div class="yearline y2006"></div>
+                    <div class="yearline y2005"></div>
+                    <div class="yearline y2004"></div>
+                    <div class="yearline y2003"></div>
+                    <div class="yearline y2002"></div>
+                    <div class="yearline y2001"></div>
+                    <div class="yearline y2000"></div>
+                    <div class="yearline y1999"></div>
+                    <div class="yearline y1998"></div>
+                    <div class="yearline y1997"></div>
+                    <div class="yearline y1996"></div>
+                    <div class="yearline y1995"></div>
+                    <div class="yearline y1994"></div>
+                    <div class="yearline y1993"></div>
+                    <div class="yearline y1992"></div>
+                    <div class="yearline y1991"></div>
+                    <div class="yearline y1990"></div>
+                    <div class="yearline y1989"></div>
+                    <div class="yearline y1988"></div>
+                    <div class="yearline y1987"></div>
+                    <div class="yearline y1986"></div>
+                    <div class="yearline y1985"></div>
+                    <div class="yearline y1984"></div>
+                    <div class="yearline y1983"></div>
+                    <div class="yearline y1982"></div>
+                    <div class="yearline y1981"></div>
+                    <div class="yearline y1980"></div>
+                    <div class="yearline y1979"></div>
+                    <div class="yearline y1978"></div>
+                    <div class="yearline y1977"></div>
+                    <div class="yearline y1976"></div>
+                    <div class="yearline y1975"></div>
+                    <div class="yearline y1974"></div>
+                    <div class="yearline y1973"></div>
+                    <div class="yearline y1972"></div>
+                    <div class="yearline y1971"></div>
+                    <div class="yearline y1970"></div>
+                    <div class="yearline y1969"></div>
+                    <div class="yearline y1968"></div>
+                    <div class="yearline y1967"></div>
+                    <div class="yearline y1966"></div>
+                    <div class="yearline y1965"></div>
+                    <div class="yearline y1964"></div>
+                    <div class="yearline y1963"></div>
+                    <div class="yearline y1962"></div>
+                    <div class="yearline y1961"></div>
+                    <div class="yearline y1960"></div>
+                    <div class="yearline y1959"></div>
+                    <div class="yearline y1958"></div>
+                    <div class="yearline y1957"></div>
+                    <div class="yearline y1956"></div>
+                    <div class="yearline y1955"></div>
+                    <div class="yearline y1954"></div>
+                    <div class="yearline y1953"></div>
+                    <div class="yearline y1952"></div>
+                    <div class="yearline y1951"></div>
+                    <div class="yearline y1950"></div>
+                    <div class="yearline y1949"></div>
+                    <div class="yearline y1948"></div>
+                    <div class="yearline y1947"></div>
+                    <div class="yearline y1946"></div>
+                    <div class="yearline y1945"></div>
+                    <div class="yearline y1944"></div>
+                    <div class="yearline y1943"></div>
+                    <div class="yearline y1942"></div>
+                    <div class="yearline y1941"></div>
+                    <div class="yearline y1940"></div>
+                </div>
+
+
+                <div class="bls4marginleft newMeter newMeterFirst newMeter85First-USA"></div>
+                <div class="bls4marginleft newMeter newMeterMiddle newMeter85Middle-USA"></div>
+                <div class="bls4marginleft newMeter newMeterLast newMeter85Last-USA"></div>
+                <div class="bls4marginleft newMeter newMeterExtra newMeter85Extra-USA"></div>
+                <div class="bls4marginleft newMeter newMeterExtra newMeter85Extratop-USA"></div>
+
+                <div class="bls4marginleft newMeter newMeterFirst newMeter45First-USA"></div>
+                <div class="bls4marginleft newMeter newMeterMiddle newMeter45Middle-USA"></div>
+                <div class="bls4marginleft newMeter newMeterLast newMeter45Last-USA"></div>
+                <div class="bls4marginleft newMeter newMeterExtra newMeter45Extra-USA"></div>
+                <div class="bls4marginleft newMeter newMeterExtra newMeter45Extratop-USA"></div>
+
+
+                <a class="fanicon faniconbls4" href="#bls1"></a>
+                <a class="prevpage text" href="#bls3">&larr; prev</a>
+                <a class="nextpage text" href="#bls5">east &rarr;</a>
+            </div>
+            <a href="#bls5" class="rightsidenav bls5right"></a>
+            <div class="bls5 country">
+                <a href="#bls5" class="leftsidenav"></a>
+
+                <div class="countryname bls5marginleft text" style="">Brazil</div>
+
+
+                <div class="bls8marginleft rcp85-button text">
+                    <div style="position: absolute; width: 100%; text-align: center; top: calc(50% - 8px);">+ 5-6°C</div>
+                </div>
+                <div class="bls8marginleft nz-button text">
+                    <div style="position: absolute; width: 100%; text-align: center; top: calc(50% - 8px);">+ 1,5°C</div>
+                </div>
+
+
+                <div class="bls5marginleft yearbox">
+                    <div class="yearline y2020"></div>
+                    <div class="yearline y2019"></div>
+                    <div class="yearline y2018"></div>
+                    <div class="yearline y2017"></div>
+                    <div class="yearline y2016"></div>
+                    <div class="yearline y2015"></div>
+                    <div class="yearline y2014"></div>
+                    <div class="yearline y2013"></div>
+                    <div class="yearline y2012"></div>
+                    <div class="yearline y2011"></div>
+                    <div class="yearline y2010"></div>
+                    <div class="yearline y2009"></div>
+                    <div class="yearline y2008"></div>
+                    <div class="yearline y2007"></div>
+                    <div class="yearline y2006"></div>
+                    <div class="yearline y2005"></div>
+                    <div class="yearline y2004"></div>
+                    <div class="yearline y2003"></div>
+                    <div class="yearline y2002"></div>
+                    <div class="yearline y2001"></div>
+                    <div class="yearline y2000"></div>
+                    <div class="yearline y1999"></div>
+                    <div class="yearline y1998"></div>
+                    <div class="yearline y1997"></div>
+                    <div class="yearline y1996"></div>
+                    <div class="yearline y1995"></div>
+                    <div class="yearline y1994"></div>
+                    <div class="yearline y1993"></div>
+                    <div class="yearline y1992"></div>
+                    <div class="yearline y1991"></div>
+                    <div class="yearline y1990"></div>
+                    <div class="yearline y1989"></div>
+                    <div class="yearline y1988"></div>
+                    <div class="yearline y1987"></div>
+                    <div class="yearline y1986"></div>
+                    <div class="yearline y1985"></div>
+                    <div class="yearline y1984"></div>
+                    <div class="yearline y1983"></div>
+                    <div class="yearline y1982"></div>
+                    <div class="yearline y1981"></div>
+                    <div class="yearline y1980"></div>
+                    <div class="yearline y1979"></div>
+                    <div class="yearline y1978"></div>
+                    <div class="yearline y1977"></div>
+                    <div class="yearline y1976"></div>
+                    <div class="yearline y1975"></div>
+                    <div class="yearline y1974"></div>
+                    <div class="yearline y1973"></div>
+                    <div class="yearline y1972"></div>
+                    <div class="yearline y1971"></div>
+                    <div class="yearline y1970"></div>
+                    <div class="yearline y1969"></div>
+                    <div class="yearline y1968"></div>
+                    <div class="yearline y1967"></div>
+                    <div class="yearline y1966"></div>
+                    <div class="yearline y1965"></div>
+                    <div class="yearline y1964"></div>
+                    <div class="yearline y1963"></div>
+                    <div class="yearline y1962"></div>
+                    <div class="yearline y1961"></div>
+                    <div class="yearline y1960"></div>
+                    <div class="yearline y1959"></div>
+                    <div class="yearline y1958"></div>
+                    <div class="yearline y1957"></div>
+                    <div class="yearline y1956"></div>
+                    <div class="yearline y1955"></div>
+                    <div class="yearline y1954"></div>
+                    <div class="yearline y1953"></div>
+                    <div class="yearline y1952"></div>
+                    <div class="yearline y1951"></div>
+                    <div class="yearline y1950"></div>
+                    <div class="yearline y1949"></div>
+                    <div class="yearline y1948"></div>
+                    <div class="yearline y1947"></div>
+                    <div class="yearline y1946"></div>
+                    <div class="yearline y1945"></div>
+                    <div class="yearline y1944"></div>
+                    <div class="yearline y1943"></div>
+                    <div class="yearline y1942"></div>
+                    <div class="yearline y1941"></div>
+                    <div class="yearline y1940"></div>
+                </div>
+
+
+                <svg class="bls5marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 98 899.5 98 599.5 40 299.5 40 299.5 23 -0.5 23 -0.5 0"/>
+                </svg>
+
+
+
+                <div class="bls5marginleft newMeter newMeterFirst newMeter85First-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterMiddle newMeter85Middle-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterLast newMeter85Last-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterExtra newMeter85Extra-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterExtra newMeter85Extratop-Brazil"></div>
+
+                <div class="bls5marginleft newMeter newMeterFirst newMeter45First-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterMiddle newMeter45Middle-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterLast newMeter45Last-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterExtra newMeter45Extra-Brazil"></div>
+                <div class="bls5marginleft newMeter newMeterExtra newMeter45Extratop-Brazil"></div>
+
+
+
+                <!--<div class="lifeline bls5marginleft R56"></div>-->
+
+                <div class="raindrop brazil draga bls5marginleft" style="left: 12%; width: 10vw; top: 100px; cursor: move;/* background-image: url(https://conteudo.imguol.com.br/blogs/74/files/2017/11/Cordel.jpg); background-size: cover;*/">   
+                    <div id="juikbuinstads" class="jukbuin brazilinni stringthing">
+                        <img class="jukbuinimg" src="https://conteudo.imguol.com.br/blogs/74/files/2017/11/Cordel.jpg">
+                        <div class="text">Cordel literature (from the Portuguese term, literatura de cordel, literally “string literature”) are popular and inexpensively printed booklets or pamphlets containing folk novels, poems and songs. They are produced and sold in street markets and by street vendors in Brazil, mainly in the Northeast. They are so named because they are hung from strings to display them to potential customers.</div>
+                    </div>
+                </div> 
+
+
+                <div class="draga2 draggable ui-widget-content raindrop brazil L68 R36 nidur1 bls5marginleft" style="top: 100px; /*background-image: url(https://f4.bcbits.com/img/a2304751530_10.jpg); background-size: cover;*/">
+                    <div class="utanumcultura brazilinni" style="top: 0px;">
+                        <div href="https://tomze.bandcamp.com/" target="_blank">
+                            <div class="cultura tomze" style="top: 0px;">
+                                <img class="culturaimg" style="width: 100%;" src="https://f4.bcbits.com/img/a2304751530_10.jpg">
+                            </div>
+                        </div>
+                        <a href="https://www.bbc.co.uk/programmes/p03hjvv7" target="_blank" class="tropicalia text"><div class="tropicalia text">Tropicália (Portuguese pronunciation: [tɾopiˈkaʎɐ, tɾɔpiˈkaljɐ]), also known as Tropicalismo ([tɾopikɐˈlizmu, tɾɔpikaˈ-]), was a Brazilian artistic movement that arose in the late 1960s and formally ended in 1968. Though music was its chief expression, the movement was not solely expressed so, as it enveloped other art forms such as film, theatre, and poetry. Tropicália was characterized by the amalgamation of Brazilian genres—notably the union of the popular and the avant-garde, as well as the melding of Brazilian tradition and foreign traditions and styles.[2]</div></a>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L77 R43 nidur2 bls5marginleft" style="top: 30%; /* background-image: url(https://portugueseattsu.files.wordpress.com/2015/01/claricelispector.jpg); background-size: cover;*/">
+                    <div class="utanumcultura brazilinni" style="top: 0px;" href="https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector" target="_blank">
+                        <div class="cultura P50" style="top: 0px;">
+                            <img class="culturaimg" style="width: 100%;" src="https://portugueseattsu.files.wordpress.com/2015/01/claricelispector.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop L68 R46 writer bls5marginleft" style="top: 40%;  background-image: url(); background-size: cover;" >
+                    <!--<div id="element" class="utanumcultura brazilinni" href="" target="_blank">
+                        <div class="cultura cL46" style="top: 0px;">
+                            <img class="culturaimg" style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Paulo_Freire_%281963%29.tif/lossy-page1-440px-Paulo_Freire_%281963%29.tif.jpg">
+                        </div>
+                    </div>-->
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L11 R11 bls5marginleft" style="top: 60%;" >
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                            <iframe style="width: 100%;" src="https://www.youtube.com/embed/cb-rUfBTQ1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L03 R03 bls5marginleft" style="top: 25%; /* background-image: url(https://d10btd77keh5oj.cloudfront.net/images/filmes/cartaz/288-carandiru.png); background-size: cover;*/">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura cL39" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                            <img class="culturaimg" style="width: 100%;" src="https://d10btd77keh5oj.cloudfront.net/images/filmes/cartaz/288-carandiru.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L02 R02 bls5marginleft" style="top: 50%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important; height: 130px;">
+                            <iframe style="width: 100%;" src="https://player.vimeo.com/video/329118628?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>
+                </div>
+                
+
+
+
+                <div class="metercountry rightrightbrazil rightright bls5marginleft"></div>
+                <div class="metercountry rightbrazil right bls5marginleft"></div>
+                <!--<div class="metercountry leftbrazil left bls5marginleft"></div>-->
+
+                <a class="fanicon faniconbls5" href="#bls1"></a>
+                <a class="prevpage text" href="#bls4">&larr; west</a>
+                <a class="nextpage text" href="#bls6">east &rarr;</a>
+
+
+
+                <!--<div class="rcp85-1 a1 text bls3marginleft">26°C</div>-->   
+<!--                <div class="rcp85-2 a2 text bls5marginleft">27°C</div>
+                <div class="rcp85-3 a3 text bls5marginleft">29°C</div>   -->
+
+                <!--<div class="rcp85-1 c1 text bls3marginleft">
+                    2.007.491
+                    <img class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuT-araf4ccsQ7GkXZsR8U_MHyUCmuv_g2b884SFbnQ7xhXa3z&usqp=CAU">
+                </div>-->
+                <div class="rcp85-2 c2 text bls5marginleft" style="color: darkred; left: 30.5vw; text-align: left; top: 155px;">3.664.312 &#10013;</div>
+                <div class="rcp85-3 c3 text bls5marginleft" style="color: darkred; left: 70.5vw; text-align: left; top: 305px;">7.546.797 &#10013;</div>
+
+
+<!--                <div class="rcp45-1 a1 text bls5marginleft">26°C</div>
+                <div class="rcp45-2 a2 text bls5marginleft">27°C</div>
+                <div class="rcp45-3 a3 text bls5marginleft">27°C</div>        -->
+
+                <div class="rcp45-1 c1 text bls5marginleft" style="color: darkred; left: 10.5vw; text-align: left; top: 110px;">2.007.491 &#10013;</div>
+<!--                <div class="rcp45-2 c2 text bls5marginleft">2.931.450 &#10013;</div>
+                <div class="rcp45-3 c3 text bls5marginleft">3.157.333 &#10013;</div>        -->
+
+
+                <div class="rcpwhat-1 a1 text bls5marginleft"><!--corona (may 5th):--></div>
+<!--                <div class="rcpwhat-2 a2 text bls5marginleft">26°C - 27°C</div>
+                <div class="rcpwhat-3 a3 text bls5marginleft">26°C - 27°C</div>         -->
+
+                <div class="rcpwhat-1 c1 text bls5marginleft"><!--7.321--></div>
+<!--                <div class="rcpwhat-2 c2 text bls5marginleft">2.007.491 - 2.931.450 &#10013;</div>
+                <div class="rcpwhat-3 c3 text bls5marginleft">2.007.491 - 3.157.333 &#10013;</div>      -->
+            </div>
+            <a href="#bls6" class="rightsidenav bls6right"></a>
+            <div class="bls6 country">
+                <a href="#bls6" class="leftsidenav"></a>
+                <div class="countryname text bls6marginleft">Iceland</div>
+                <div class="lifeline R94 bls6marginleft"></div>
+
+                <div class="bls6marginleft" style="position: absolute; left: calc(48vw - 5vw); width: 10vw; z-index: -1; top: 25vh;">
+                    <!--<img class="bubbi" src="imgs/sviti-1992.jpg">
+                    <div class="bubbatexti text">Hlusta á Zeppelin og ég ferðast aftur í tímann. [linkur að zeppelin í californiu eða í reykjavik 1970]</div>-->
+                </div>
+
+                <!--<div class="bls6marginleft" style="position: absolute; left: calc(60vw - 5vw); width: 10vw; z-index: -1; top: 20vh;">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/92853792?loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+                <div class="bls6marginleft" style="position: absolute; left: calc(60vw - 5vw); width: 10vw; z-index: -1; top: 20vh;">
+                    <img class="bubbi" src="https://i.pinimg.com/564x/fa/41/f0/fa41f0bba5df03615f9001d167ef04b9.jpg">
+                    <div class="bubbatexti text">Oh, let the sun beat down upon my face
+                        Stars fill my dream
+                        I'm a traveler of both time and space
+                        To be where I have been
+                        Sit with elders of the gentle race
+                        This world has seldom seen
+                        They talk of days for which they sit and wait
+                        All will be revealed
+                    </div>
+                </div>-->
+
+                <a class="fanicon faniconbls6" href="#bls1"></a>
+                <a class="prevpage text" href="#bls5">&larr; west</a>
+                <a class="nextpage text" href="#bls7">east &rarr;</a>
+            </div>
+            <a href="#bls7" class="rightsidenav bls7right"></a>
+            <div class="bls7 country">
+                <a href="#bls7" class="leftsidenav"></a>
+                <div class="countryname text bls7marginleft">Ghana</div>
+                <!--<div class="lifeline R94 bls6marginleft"></div>-->
+
+
+                <svg class="bls7marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 324 899.5 324 599.5 286 299.5 286 299.5 259 -0.5 259 -0.5 0"/>
+                </svg>
+
+
+                <a class="fanicon faniconbls7" href="#bls1"></a>
+                <a class="prevpage text" href="#bls6">&larr; west</a>
+                <a class="nextpage text" href="#bls8">east &rarr;</a>
+            </div>
+            <a href="#bls8" class="rightsidenav bls8right"></a>
+            <div class="bls8 country">
+                <a href="#bls8" class="leftsidenav"></a>
+                <div class="countryname text bls8marginleft">Saudi Arabia</div>
+
+                <svg class="bls8marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 200 899.5 200 599.5 163 299.5 163 299.5 147 -0.5 147 -0.5 0"/>
+                </svg>                
+
+
+                <a class="fanicon faniconbls8" href="#bls1"></a>
+                <a class="prevpage text" href="#bls7">&larr; west</a>
+                <a class="nextpage text" href="#bls9">east &rarr;</a>
+            </div>
+            <a href="#bls9" class="rightsidenav bls9right"></a>
+            <div class="bls9 country">
+                <a href="#bls9" class="leftsidenav"></a>
+                <div class="countryname text bls9marginleft">India</div>
+                <!--<div class="lifeline R94 bls8marginleft"></div>-->
+
+
+                <svg class="bls9marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 181 899.5 181 599.5 118 299.5 118 299.5 97 -0.5 97 -0.5 0"/>
+                </svg>  
+
+
+                <a class="fanicon faniconbls9" href="#bls1"></a>
+                <a class="prevpage text" href="#bls8">&larr; west</a>
+                <a class="nextpage text" href="#bls10">east &rarr;</a>
+            </div>
+            <a href="#bls10" class="rightsidenav bls10right"></a>
+            <div class="bls10 country">
+                <a href="#bls10" class="leftsidenav"></a>
+                <div class="countryname text bls10marginleft">South Korea</div>
+                <!--<div class="lifeline R94 bls10marginleft"></div>-->
+
+                <div class="lifeline R63 bls8marginleft"></div>
+
+                <svg class="bls10marginleft form-try" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199 365" preserveAspectRatio="none">
+                        <polygon class="cls-1" points="-0.5 0 299.5 0 599.5 0 899.5 0 1199.5 0 1199.5 19 899.5 19 599.5 2 299.5 2 299.5 0 -0.5 0 -0.5 0"/>
+                </svg> 
+
+
+
+
+                <!--<div class="bls8marginleft newMeter newMeterFirst newMeter85First-SK"></div>
+                <div class="bls8marginleft newMeter newMeterMiddle newMeter85Middle-SK"></div>
+                <div class="bls8marginleft newMeter newMeterLast newMeter85Last-SK"></div>
+                <div class="bls8marginleft newMeter newMeterExtra newMeter85Extra-SK"></div>
+                <div class="bls8marginleft newMeter newMeterExtra newMeter85Extratop-SK"></div>
+
+                <div class="bls8marginleft newMeter newMeterFirst newMeter45First-SK"></div>
+                <div class="bls8marginleft newMeter newMeterMiddle newMeter45Middle-SK"></div>
+                <div class="bls8marginleft newMeter newMeterLast newMeter45Last-SK"></div>
+                <div class="bls8marginleft newMeter newMeterExtra newMeter45Extra-SK"></div>
+                <div class="bls8marginleft newMeter newMeterExtra newMeter45Extratop-SK"></div>-->
+
+
+                <div class="draga2 draggable ui-widget-content raindrop brazil P10 R32 bls8marginleft" style="top: 100px;">
+                    <div class="utanumcultura brazilinni " style="top: 0px;">
+                        <div class="cultura L20" style="position: absolute; top: 0px; margin-left: -5vw !important; height: 130px;">
+                            <img style="width: 100%;" src="https://66.media.tumblr.com/4c695d9330e1f45ff1ad3a1bafd25265/tumblr_n9wc098a5b1qgsppto4_1280.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L20 R41 bls8marginleft" style="top: 20%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important; height: 130px;">
+                            <iframe style="width: 100%;" src="https://www.youtube.com/embed/ZhLdn_cip_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L15 bls8marginleft" style="top: 30%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important; height: 130px;">
+                            <iframe style="width: 100%;" src="https://www.youtube.com/embed/qrEoePadw7w?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L14 R78 bls8marginleft" style="top: 60%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura"  style="position: absolute; top: 0px; margin-left: 2vw !important;">
+                            <iframe style="width: 100%;" src="https://www.youtube.com/embed/CNEku9GjnZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil L20 R61 bls8marginleft" style="top: 70%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                        <iframe style="width: 100%;" src="https://www.youtube.com/embed/BACnvj5jAh0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    </div>
+                </div>
+                <div class="draga2 draggable ui-widget-content raindrop brazil P10 R63 bls8marginleft" style="top: 37%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                            <iframe style="width: 100%;" class="cultura P0" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1023616399&color=%23ffffff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="draga2 draggable ui-widget-content raindrop brazil L13 R11 bls8marginleft" style="top: 25%;">
+                    <div class="utanumcultura brazilinni">
+                        <div class="cultura" style="position: absolute; top: 0px; margin-left: -5vw !important;">
+                            <iframe style="width: 100%;" src="https://www.youtube.com/embed/y6tMA7mjFiA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="raindrop brazil draga bls8marginleft" style="left: 78%; width: 10vw; top: 110px; cursor: move;">   
+                    <div id="iyeolchiyeolstads" class="iyeolchiyeol brazilinni stringthing">
+                        <img class="jukbuinimg" src="imgs/Jukbuin.png">
+                    </div>
+                </div>
+                <div class="raindrop brazil draga bls8marginleft" style="left: 77%; width: 10vw; top: 100px; cursor: move;">   
+                    <div id="juikbuinstads" class="jukbuin brazilinni stringthing">
+                        <img class="jukbuinimg" src="imgs/iyeolchiyeol.png">
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="metercountry rightrightseoul rightright bls8marginleft"></div>
+                <div class="metercountry rightseoul right bls8marginleft"></div>
+                <!--<div class="metercountry leftseoul left bls8marginleft"></div>-->
+
+
+
+                <!--<div class="rcp85-1 a1 text bls5marginleft">26°C</div> -->  
+                <div class="rcp85-2 a2 text bls8marginleft">26°C</div>
+                <div class="rcp85-3 a3 text bls8marginleft">28°C</div>
+
+                <!--<div class="rcp85-1 c1 text bls5marginleft">0</div>-->
+                <div class="rcp85-2 c2 text bls8marginleft">38.646 &#10013;</div>
+                <div class="rcp85-3 c3 text bls8marginleft">244.198 &#10013;</div>
+
+
+                <div class="rcp45-1 a1 text bls8marginleft">25°C</div>
+                <div class="rcp45-2 a2 text bls8marginleft">26°C</div>
+                <div class="rcp45-3 a3 text bls8marginleft">26°C</div>
+
+                <div class="rcp45-1 c1 text bls8marginleft">0 &#10013;</div>
+                <div class="rcp45-2 c2 text bls8marginleft">19.323 &#10013;</div>
+                <div class="rcp45-3 c3 text bls8marginleft">25.705 &#10013;</div>
+
+
+                <div class="rcpwhat-1 a1 text bls8marginleft"><!--corona (may 5th):--></div>
+                <div class="rcpwhat-2 a2 text bls8marginleft">25°C - 26°C</div>
+                <div class="rcpwhat-3 a3 text bls8marginleft">25°C - 26°C</div>
+
+                <div class="rcpwhat-1 c1 text bls8marginleft"><!--252--></div>
+                <div class="rcpwhat-2 c2 text bls8marginleft">0 - 19.323 &#10013;</div>
+                <div class="rcpwhat-3 c3 text bls8marginleft">0 - 25.705 &#10013;</div>
+
+
+                <a class="fanicon faniconbls10" href="#bls1"></a>
+                <a class="prevpage text" href="#bls9">&larr; west</a>
+                <a class="nextpage text" href="#bls11">next &rarr;</a>
+            </div>
+            <a href="#bls11" class="rightsidenav bls11right"></a>
+            <div class="bls11 notcountry">
+                <a href="#bls11" class="leftsidenav"></a>
+                <div class="countryname text bls11marginleft">about project</div>
+                <!--<div class="lifeline R94 bls11marginleft"></div>-->
+
+                <!--<div class="firstpagedescription draga bls2marginleft">
+                    and excerpt from thesis.
+                </div>-->
+
+
+                <a class="fanicon faniconbls11" href="#bls1"></a>
+                <a class="prevpage text" href="#bls10">&larr; prev</a>
+                <a class="nextpage text" href="#bls12">next &rarr;</a>
+            </div>
+            <a href="#bls12" class="rightsidenav bls12right"></a>
+            <div class="bls12 notcountry">
+                <a href="#bls12" class="leftsidenav"></a>
+                <div class="countryname text bls12marginleft">Other content<br><br></div>
+                <!--<div class="lifeline R94 bls12marginleft"></div>-->
+
+
+                <a class="fanicon faniconbls12" href="#bls1"></a>
+                <a class="prevpage text" href="#bls11">&larr; prev</a>
+                <a class="nextpage text" href="#bls13">next &rarr;</a>
+            </div>
+            <a href="#bls13" class="rightsidenav bls13right"></a>
+            <div class="bls13 notcountry">
+                <a href="#bls13" class="leftsidenav"></a>
+                <div class="countryname text bls13marginleft">Other content</div>
+                <!--<div class="lifeline R94 bls13marginleft"></div>-->
+                <div class="firstpagedescription draga bls2marginleft">
+                    could be history of famous deadly heatwaves in layout (instead of country, the page could be deadly heatwaves)<br><br>
+                    - Chicago 90s<br>
+                    - Paris 00’s<br>
+                    -(australia fires, california fires, siberia fires)
+                </div>
+
+                <a class="fanicon faniconbls13" href="#bls1"></a>
+                <a class="prevpage text" href="#bls12">&larr; prev</a>
+                <a class="nextpage text" href="#bls14">next &rarr;</a>
+            </div>
+            <a href="#bls14" class="rightsidenav bls14right"></a>
+            <div class="bls14 notcountry">
+                <a href="#bls14" class="leftsidenav"></a>
+                <div class="countryname text bls14marginleft">How much emissions need to be reduced,<br><br>
+                </div>
+                <!--<div class="lifeline R94 bls14marginleft"></div>-->
+                <div class="firstpagedescription draga bls2marginleft">
+                    quick summary of RCP8.5 and RCP4.5 + the third (neccessary) option of reaching net-zero by 2050.
+                </div>
+
+                <a class="fanicon faniconbls14" href="#bls1"></a>
+                <a class="prevpage text" href="#bls13">&larr; prev</a>
+                <a class="nextpage text" href="#bls15">next &rarr;</a>
+            </div>
+            <a href="#bls15" class="rightsidenav bls15right"></a>
+            <div class="bls15 notcountry">
+                <a href="#bls15" class="leftsidenav"></a>
+                <div class="countryname text bls15marginleft">Form to fill out<br><br></div>
+                <!--<div class="lifeline R94 bls15marginleft"></div>-->
+                <div class="firstpagedescription draga bls2marginleft">
+                    Form for viewers to fill out if they want to participate in future adaptations of the project.
+                </div>
+
+                <a class="fanicon faniconbls15" href="#bls1"></a>
+                <a class="prevpage text" href="#bls14">&larr; prev</a>
+                <a class="nextpage text" href="#bls16">next &rarr;</a>
+            </div>
+            <a href="#bls16" class="rightsidenav bls16right"></a>
+            <div class="bls16 notcountry">
+                <a href="#bls16" class="leftsidenav"></a>
+                <div class="countryname text bls16marginleft">Back page<br><br>thanks to participants<br><br><br>and call to action</div>
+                <!--<div class="lifeline R94 bls16marginleft"></div>-->
+
+                <div class="firstpagedescription draga bls2marginleft">
+                    Reading, watching, listening and following list.
+                </div>
+
+
+
+                <a class="fanicon faniconbls16" href="#bls1"></a>
+                <a class="prevpage text" href="#bls15">&larr; prev</a>
+                <a class="nextpage text" href="#bls1">&larr; close</a>
+            </div>
+        </div>
+
+
+        <div id="main-overlay" class="main-overlay">
+            <div class="background layout-overlay">
+                <div class="verticalLine vlt bottom P10"></div>
+                <div class="verticalLine vlt bottom P20"></div>
+                <div class="verticalLine vlt bottom P30"></div>
+                <div class="verticalLine vlt bottom P40"></div>
+                <div class="verticalLine vlt bottom P50"></div>
+                <div class="verticalLine vlt bottom P60"></div>
+                <div class="verticalLine vlt bottom P70"></div>
+                <div class="verticalLine vlt bottom P80"></div>
+                <div class="verticalLine vlt bottom P90"></div>
+                <div class="yearTop P0">2020</div>
+                <div class="yearTop P10">2030</div>
+                <div class="yearTop P20">2040</div>
+                <div class="yearTop P30">2050</div>
+                <div class="yearTop P40">2060</div>
+                <div class="yearTop P50">2070</div>
+                <div class="yearTop P60">2080</div>
+                <div class="yearTop P70">2090</div>
+                <div class="yearTop P80">2100</div>
+                <div class="verticalLine vlb top P10" style="/*height: 100vh;*/"></div>
+                <div class="verticalLine vlb top P20"></div>
+                <div class="verticalLine vlb top P30"></div>
+                <div class="verticalLine vlb top P40"></div>
+                <div class="verticalLine vlb top P50"></div>
+                <div class="verticalLine vlb top P60"></div>
+                <div class="verticalLine vlb top P70"></div>
+                <div class="verticalLine vlb top P80"></div>
+                <div class="verticalLine vlb top P90"></div>
+                <div class="yearBottom P0">2020</div>
+                <div class="yearBottom P10">2010</div>
+                <div class="yearBottom P20">2000</div>
+                <div class="yearBottom P30">1990</div>
+                <div class="yearBottom P40">1980</div>
+                <div class="yearBottom P50">1970</div>
+                <div class="yearBottom P60">1960</div>
+                <div class="yearBottom P70">1950</div>
+                <div class="yearBottom P80">1940</div>
+
+                <!--<div class="year2020">2020, year 0</div>-->
+
+                <!--<div class="tempLine85-1 one"></div>-->
+                <!--<div class="tempLine85-2 two"></div>
+                <div class="tempLine85-3 three"></div>
+                <div class="tempLine45-1 one"></div>
+                <div class="tempLine45-2 two"></div>
+                <div class="tempLine45-3 three"></div>
+                <div class="tempLine3-1 one"></div>
+                <div class="tempLine3-2 two"></div>
+                <div class="tempLine3-3 three"></div> -->
+
+                <div class="meter rightright"></div>
+                <div class="meter right"></div>
+                <!--<div class="meter left"></div>-->
+            </div>
+        </div>
+
+        <div id="fan-overlay" class="fan-overlay">
+            <div class="background layout-overlay">
+                <div class="fanicon" href="#bls1"></div>
+            </div>
+        </div>
+    </div>
+
+           
+
+
+
+
+
+
+    <!--<img class="blabb1" src="imgs/fanclean.png" alt="" usemap="#map #map2 #map3" />
+    <a class="blabb2" href="#bls1">
+        <map class="blabb3" name="map">
+            <area shape="poly" coords="1632, 720, 1609, 587, 702, 978, 695, 965" />
+        </map>
+    </a>
+    <a class="blabb2" href="#bls2">
+        <map class="blabb3" name="map2">
+            <area shape="poly" coords="704, 977, 1607, 588, 1556, 454, 709, 990" />
+        </map>
+    </a>
+    <a class="blabb2" href="#bls3">
+        <map class="blabb3" name="map3">
+            <area shape="poly" coords="720, 1001, 710, 991, 1557, 457, 1479, 332" />
+        </map>
+    </a>
+    <a class="blabb2" href="#bls2">
+        <map class="blabb3" name="map">
+            <area shape="poly" coords="1480, 333, 1377, 220, 729, 1009, 720, 1000" />
+            <area shape="poly" coords="1377, 220, 1251, 126, 742, 1018, 729, 1010" />
+            <area shape="poly" coords="1252, 128, 1105, 58, 758, 1025, 743, 1018" />
+            <area shape="poly" coords="1106, 58, 950, 15, 772, 1026, 759, 1025" />
+            <area shape="poly" coords="950, 15, 790, 1, 786, 1028, 772, 1027" />
+            <area shape="poly" coords="789, 2, 631, 18, 801, 1029, 786, 1029" />
+            <area shape="poly" coords="630, 19, 479, 64, 817, 1026, 802, 1029" />
+            <area shape="poly" coords="479, 64, 346, 133, 833, 1022, 817, 1026" />
+            <area shape="poly" coords="346, 134, 231, 223, 844, 1016, 832, 1021" />
+            <area shape="poly" coords="231, 224, 139, 328, 854, 1008, 843, 1015" />
+            <area shape="poly" coords="141, 328, 74, 444, 867, 997, 855, 1007" />
+            <area shape="poly" coords="74, 445, 29, 564, 877, 984, 865, 996" />
+            <area shape="poly" coords="29, 565, 7, 685, 884, 972, 875, 984" />
+        </map>
+    </a>-->
+
+
+
+            <!--   SEOUL   -->
+            
+
+
+
+
+            <!--   FAN NAVIGATE   -->
+
+            
+
+
+            <!--   STUFF   -->
+
+
+    
+    
+<!--
+
+    <div id="label" class="FirstGen">
+        <div class="close closeBachelors bachelorsfurther">close</div>
+        <div class="bachelors FirstGenStyle">0</div>
+    </div>
+            <div id="label14" class="bachelorsfurther">Graphic Design</div>
+            <div id="label15" class="bachelorsfurther">Photography</div>
+            <div id="label16" class="bachelorsfurther">Textile</div>
+            <div id="label17" class="bachelorsfurther">Fashion</div>
+            <div id="label18" class="bachelorsfurther">Fine Arts</div>
+            <div id="label19" class="bachelorsfurther">Interactive Media Design</div>
+            <div id="label20" class="bachelorsfurther">Interior Architecture & Furniture Design</div>
+
+ -->   
+
+
+
+    <script type="text/javascript" src="scriptnew-may-29.js"></script>
+
+
+
+    <!-- NOTE! imagemaps are not responsive (because they are so old!), but this script makes it act as such -->
+  <script src="js/imageMapResizer.min.js"></script>
+
+
+        <!-- DRAG DROPS ON VERTICAL -->
+    <!--
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    -->
+</body>
+</html>
