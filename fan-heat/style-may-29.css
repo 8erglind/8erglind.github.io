@@ -441,6 +441,7 @@ canvas {
     top: 70px;  
     border: 1px solid darkred; 
     color: darkred;
+    /*background-color: white;*/
 }
 .rcp85-button:hover {
     background-color: darkred;
