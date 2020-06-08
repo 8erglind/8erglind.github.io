@@ -1,12 +1,20 @@
 <script>
 
+	//  specifics  //
 	import Timelines from './specifics/Timelines.svelte';
 	import TimelineFuture from './specifics/TimelineFuture.svelte';
 	import TimelinePast from './specifics/TimelinePast.svelte';
 	import Meter from './specifics/topMeter.svelte';
 	import Footer from './footer.svelte';
-	import CriticalDecadeI from './specifics/CriticalDecadeI.svelte';
+
+	
+	//  take out and delete file once all pages are in  //
 	import Pagetitle from './specifics/pagetitle.svelte';
+
+
+	// PAGES  //
+	import Cover from './specifics/Cover.svelte';
+	import CriticalDecadeI from './specifics/CriticalDecadeI.svelte';
 
 
 
@@ -121,9 +129,8 @@
 
 			<main class:current={current == 0}>
 				<div class="content page1" style="right: {100 * (introProgress - 0)}%;">
-					<Pagetitle pagetitleText="cover" rotate="90deg"></Pagetitle>
+					<Cover pagetitleText="Cover" rotate="90deg"></Cover>
 				</div>
-				
 			</main>
 			<main class:current={current == 1}>
 				<div class="content page2" style="right: {100 * (introProgress - 1)}%;">
@@ -137,8 +144,7 @@
 			</main>
 			<main class:current={current == 3}>
 				<div class="content page4" style="right: {100 * (introProgress - 3)}%;">
-					<Meter></Meter>
-					<TimelinePast></TimelinePast>
+					
 					<CriticalDecadeI pagetitleText="The Critical Decade:&emsp;I" rotate="56.25deg"></CriticalDecadeI>
 				</div>				
 			</main>
@@ -263,7 +269,7 @@
 	bottom: 0vh;
 	height: 5vh;
 	left: 0px;
-	width: calc(100vw - 1px);
+	width: 100vw;
 	border-left: 1px solid #444;
 }
 .dot {

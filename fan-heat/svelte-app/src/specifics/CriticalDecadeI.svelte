@@ -1,21 +1,20 @@
 <script>
+	import TimelinePast from './TimelinePast.svelte';
+
 	let distanceBLines = 'calc((95vh - 1px) / 9 * 1)';
 	let marginSides = 'calc(100vw / 16)';
 	
-
-
-
 	export let pagetitleText;
-
 	export let rotate;
 </script>
 
 
+<TimelinePast></TimelinePast>
 
 
 <div class="pagetitle" style="transform: rotate({rotate});">
  	{pagetitleText}
- 	<div class="text">Since 1880, in 140 years, Earth’s average global temperature has increased by&nbsp;1,1-1,3°C.</div>
+ 	<div class="text">Since 1880<!-- , in 140 years,--> Earth’s average global temperature has increased by&nbsp;1,1&nbsp;-&nbsp;1,3°C.</div>
 </div>
 
 
