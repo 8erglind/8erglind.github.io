@@ -1,0 +1,127 @@
+
+.image {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.first {background-image: url(imgs/exam/desktopsmaller.png);}
+.second {background-image: url(imgs/exam/pagessmaller.png);}
+.third {background-image: url(imgs/exam/setupupdated.jpg);}
+.fourth {background-image: url(imgs/exam/1.png);}
+.fifth {background-image: url(imgs/exam/2.png);}
+.sixth {background-image: url(imgs/exam/3.png);}
+.seventh {background-image: url(imgs/exam/4.png);}
+.eightth {background-image: url(imgs/exam/5.png);}
+
+.code {background-image: url(imgs/exam/coding.png);}
+
+.fullfan {background-image: url(imgs/exam/full.png);}
+.a {background-image: url(imgs/exam/a.png);}
+
+.micro {background-image: url(imgs/exam/pagesmicro.png);}
+.micro2 {background-image: url(imgs/exam/pagesmicro2.png);}
+.micro3 {background-image: url(imgs/exam/pagesmicro3.png);}
+.micro4 {background-image: url(imgs/exam/pagesmicro4.png);}
+.micro5 {background-image: url(imgs/exam/pagesmicro5.png);}
+.micro6 {background-image: url(imgs/exam/pagesmicro6.png);}
+.micro7 {background-image: url(imgs/exam/pagesmicro7.png);}
+
+
+.videobox {
+  position: relative;
+  width: calc(100% - 60px);
+  height: 100vh;
+  left: 30px;
+}
+
+.left {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  overflow: scroll;
+}
+.right {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+}
+.video {
+  position: relative;
+  top: 0%;
+  left: 30px;
+  width: calc(100% - 60px);
+  height: 100%;
+}
+
+.video2 {
+  position: relative;
+  top: 0%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.video3 {
+  position: relative;
+  top: 10%;
+  left: 0px;
+  width: auto;
+  height: 80%;
+  z-index: 1;
+}
+
+.halfleft {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  overflow: scroll;
+}
+.halfright {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  overflow: scroll;
+}
+
+.full {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  overflow: scroll;
+  z-index: 0;
+}
+
+.fullscroll {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  overflow: scroll;
+  z-index: 1;
+}
+
+.sticky {
+  position: sticky;
+  top: 0%;
+}
+

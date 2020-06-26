@@ -27,13 +27,6 @@
 		setTimeout(() => initializing = false, 100)
 	})
 
-	//let showModal = false;
-
-	//const toggleModal = () => {
-	//	showModal = !showModal;
-	//}
-
-	//let name = 'Fanpage';
 	
 	let pages = [
 		{ name: 'page1', id: 1, swipes: 0, type: 'notcountry', rotate: '90', pagetitle: 'cover' },
@@ -55,70 +48,9 @@
 	];
 
 
-	//const handleClick = (id) => {
-	//	// delete the person from people
-	//	people = people.filter((person) => person.id != id);
-	//}
-
-	//let num = 3;
-
-	//const addPerson = (e) => {
-	//	//console.log(e.detail);
-	//	const person = e.detail;
-	//	people = [person, ...people];
-	//	showModal = false;
-	//}
 </script>
 
-<!--
-	<Modal {showModal} on:click={toggleModal}>
-		<AddPersonForm on:addPerson={addPerson} />
-	</Modal>
 
-
-	<main>
-		<h1>{name}</h1>
-		<button on:click={toggleModal}>Open Modal</button>
-
-		{#each people as person (person.id)}
-			<div>
-				<h4>{person.name}</h4>
-				{#if person.beltColour === 'brown'}
-					<p><strong>MASTER NINJA</strong></p>
-				{/if}
-				<p>{person.age} years old, {person.beltColour} belt.</p>
-				{#if person.skills}
-					<p><i>{person.skills}</i></p>
-				{/if}
-				<button on:click={() => handleClick(person.id)}>delete</button>
-			</div>
-		{:else}
-			<p>There are no people to show.</p>
-		{/each}
-		
-	</main>
--->
-
-
-
-
-
-
-<!--		{#each pages as page (page.id)}
-			<div>
-				<h4>{page.name}</h4>
-				{#if page.type === 'notcountry'}
-					<p><strong>MASTER NINJA</strong></p>
-				{/if}
-				<p>{person.age} years old, {person.beltColour} belt.</p>
-				{#if person.skills}
-					<p><i>{person.skills}</i></p>
-				{/if}
-				<button on:click={() => handleClick(page.id)}>delete</button>
-			</div>
-		{:else}
-			<p>There are no people to show.</p>
-		{/each} -->
 
 
 
