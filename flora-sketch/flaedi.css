@@ -37,7 +37,7 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     text-transform: uppercase;
 }
 .calyces {
-    font: 27px Arial;
+    font: 17px Arial;
     text-transform: uppercase;
     line-height: 50px;
     line-height: 30px !important;
@@ -49,8 +49,19 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     line-height: 30px !important;
 }
 .calycesminni {
-    font: 20px Calyces;
+    font: 17px Calyces;
 }
+
+
+.arialStaerri {
+    font: 27px Arial;
+    text-transform: uppercase;
+    line-height: 50px;
+    line-height: 30px !important;
+}
+
+
+
 .ptLengri {
     /*font: 16px PTSans;*/
     font: 16px Arial;
