@@ -40,6 +40,18 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     font: 27px Arial;
     text-transform: uppercase;
     line-height: 50px;
+    line-height: 30px !important;
+}
+.arialStaerri {
+    font: 27px Arial;
+    text-transform: uppercase;
+    line-height: 50px;
+    line-height: 30px !important;
+}
+.calycesStaerri {
+    font: 27px Calyces;
+    line-height: 50px;
+    line-height: 30px !important;
 }
 .calycesminni {
     font: 20px Calyces;
@@ -54,38 +66,34 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     top: 39%;
     left: 40%;
 }
-a {color: black;}
-
+a {color: black; text-decoration: none !important;}
+.whitebackground {background-color: white;}
 
 /*  FIXED  */
 
-.styrkja {
+.takkakassi {
     position: fixed;
-    right: 20px;
     top: 20px;
     border: 1px solid rgb(70,70,70);
     text-align: center;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
 }
-.umOkkur {
-    position: fixed;
-    right: 220px;
-    top: 20px;
-    border: 1px solid rgb(70,70,70);
-    text-align: center;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+.takkakassi:hover {background: white;}
+.styrkja {right: 20px;}
+.umOkkur {right: 220px;}
+.leita {right: 375px;}
+.leitaLoka {right: 375px; opacity: 0; z-index: 9999; display: none;}
+.english {right: 485px;}
 
 .logoFlora {
     position: fixed;
     top: 20px;
     left: 20px;
     width: calc((100vw - 100px) - 40px);
-    width: calc(100vw / 4);
+    width: calc(100vw / 5);
     height: 100px;
     text-align: center;
 
@@ -97,23 +105,24 @@ a {color: black;}
     cursor: pointer;
 }
 
-.fourthwidth {
+.fifthwidth {
     position: fixed; 
-    width: calc((100vw - 100px) / 4);
+    width: calc((100vw - 120px) / 5);
     border-right: 1px solid rgb(70,70,70);
     border-left: 1px solid rgb(70,70,70);
     /*background-color: white;*/
     border-radius: 140px;
     text-align: center;
-    top: calc(0% + 80px);
+    top: 80px;
     height: 40px;
     max-height: 100px !important; 
 }
-.umokkur {left: 20px; border: .25px solid rgba(70,70,70,0); border-radius: 0px;background-color: rgba(0,0,0,0);}
-.flaedi {left: calc(40px + ((100vw - 100px) / 4));}
-.utgafur {right: calc(40px + ((100vw - 100px) / 4));}
+.flaedi {left: calc(60px + ((100vw - 120px) / 5) * 2);}
+.utgafur {left: calc(40px + ((100vw - 120px) / 5));}
+.hladvorp {right: calc(40px + ((100vw - 120px) / 5));}
 .verslun {right: 20px;}
-.fourthwidth:hover {
+.verslun {right: 20px;}
+.fifthwidth:hover {
     background-color: white;
     border-bottom: 1px solid rgb(70,70,70);
     cursor: pointer;
@@ -122,7 +131,7 @@ a {color: black;}
 
 .lines {
     position: absolute;
-    top: calc(100% + 130px);
+    top: calc(0% + 130px);
     left: 100px;
     right: 100px;
     height: 20px;
@@ -143,14 +152,18 @@ a {color: black;}
     width: 100%;
     height: 1px;
 }*/
-/*.linesVertical {
+.linesVertical {
     position: fixed;
     top: 20px;
-    left: calc(20px + ((100vw - 100px) / 4));
+    left: -21px;
     bottom: 20px;
     max-width: 20px;
     width: 20px;
+
+    transition: 0.5s;
 }
+
+.linesVerticalLeita {left: calc(20px + ((100vw - 120px) / 5));}
 .linesVertical:after {
     content: '';
     position: absolute;
@@ -160,7 +173,7 @@ a {color: black;}
     height: 100%;
     background-color: rgb(70,70,70);
 }
-.lineV {
+/*.lineV {
     position: relative;
     display: inline-block;
     margin-right: 0px;
@@ -170,7 +183,7 @@ a {color: black;}
 }*/
 
 
-
+/*
 .utgafuvikubox {
     position: absolute;
     right: 20%;
@@ -182,19 +195,21 @@ a {color: black;}
     padding: 20px;
 }
 
-
+*/
 
 
 .tilkynningarBox {
-    position: absolute;
-    left: 25%;
-    top: 200px;
-    width: calc((100vw - 100px) / 4);
-    height: calc(100vh - 350px);
+    position: fixed;
+    left: calc(0px - 1px - ((100vw - 120px) / 5));
+    top: 150px;
+    width: calc((100vw - 120px) / 5);
+    height: calc(100vh - 150px);
     overflow-y: scroll;
-    border: 1px solid rgb(70,70,70);
-    padding: 20px;
+
+    transition: 0.5s;
 }
+
+.tilkynningarBoxLeita {left: 20px;}
 
 .tilkynning {
     position: relative;
@@ -216,19 +231,9 @@ a {color: black;}
     position: relative;
     width: 100%;
 }
-/*.tilkynning:before {
-    content: '';
-    position: absolute;
-    bottom: -17px;
-    width: calc(100% - 20px);
-    height: 1px;
-    background-color: rgb(70,70,70);
-    left: 0px;
-}*/
 
-.portfolio-item {
-    cursor: move;
-}
+
+
 
 .title {
     position: relative;
@@ -245,19 +250,22 @@ a {color: black;}
     right: 0px;
     /*top: 0%;
     padding-top: 210px;*/
-    top: calc(100% + 150px);
+    top: calc(0% + 150px);
     width: calc(100vw - 40px);
     height: calc(100vh - 150px);
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: -1;
+
+    transition: 0.5s;
 }
+.greinaBoxLeita {width: calc((((100vw - 120px) / 5) * 4) + 70px);}
 
 .nyjastaGrein {
     position: relative;
     width: calc(100% - 20px);
     /*background: yellow;*/
-    height: 600px;
+    height: 50vh;
     margin-bottom: 50px;
 }
 .nyjastaGrein:hover {
@@ -283,7 +291,11 @@ a {color: black;}
     position: relative;
     width: calc(100% - 20px);
     /*height: 1000px;*/
-    margin-bottom: 200px;
+    margin-bottom: 160px;
+    align-content: top;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 .nyjast:after {
     content: '';
@@ -298,10 +310,12 @@ a {color: black;}
 .grein {
     position: relative;
     display: inline-block;
+    top: 0% !important;
     margin-right: 20px;
     margin-bottom: 20px;
     width: calc(((100% - 80px) / 4) - 0px);
-    height: 400px;
+    /*height: 400px;*/
+    height: auto;
     /*border: 1px solid rgb(70,70,70);*/
     padding: 0px;
 }
@@ -314,11 +328,11 @@ a {color: black;}
     /*border: 1px solid rgb(70,70,70);*/
 }
 .greinPic {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 80%;
+    height: 300px;
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -326,11 +340,14 @@ a {color: black;}
     border: 1px solid rgb(70,70,70);
 }
 .greinInfo {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: 100%;
-    height: 20%;
+    /*height: 20%;*/
+    height: auto;
+    line-height: 20px !important;
+    margin-top: 10px;
     z-index: 1;
     /*border-top: 1px solid rgb(70,70,70);*/
 }

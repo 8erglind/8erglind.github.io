@@ -37,6 +37,12 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     text-transform: uppercase;
 }
 .calyces {
+    font: 17px Arial;
+    text-transform: uppercase;
+    line-height: 50px;
+    line-height: 30px !important;
+}
+.arialStaerri {
     font: 27px Arial;
     text-transform: uppercase;
     line-height: 50px;
@@ -44,12 +50,11 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
 }
 .calycesStaerri {
     font: 27px Calyces;
-    text-transform: none;
     line-height: 50px;
     line-height: 30px !important;
 }
 .calycesminni {
-    font: 20px Calyces;
+    font: 17px Calyces;
 }
 .ptLengri {
     /*font: 16px PTSans;*/
@@ -79,9 +84,6 @@ a {color: black; text-decoration: none !important;}
 .takkakassi:hover {background: white;}
 .styrkja {right: 20px;}
 .umOkkur {right: 220px;}
-.leita {right: 375px;}
-.leitaLoka {right: 375px; opacity: 0; z-index: 9999; display: none;}
-.english {right: 485px;}
 
 .logoFlora {
     position: fixed;
@@ -112,9 +114,9 @@ a {color: black; text-decoration: none !important;}
     height: 40px;
     max-height: 100px !important; 
 }
-.flaedi {left: calc(60px + ((100vw - 120px) / 5) * 2); background-color: white; border-bottom: 1px solid rgb(70,70,70);}
+.flaedi {left: calc(60px + ((100vw - 120px) / 5) * 2);}
 .utgafur {left: calc(40px + ((100vw - 120px) / 5));}
-.hladvorp {right: calc(40px + ((100vw - 120px) / 5));}
+.hladvorp {right: calc(40px + ((100vw - 120px) / 5)); background-color: white; border-bottom: 1px solid rgb(70,70,70);}
 .verslun {right: 20px;}
 .verslun {right: 20px;}
 .fifthwidth:hover {
@@ -140,92 +142,7 @@ a {color: black; text-decoration: none !important;}
     height: 1px;
     background-color: rgb(70,70,70);
 }
-/*.line {
-    position: relative;
-    margin-bottom: 3px;
-    background-color: rgb(70,70,70);
-    width: 100%;
-    height: 1px;
-}*/
-.linesVertical {
-    position: fixed;
-    top: 20px;
-    left: -21px;
-    bottom: 20px;
-    max-width: 20px;
-    width: 20px;
 
-    transition: 0.5s;
-}
-
-.linesVerticalLeita {left: calc(20px + ((100vw - 120px) / 5));}
-.linesVertical:after {
-    content: '';
-    position: absolute;
-    left: calc(50%);
-    top: 0px;
-    width: 1px;
-    height: 100%;
-    background-color: rgb(70,70,70);
-}
-/*.lineV {
-    position: relative;
-    display: inline-block;
-    margin-right: 0px;
-    background-color: rgb(70,70,70);
-    width: 1px;
-    height: 100%;
-}*/
-
-
-/*
-.utgafuvikubox {
-    position: absolute;
-    right: 20%;
-    top: 300px;
-    width: calc((100vw - 100px) / 4);
-    height: calc(100vh - 600px);
-    overflow-y: scroll;
-    border: 1px solid rgb(70,70,70);
-    padding: 20px;
-}
-
-*/
-
-
-.tilkynningarBox {
-    position: fixed;
-    left: calc(0px - 1px - ((100vw - 120px) / 5));
-    top: 150px;
-    width: calc((100vw - 120px) / 5);
-    height: calc(100vh - 150px);
-    overflow-y: scroll;
-
-    transition: 0.5s;
-}
-
-.tilkynningarBoxLeita {left: 20px;}
-
-.tilkynning {
-    position: relative;
-    display: inline-block;
-    padding-right: 20px;
-    width: calc(100% - 20px);
-    margin-bottom: 60px;
-}
-.tilkynning:after {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    width: calc(100% - 20px);
-    height: 1px;
-    background-color: rgb(70,70,70);
-    left: 0px;
-}
-.tilkynningamynd {
-    position: relative;
-    width: 100%;
-}
 
 
 
@@ -256,16 +173,11 @@ a {color: black; text-decoration: none !important;}
 }
 .greinaBoxLeita {width: calc((((100vw - 120px) / 5) * 4) + 70px);}
 
-.nyjastaGrein {
+.umokkurEfst {
     position: relative;
     width: calc(100% - 20px);
-    /*background: yellow;*/
-    height: 50vh;
+    height: auto;
     margin-bottom: 50px;
-}
-.nyjastaGrein:hover {
-    /*background-color: white;*/
-    cursor: pointer;
 }
 .nyjastaPic {
     position: absolute;
@@ -277,10 +189,11 @@ a {color: black; text-decoration: none !important;}
     background-repeat: no-repeat;
     background-position: center;
 }
-.nyjastaTexti {
-    position: absolute;
-    right: 0px;
-    width: calc((100% - 40px) / 3);
+.umokkurTexti {
+    position: relative;
+    left: calc(40px + ((100% - 100px) / 4));
+    width: calc((100% - 40px) / 2);
+    text-align: center;
 }
 .nyjast {
     position: relative;
@@ -288,7 +201,7 @@ a {color: black; text-decoration: none !important;}
     /*height: 1000px;*/
     margin-bottom: 160px;
     align-content: top;
-    display: flex;
+    display: flex-start;
     flex-flow: row wrap;
     justify-content: space-around;
 }
@@ -308,7 +221,7 @@ a {color: black; text-decoration: none !important;}
     top: 0% !important;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: calc(((100% - 80px) / 4) - 0px);
+    width: calc(((100% - 120px) / 6) - 4px);
     /*height: 400px;*/
     height: auto;
     /*border: 1px solid rgb(70,70,70);*/
@@ -344,51 +257,8 @@ a {color: black; text-decoration: none !important;}
     line-height: 20px !important;
     margin-top: 10px;
     z-index: 1;
-    /*border-top: 1px solid rgb(70,70,70);*/
 }
-/*
-.eitt {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/06/Dreki2-1000x1334.jpg);}
-.tvo {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/06/427a-1000x715.jpg);}
-.thrju {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/06/tayla2-1000x982.jpg);}
-.fjogur {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/05/GIGG.gif);}
-.fimm {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/06/image1-1000x1082.jpeg);}
-.sex {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/05/toxic2-1000x751.jpg);}
-.sjo {background-image: url(https://flora-utgafa.is/wp-content/uploads/2020/03/Rotterdam15-1800x1201.jpg);}
-.atta {background-image: url(https://flora-utgafa.is/wp-content/uploads/2019/07/you-1800x1270.jpg);}
-*/
 
-
-
-
-/*
-
-    .logo {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        height: 30vh; 
-        z-index: 2;
-
-        animation: spin;
-        transition-timing-function: ease-in-out;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-
-        transform: rotate(0deg);
-    }
-    @keyframes spin {
-      0% {transform: rotate(0deg);}
-      15% {transform: rotate(0deg);}
-      25% {transform: rotate(-90deg);}
-      35% {transform: rotate(-90deg);}
-      50% {transform: rotate(-180deg);}
-      60% {transform: rotate(-180deg);}
-      70% {transform: rotate(-270deg);}
-      90% {transform: rotate(-270deg);}
-      100% {transform: rotate(-360deg);}
-    }
-
-*/
 
 
 
