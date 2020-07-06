@@ -132,7 +132,7 @@ a {color: black; text-decoration: none !important;}
     cursor: pointer;
 }
 .dropdownList {
-    background-color: rgb(255,230,220); 
+    background-color: rgb(251, 249, 243);
     border-radius: 18px;
     border-bottom-right-radius: 0px; 
     border-bottom-left-radius: 0px; 
@@ -149,8 +149,14 @@ a {color: black; text-decoration: none !important;}
     padding-bottom: 20px;
 }
 .utgafur:hover .dropdownList {display: inline;}
-.dropdownList:hover {display: inline;}
-.utgafuval:hover {background-color: white}
+.utgafur:hover {background-color: rgba(0,0,0,0); border: none;}
+.utgafur:hover + .utgafurtitill {display: none;}
+.utgafuval:hover {background-color: white; border-bottom: 1px solid rgb(70,70,70);}
+
+.hladvorp:hover .dropdownList {display: inline;}
+.hladvorp:hover {background-color: rgba(0,0,0,0); border: none;}
+.hladvorp:hover + .utgafurtitill {display: none;}
+.utgafuval:hover {background-color: white; border-bottom: 1px solid rgb(70,70,70);}
 
 .lines {
     position: absolute;

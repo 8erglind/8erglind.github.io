@@ -50,7 +50,10 @@ body {background-color: rgba(237,228,199,.2); width: 100vw; overflow-x: hidden;-
     line-height: 21px;
 }
 .topNav {
-    position: absolute;
+    position: relative;
+    text-align: center;
+    left: 0% !important;
+    right: 0%;
     top: 39%;
     left: 40%;
 }
